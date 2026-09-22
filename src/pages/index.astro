@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import LetterNav from '../components/LetterNav.astro';
+---
+<BaseLayout>
+  <div class="page-shell">
+    <SiteHeader />
+    <main id="main" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-kicker metadata">
+          <span><span class="status-dot" aria-hidden="true"></span><span data-copy="universe">A PERSONAL UNIVERSE</span></span>
+          <span data-copy="six">SIX LETTERS. MANY WORLDS.</span>
+        </div>
+        <h1 id="hero-title" class="sr-only">THISHI</h1>
+        <LetterNav />
+        <div class="hero-bottom">
+          <div class="intro"><p class="tagline">This is ishi<span class="period">.</span></p><p class="intro-note" data-copy="intro">A little of who I am. A lot of what I make.</p></div>
+          <div class="world-detail" id="world-detail" role="status" aria-live="polite" aria-atomic="true">
+            <span class="detail-title metadata" data-detail-title>HELLO, YOU.</span>
+            <p data-detail-note>Pick a letter. Follow your curiosity.</p>
+            <span class="detail-stage metadata" data-detail-stage></span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer metadata">
+      <span>© {new Date().getFullYear()} THISHI</span>
+      <span data-copy="footer">ALWAYS A WORK IN PROGRESS</span>
+      <span class="footer-mark" aria-hidden="true">↗</span>
+    </footer>
+  </div>
+  <script>
+    import '../scripts/home';
+  </script>
+</BaseLayout>
