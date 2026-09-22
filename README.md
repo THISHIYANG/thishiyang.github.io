@@ -1,4 +1,4 @@
-# THISHI — Homepage v0.2
+# THISHI — Homepage v0.3
 
 A deliberately minimal Astro + TypeScript hero. Work stays on `rebuild/thishi-v3`; production main and Pages settings are unchanged.
 
@@ -43,3 +43,12 @@ The main word and body now use neutral system Arial / Helvetica with a sans-seri
 Astro check and production build pass without errors or warnings. Browser checks cover 1440 × 900 desktop proportions (word approximately 619px wide), default and INTEREST screenshots, hover reset, Tab focus, Escape, mobile selection/reset, Chinese copy, reduced motion and horizontal overflow at 320–1536px widths. Visual reference images were not attached to this correction request; implementation follows the supplied written dimensions and behavior.
 
 Stop here for visual review before adding any other sections.
+
+## v0.3 correction
+
+Default background is pure white (#FFFFFF). Each `.hero-letter` owns its button and unique copy panel, linked by aria-controls/aria-describedby. Desktop panels are absolutely positioned at 50% of their own wrapper and translated by half their width, with left-aligned text. Six independent panels fade locally over 150ms. No global changing tooltip exists.
+
+On mobile the six panels retain their own DOM ownership but appear below the complete matrix to avoid covering the lower row. Column-based positioning is clamped to a readable 260px width within the matrix; the selected glyph remains the visual anchor. Pointer exit clears mouse selection; keyboard focus and touch remain supported.
+
+Verified all six desktop panel centers against their owning buttons, unchanged wordmark bounds across all states, pure-white body background, keyboard behavior and pointer exit. All six mobile states fit at 320px and 390px without horizontal overflow. No layout shift was found. No new sections were added.
+

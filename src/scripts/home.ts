@@ -6,8 +6,6 @@ let focused: string | null = null;
 const hero = document.querySelector<HTMLElement>('[data-hero]')!;
 const letters = document.querySelector<HTMLElement>('[data-letters]')!;
 const buttons = [...letters.querySelectorAll<HTMLButtonElement>('[data-world]')];
-const title = document.querySelector<HTMLElement>('[data-detail-title]')!;
-const note = document.querySelector<HTMLElement>('[data-detail-note]')!;
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 let shown: string | null | undefined;
 function render(force = false) {
@@ -18,11 +16,10 @@ function render(force = false) {
   letters.toggleAttribute('data-active', !!active);
   buttons.forEach(button => {
     button.toggleAttribute('data-active', button.dataset.world === active);
+    button.parentElement!.toggleAttribute('data-active', button.dataset.world === active);
+    document.getElementById(button.getAttribute('aria-controls')!)!.setAttribute('aria-hidden', String(button.dataset.world !== active));
     button.setAttribute('aria-pressed', String(button.dataset.world === selected));
   });
-  const world = worlds.find(world => world.id === active);
-  title.textContent = world ? world[language] : '';
-  note.textContent = world ? language === 'en' ? world.note : world.noteZh : '';
 }
 function resetMovement() {
   buttons.forEach(button => { button.style.removeProperty('--mx'); button.style.removeProperty('--my'); });
@@ -48,6 +45,7 @@ document.addEventListener('pointermove', event => {
     if (value < distance) { nearest = button; distance = value; }
   });
   hovered = nearest?.dataset.world ?? null;
+  if (!nearest) selected = null;
   resetMovement();
   if (nearest && !reduced.matches) {
     const rect = nearest.getBoundingClientRect();
@@ -56,7 +54,7 @@ document.addEventListener('pointermove', event => {
   }
   render();
 });
-document.documentElement.addEventListener('pointerleave', () => { hovered = null; resetMovement(); render(); });
+document.documentElement.addEventListener('pointerleave', () => { hovered = null; selected = null; resetMovement(); render(); });
 document.addEventListener('pointerdown', event => {
   if (!(event.target instanceof Element) || event.target.closest('[data-world],.controls')) return;
   selected = null; hovered = null; focused = null; resetMovement(); render();
@@ -72,6 +70,11 @@ document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button =
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
     document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
     buttons.forEach((item, index) => item.setAttribute('aria-label', `${worlds[index].letter} — ${worlds[index][language]}`));
+    buttons.forEach((item, index) => {
+      const panel = document.getElementById(item.getAttribute('aria-controls')!)!;
+      panel.querySelector('[data-detail-title]')!.textContent = worlds[index][language];
+      panel.querySelector('[data-detail-note]')!.textContent = language === 'en' ? worlds[index].note : worlds[index].noteZh;
+    });
     document.querySelector('[data-tap-hint]')!.textContent = language === 'en' ? 'TAP A LETTER' : '轻触一个字母';
     render(true);
   });
@@ -80,10 +83,11 @@ document.querySelectorAll<HTMLButtonElement>('[data-mode]').forEach(button => {
   button.addEventListener('click', () => {
     const field = button.dataset.mode === 'field';
     document.documentElement.dataset.mode = field ? 'field' : 'index';
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', field ? '#0A0A0A' : '#F4F4EF');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', field ? '#0A0A0A' : '#FFFFFF');
     document.querySelectorAll<HTMLButtonElement>('[data-mode]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
   });
 });
 document.querySelector<HTMLElement>('[data-controls]')!.hidden = false;
 render();
+
 
