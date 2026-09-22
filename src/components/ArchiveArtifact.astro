@@ -1,0 +1,10 @@
+---
+const categories = ['ARCHIVE', 'ARTICLE', 'STUDY'];
+---
+<div class="artifact archive-artifact desktop-object" aria-label="Archive index">
+  {categories.map((category,index) => (
+    <a class="archive-slip" href="/archive" data-scene="ideas" data-signature="archive" style={`--card: ${index}`} aria-label={`${category} — Archive scene`}>
+      <span class="archive-tab">{category}</span><span class="archive-number">00{index + 1}</span>
+    </a>
+  ))}
+</div>

@@ -1,13 +1,26 @@
 ---
 import { worlds } from '../content/worlds';
+import IdentityKeywords from './IdentityKeywords.astro';
+import PlaceArtifact from './PlaceArtifact.astro';
+import FolderArtifact from './FolderArtifact.astro';
+import SocialArtifact from './SocialArtifact.astro';
+import PhotoArtifact from './PhotoArtifact.astro';
+import ArchiveArtifact from './ArchiveArtifact.astro';
 ---
 <div class="letters" role="group" aria-label="THISHI" data-letters>
 {worlds.map((world, index) => (
-<div class="hero-letter" style={`--column: ${index % 3}`}>
+<div class="hero-letter" data-letter-world={world.id} style={`--column: ${index % 3}`}>
 <button class="letter" type="button" data-world={world.id} aria-label={`${world.letter} — ${world.en}`} aria-pressed="false" aria-controls={`copy-${world.id}`} aria-describedby={`copy-${world.id}`}><span class="letter-glyph" aria-hidden="true">{world.letter}</span></button>
 <div class="letter-detail" id={`copy-${world.id}`} aria-hidden="true">
 <span class="letter-rule" aria-hidden="true"></span><div class="letter-copy-content"><span class="detail-title metadata" data-detail-title>{world.en}</span>
-<p data-detail-note>{world.note}</p></div>
+<p data-detail-note>{world.note}</p>
+{world.id === 'about' && <IdentityKeywords />}
+{world.id === 'work' && <PlaceArtifact />}
+{world.id === 'games' && <FolderArtifact />}
+{world.id === 'social' && <SocialArtifact />}
+{world.id === 'life' && <PhotoArtifact />}
+{world.id === 'ideas' && <ArchiveArtifact />}
+</div>
 </div>
 </div>
 ))}
