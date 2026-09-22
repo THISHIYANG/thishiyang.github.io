@@ -1,52 +1,45 @@
-# THISHI — Independent Creator
+# THISHI — Homepage v0.2
 
-Homepage v0.1. A new Astro + TypeScript source project on `rebuild/thishi-v3`, based on main commit `7865b5d3e3101318baea31e8a0014eafff759fb3`.
+A deliberately minimal Astro + TypeScript hero. Work stays on `rebuild/thishi-v3`; production main and Pages settings are unchanged.
 
-## Local development
+## Local preview
 
-Use Node.js 22.12+ and pnpm 11.
+Node.js 22.12+ and pnpm 11:
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm dev
-pnpm build
-pnpm preview
 ```
 
-Open the local URL printed by Astro (normally http://localhost:4321). `build` runs Astro/TypeScript checks before producing static output in `dist/`.
+Open http://localhost:4321. `pnpm build` checks types and generates `dist/`; `pnpm preview` serves that output.
 
-## Structure
+## Structure and scope
 
-```text
-src/
-  components/   SiteHeader and LetterNav
-  content/      typed six-world definitions (no old content migrated)
-  layouts/      BaseLayout, document metadata and fonts
-  pages/        index.astro
-  scripts/      progressive homepage interactions
-  styles/       palette, typography, responsive layout and motion rules
-public/         original SVG favicon; future public assets
-```
+- `src/components/LetterHero.astro`: isolated full-viewport hero and revealed text.
+- `src/components/LetterNav.astro`: six semantic letter buttons, without visible category labels or grid framing.
+- `src/components/SiteHeader.astro`: small maker mark and quiet language/appearance controls.
+- `src/content/worlds.ts`: the six supplied personal statements; stable IDs reserve future scene destinations.
+- `src/scripts/home.ts`: proximity, focus, selection, language and appearance state.
+- `src/styles/global.css`: desktop composition, mobile two-row arrangement and reduced motion.
+- `src/layouts/BaseLayout.astro`: document metadata and font imports.
+- `src/pages/index.astro`: header, hero and scroll cue only.
 
-## Scope
+No footer, cards, projects, Six Worlds section or physics. The scroll cue is a visual placeholder; no content section is built below it in this phase.
 
-- Warm paper / ink, oversized six-letter wordmark, identity and footer.
-- Each letter has a stable scene ID: About / Work / Games / Social / Life / Ideas. Hover/focus previews; click, Enter, Space or tap selects; Escape clears. These are previews, not links to nonexistent pages.
-- EN / 中 translates supporting copy and scene labels, and changes document language.
-- INDEX / FIELD changes the palette. FIELD is a visual preview only: no physics or cards yet.
-- Semantic landmarks, skip link, accessible button names and pressed states, visible focus, reduced motion, responsive layout.
-- No React runtime needed at this stage. Add islands only when interaction complexity requires them.
+## Behavior
 
-## Fonts
+Desktop proximity within 86px reveals one letter's statement. The active letter scales to 1.06, lifts 5px and moves subtly with the pointer; other letters become light grey. Tab reveals the same information with a visible focus outline. Click selects; another click toggles selection. Escape or tapping empty space clears selection. Pointer exit restores any selected or keyboard-focused letter, otherwise the quiet default.
 
-Syne 800, IBM Plex Mono 400 and Noto Sans SC 400 are self-hosted through pinned Fontsource dependencies. All three families use SIL Open Font License 1.1; the packages include their license files. No proprietary font files are checked in. Chinese webfont subsets are emitted by the build and downloaded only as required by characters.
+Mobile uses a 2 × 3 arrangement and 80–92px letters. First tap reveals a statement, tapping it again clears selection. Scene navigation is intentionally deferred. Appearance controls are hidden on mobile. Desktop FIELD retains palette switching only.
 
-## Deployment boundary
+Reduced motion removes all letter translation and scaling while retaining a simple color fade.
 
-This branch replaces the legacy generated files with a source tree. The old site and all old assets remain intact on `main` and in Git history. No old content is migrated. No deployment workflow is installed and no Pages settings are changed. Do not merge this branch or change the Pages source during visual review. `dist/` is generated and never committed.
+## Typography
 
-Future publishing is a separate step: confirm the actual Pages source and custom domain, review the finished site, then configure an Astro static build deployment and replace the live version deliberately.
+The main word and body now use neutral system Arial / Helvetica with a sans-serif fallback. No system font binaries are distributed. IBM Plex Mono and Noto Sans SC remain self-hosted OFL Fontsource dependencies; their license texts are included in `public/fonts`. Syne is no longer imported by the page; its existing dependency and license are retained for possible later use, without loading it.
 
-## Next review
+## Verification
 
-Approve homepage scale, spacing, mobile proportions and letter feedback first. Then build the six scenes and card system, implement real FIELD interactions, and migrate selected original content.
+Astro check and production build pass without errors or warnings. Browser checks cover 1440 × 900 desktop proportions (word approximately 619px wide), default and INTEREST screenshots, hover reset, Tab focus, Escape, mobile selection/reset, Chinese copy, reduced motion and horizontal overflow at 320–1536px widths. Visual reference images were not attached to this correction request; implementation follows the supplied written dimensions and behavior.
+
+Stop here for visual review before adding any other sections.

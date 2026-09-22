@@ -1,11 +1,10 @@
 export type Language = 'en' | 'zh';
-
-// Stable IDs distinguish the repeated H and I; future scenes attach here.
 export const worlds = [
-  { id: 'about', letter: 'T', en: 'About', zh: '关于', note: 'The person behind the letters.', noteZh: '字母背后的我。' },
-  { id: 'work', letter: 'H', en: 'Work', zh: '作品', note: 'Made by hand. Led by curiosity.', noteZh: '亲手制作，好奇驱动。' },
-  { id: 'games', letter: 'I', en: 'Games', zh: '游戏', note: 'Little worlds to get lost in.', noteZh: '可以走进去的小小世界。' },
-  { id: 'social', letter: 'S', en: 'Social', zh: '连接', note: 'Somewhere our paths cross.', noteZh: '让我们的轨迹在此交汇。' },
-  { id: 'life', letter: 'H', en: 'Life', zh: '生活', note: 'The everyday, noticed.', noteZh: '留意每一个日常。' },
-  { id: 'ideas', letter: 'I', en: 'Ideas', zh: '想法', note: 'Things that could become things.', noteZh: '让念头慢慢长成些什么。' },
+{id:'about',letter:'T',en:'THE CREATOR',zh:'创作者',note:'The Illustrator,\nGame Designer / Developer\nand Educator.',noteZh:'插画师、\n游戏设计师 / 开发者\n与教育者。'},
+{id:'work',letter:'H',en:'HERE',zh:'此地',note:'Here is my hometown Fuping,\nnow based in Shanghai.',noteZh:'家乡在富平，\n现居上海。'},
+{id:'games',letter:'I',en:'INTEREST',zh:'兴趣',note:'I love games,\nvisual culture\nand music.',noteZh:'我喜欢游戏、\n视觉文化\n和音乐。'},
+{id:'social',letter:'S',en:'SOCIAL',zh:'社交',note:'Find me everywhere.',noteZh:'在各处找到我。'},
+{id:'life',letter:'H',en:'HAPPY',zh:'快乐',note:'Happy maker.\nSometimes I just make\nthings for fun.',noteZh:'快乐的创作者。\n有时创作，\n只是为了好玩。'},
+{id:'ideas',letter:'I',en:'I WILL',zh:'我会',note:'I will make things\nuntil I die.',noteZh:'我会一直创作，\n直到生命尽头。'},
 ] as const;
+

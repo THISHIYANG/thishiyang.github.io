@@ -1,12 +1,9 @@
 ---
 import { worlds } from '../content/worlds';
 ---
-<div class="letter-grid" role="group" aria-label="Explore six worlds" data-letters>
-  {worlds.map((world, index) => (
-    <button class="letter" type="button" data-world={world.id} aria-label={`${world.letter} — ${world.en}`} aria-pressed="false" aria-controls="world-detail">
-      <span class="letter-index metadata" aria-hidden="true">0{index + 1}</span>
-      <span class="letter-glyph" aria-hidden="true">{world.letter}</span>
-      <span class="letter-caption metadata" data-world-label={world.id}>{world.en}</span>
-    </button>
-  ))}
+<div class="letters" role="group" aria-label="THISHI" data-letters>
+{worlds.map(world => (
+<button class="letter" type="button" data-world={world.id} aria-label={`${world.letter} — ${world.en}`} aria-pressed="false" aria-controls="letter-detail"><span class="letter-glyph" aria-hidden="true">{world.letter}</span></button>
+))}
 </div>
+
