@@ -1,4 +1,4 @@
-# THISHI — Homepage v0.3
+# THISHI — Homepage v0.4
 
 A deliberately minimal Astro + TypeScript hero. Work stays on `rebuild/thishi-v3`; production main and Pages settings are unchanged.
 
@@ -52,3 +52,10 @@ On mobile the six panels retain their own DOM ownership but appear below the com
 
 Verified all six desktop panel centers against their owning buttons, unchanged wordmark bounds across all states, pure-white body background, keyboard behavior and pointer exit. All six mobile states fit at 320px and 390px without horizontal overflow. No layout shift was found. No new sections were added.
 
+
+
+## v0.4 annotation alignment
+
+Desktop captions now start at their own glyph's left ink edge, with a 1px vertical rule and 16px text inset. Font metrics account for the distinct side bearings of narrow I versus wide T without changing letter advances or wordmark positioning. Caption widths vary (220–300px) and available viewport width constrains the right-hand captions. The anchor stays fixed during subtle pointer magnetism. Rule and text fade together with a 4px vertical reveal; reduced motion removes that translation.
+
+The mobile readable-width fallback from v0.3 remains in place. Build/type checks and browser verification passed: all six desktop anchor positions, 1px rules, unchanged wordmark bounds, keyboard/exit behavior, and all six mobile panels at 320px and 390px. No other sections or deployment changes.

@@ -6,9 +6,10 @@ import { worlds } from '../content/worlds';
 <div class="hero-letter" style={`--column: ${index % 3}`}>
 <button class="letter" type="button" data-world={world.id} aria-label={`${world.letter} — ${world.en}`} aria-pressed="false" aria-controls={`copy-${world.id}`} aria-describedby={`copy-${world.id}`}><span class="letter-glyph" aria-hidden="true">{world.letter}</span></button>
 <div class="letter-detail" id={`copy-${world.id}`} aria-hidden="true">
-<span class="detail-title metadata" data-detail-title>{world.en}</span>
-<p data-detail-note>{world.note}</p>
+<span class="letter-rule" aria-hidden="true"></span><div class="letter-copy-content"><span class="detail-title metadata" data-detail-title>{world.en}</span>
+<p data-detail-note>{world.note}</p></div>
 </div>
 </div>
 ))}
 </div>
+

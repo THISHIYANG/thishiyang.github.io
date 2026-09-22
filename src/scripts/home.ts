@@ -91,3 +91,23 @@ document.querySelector<HTMLElement>('[data-controls]')!.hidden = false;
 render();
 
 
+
+// Font side bearings differ sharply between T and I. Anchor captions to ink,
+// not the invisible advance box; preserve the existing wordmark spacing.
+function measureCaptionAnchors() {
+  const context = document.createElement('canvas').getContext('2d');
+  if (!context) return;
+  buttons.forEach(button => {
+    const style = getComputedStyle(button);
+    context.font = `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+    const metrics = context.measureText(button.textContent!.trim());
+    const box = button.getBoundingClientRect();
+    const scale = reduced.matches ? 1 : 1.06;
+    const inkLeft = -metrics.actualBoundingBoxLeft * scale - box.width * (scale - 1) / 2;
+    button.parentElement!.style.setProperty('--ink-left', `${inkLeft}px`);
+    button.parentElement!.style.setProperty('--available-width', `${Math.max(0, innerWidth - box.left - inkLeft - 24)}px`);
+  });
+}
+void document.fonts.ready.then(measureCaptionAnchors);
+window.addEventListener('resize', measureCaptionAnchors);
+reduced.addEventListener('change', measureCaptionAnchors);
