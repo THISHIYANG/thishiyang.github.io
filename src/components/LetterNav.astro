@@ -4,6 +4,8 @@ import CreatorIdentity from './worlds/CreatorIdentity.astro';
 import JourneyMap from './worlds/JourneyMap.astro';
 import PortfolioFolder from './worlds/PortfolioFolder.astro';
 import SocialCarousel from './worlds/SocialCarousel.astro';
+import LifeAlbum from './worlds/LifeAlbum.astro';
+import ArchiveCabinet from './worlds/ArchiveCabinet.astro';
 ---
 <div class="letters" role="group" aria-label="THISHI" data-letters>
 {worlds.map((world, index) => (
@@ -16,11 +18,14 @@ import SocialCarousel from './worlds/SocialCarousel.astro';
 {world.id === 'work' && <JourneyMap />}
 {world.id === 'games' && <PortfolioFolder />}
 {world.id === 'social' && <SocialCarousel />}
+{world.id === 'life' && <LifeAlbum />}
+{world.id === 'ideas' && <ArchiveCabinet />}
 </div>
 </div>
 </div>
 ))}
 </div>
+
 
 
 

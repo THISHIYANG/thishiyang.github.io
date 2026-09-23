@@ -1,0 +1,10 @@
+---
+import { life } from '../../content/life';
+---
+<div class="life-album desktop-object" data-life-album data-photos={JSON.stringify(life)} role="region" aria-roledescription="carousel" aria-label="Life album. Scroll or use up and down arrow keys to browse.">
+<div class="life-space">
+{Array.from({length:9},(_,slot) => <button type="button" class="life-photo" data-life-photo data-slot={slot} tabindex="-1" aria-pressed="false"><span class="life-photo-media"><img alt="" hidden /></span><span class="life-photo-number"></span></button>)}
+</div>
+<span class="sr-only" data-life-status aria-live="polite"></span>
+</div>
+<script>import '../../scripts/life-album';</script>

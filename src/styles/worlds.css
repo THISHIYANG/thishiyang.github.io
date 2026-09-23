@@ -97,3 +97,38 @@
   .journey-station:nth-child(n+4) { top:calc(var(--y)*1.13); }
   .journey-map { height:232px; }
 }
+/* Commit 03: the two final desktop worlds. Existing worlds are unchanged. */
+@media (min-width:601px) {
+  .hero-letter:has([data-world='life']) { --copy-width:460px; }
+  .hero-letter:has([data-world='ideas']) { --copy-width:390px; }
+  .life-album { position:relative; width:220px; height:220px; margin-top:8px; }
+  .life-space { position:absolute; inset:0; perspective:700px; }
+  .life-photo { position:absolute; top:60px; left:35px; width:150px; height:100px; padding:6px; border:1px solid #777; background:#fff; color:#0a0a0a; transition:transform 360ms cubic-bezier(.22,.61,.36,1),opacity 360ms cubic-bezier(.22,.61,.36,1); }
+  .life-photo[aria-pressed=true] { border-color:#0a0a0a; }
+  .life-photo-media { display:block; width:100%; height:100%; background:#c7c9cc; }
+  .life-photo-media img { width:100%; height:100%; object-fit:cover; }
+  .life-photo-number { position:absolute; bottom:8px; left:10px; padding:0 2px; color:#0a0a0a; background:#fff; font:13px/1.4 var(--mono); }
+  .life-photo[data-offset^='-'] .life-photo-number { top:8px; bottom:auto; }
+  .archive-cabinet { width:330px; max-width:100%; max-height:252px; margin-top:12px; overflow:auto; overscroll-behavior:contain; padding:3px 25px 3px 3px; scrollbar-width:thin; }
+  .archive-rows { list-style:none; margin:0; padding:0; border-top:1px solid #0a0a0a; }
+  .archive-row { height:30px; position:relative; background:#c7c9cc; border-left:1px solid #0a0a0a; border-right:1px solid #0a0a0a; border-bottom:1px solid #0a0a0a; }
+  .archive-drawer { position:absolute; inset:-1px; width:calc(100% + 2px); border:1px solid #0a0a0a; background:#fff; color:#0a0a0a; text-align:left; padding:0 10px; transition:transform 210ms cubic-bezier(.22,.61,.36,1); }
+  .archive-row:nth-child(even) .archive-drawer { background:#e8e9ea; }
+  .archive-category,.archive-title { position:absolute; left:10px; top:50%; transform:translateY(-50%); transition:opacity 150ms ease; }
+  .archive-category,.archive-number { font:13px/1.4 var(--mono); }
+  .archive-title { font:14px/1.35 var(--mono); opacity:0; max-width:calc(100% - 56px); white-space:nowrap; }
+  .archive-number { position:absolute; right:10px; top:50%; transform:translateY(-50%); }
+  .archive-pull { position:absolute; left:48%; bottom:3px; width:14px; border-top:1px solid #777; }
+  .archive-drawer:is(:hover,:focus) { transform:translateX(20px); }
+  .archive-drawer:is(:hover,:focus) .archive-title { opacity:1; }
+  .archive-drawer:is(:hover,:focus) .archive-category { opacity:0; }
+  .archive-drawer:focus-visible { outline-offset:1px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .life-photo { transition:none !important; }
+  .archive-drawer { transition:none !important; }
+  .archive-drawer:is(:hover,:focus) { transform:none; background:#c7c9cc; }
+}
+@media (min-width:601px) { .life-space { overflow:clip; } }
+/* Invisible perspective buffers must not enlarge the page's scrollable width. */
+@media (min-width:601px) { .landing { overflow-x:clip; } }

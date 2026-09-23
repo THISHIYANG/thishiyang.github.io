@@ -1,6 +1,6 @@
 # THISHI — Independent Creator
 
-Astro + TypeScript source project on `rebuild/thishi-v3`. The current review is **Commit 02: typography + portfolio folder + social carousel**, desktop only. Main and production are unchanged.
+Astro + TypeScript source project on `rebuild/thishi-v3`. The current review is **Commit 03: life album + research archive cabinet**, desktop only. Main and production are unchanged.
 
 ## Run locally
 
@@ -16,7 +16,7 @@ Open http://127.0.0.1:4321/. The preview command serves the last production buil
 
 ## Current review scope
 
-The homepage retains its existing wordmark, header, white background, caption alignment and mobile fallback. T, H1, I1 and S mount interactive artifacts. Previous scene, remaining artifact and DOT pointer files are retained as dormant scaffolding; the homepage does not mount or initialize them. No further scene content or mobile interaction is part of this review.
+The homepage retains its existing wordmark, header, white background, caption alignment and mobile fallback. All six letters now mount their own interactive artifacts. Previous scene, remaining artifact and DOT pointer files are retained as dormant scaffolding; the homepage does not mount or initialize them. No further scene content or mobile interaction is part of this review.
 
 - `src/components/worlds/CreatorIdentity.astro` tokenizes the current `worlds.ts` copy, preserving its line breaks. Each identity has a button and its own 44 × 56 numbered empty portrait proof. The frames are positioned in a shared gutter, do not reflow the text, and only one is active at a time.
 - `src/content/journey.ts` contains the ordered route and editable city, role, school, degree and mapType fields.
@@ -55,4 +55,17 @@ Portfolio uses bounded extraction progress, five staggered CSS transforms and nu
 Social uses eight data-driven cards and a CSS perspective orbit, without WebGL or animation dependencies. Five cards are visible at a time, with independently reachable transformed hit areas. Moving onto a side card selects it after a brief dwell; wheel down/right advances, up/left reverses. Selection wraps in both directions. Roving keyboard focus uses left/right arrows, with Enter invoking a destination once its currently-null href is supplied. Status is announced through a polite live region. Each card has a dedicated `.social-card-media` container for future images.
 
 Reduced motion disables extraction transitions and replaces animated perspective with immediate planar selection. Tests cover 1440×900, 1536×960 and 1920×1080: reverse extraction, five keyboard-accessible sheets, all visible carousel hit areas, wraparound, wheel ownership, stable hero bounds and reduced motion. `pnpm check` and `pnpm build` pass. H2/I2, DOT, scene transitions, real images, mobile redesign and production remain outside this commit. Stop for visual review.
+
+
+## Commit 03 — life album and research cabinet
+
+New components: `LifeAlbum.astro` and `ArchiveCabinet.astro` under `src/components/worlds/`. Each has a small matching TypeScript controller under `src/scripts/`. `LetterNav.astro` only imports and mounts them; desktop presentation is in `worlds.css`. No changes to the four approved interaction controllers or their data.
+
+`src/content/life.ts` supplies seven records with `id`, `image`, `alt`, `date`, and `place`. Add image paths and descriptive alternative text there without changing animation code. Nine reusable display slots represent seven visible photos and two invisible edge buffers. An unbounded logical index maps into the seven records with modulo arithmetic. Only an invisible edge slot is recycled, so visible cards travel continuously through the 007/001 boundary. Wheel down advances and wheel up reverses; input is consumed only inside the album. Up/down keys and direct photo buttons also select photos. The active photo participates in the tab order and a polite live region announces selection.
+
+`src/content/archive.ts` supplies eight generic entries with `id`, `type`, `title`, `year`, and nullable `href`. Each renders one independent, keyboard-focusable 30px drawer. Hover/focus slides the front 20px to expose a silver body; its category gives way to the title inside that same row. Enter uses the href once provided. The cabinet has a bounded internal scroll region, so additional entries do not grow the hero or move the page. The prototype does not invent real publications.
+
+Reduced motion replaces the album's depth with immediate planar selection and disables drawer translation while retaining title reveal. Both artifacts retain the shared letter/caption interaction ownership. Invisible perspective buffers are prevented from increasing desktop page width. No mobile styles, scene transitions, custom cursor, real images or article pages are added.
+
+Validation: 1440×900, 1536×960, 1920×1080; six-world screenshots and stable hero bounds, twenty bidirectional album wheel steps through wraparound, visible-photo hit areas, keyboard selection, eight independent drawers, synthetic 88-row internal scrolling, no page scrolling or horizontal overflow, and reduced-motion behavior. Run `pnpm check` and `pnpm build`, then `pnpm preview --host 127.0.0.1`. Stop for visual review.
 
