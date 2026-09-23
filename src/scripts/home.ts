@@ -1,3 +1,5 @@
+import { setupPointer } from './pointer';
+import { setupScenes } from './transitions';
 import { worlds, type Language } from '../content/worlds';
 let language: Language = 'en';
 let selected: string | null = null;
@@ -8,7 +10,9 @@ const letters = document.querySelector<HTMLElement>('[data-letters]')!;
 const buttons = [...letters.querySelectorAll<HTMLButtonElement>('[data-world]')];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 let shown: string | null | undefined;
+const desktop = matchMedia('(min-width: 601px)');
 function render(force = false) {
+  if (document.documentElement.hasAttribute('data-transition') && !force) return;
   const active = focused ?? hovered ?? selected;
   if (active === shown && !force) return;
   shown = active;
@@ -17,7 +21,9 @@ function render(force = false) {
   buttons.forEach(button => {
     button.toggleAttribute('data-active', button.dataset.world === active);
     button.parentElement!.toggleAttribute('data-active', button.dataset.world === active);
-    document.getElementById(button.getAttribute('aria-controls')!)!.setAttribute('aria-hidden', String(button.dataset.world !== active));
+    const panel = document.getElementById(button.getAttribute('aria-controls')!)!;
+    panel.setAttribute('aria-hidden', String(button.dataset.world !== active));
+    panel.inert = button.dataset.world !== active;
     button.setAttribute('aria-pressed', String(button.dataset.world === selected));
   });
 }
@@ -26,15 +32,18 @@ function resetMovement() {
 }
 buttons.forEach(button => {
   button.addEventListener('focus', () => { if (button.matches(':focus-visible')) { focused = button.dataset.world!; render(); } });
-  button.addEventListener('blur', () => { focused = null; render(); });
+  button.addEventListener('blur', () => { if (desktop.matches) return; focused = null; render(); });
   button.addEventListener('click', () => {
+    if (document.documentElement.hasAttribute('data-transition')) return;
+    if (desktop.matches && button.dataset.world) { document.dispatchEvent(new CustomEvent('thishi:navigate', {detail:{id:button.dataset.world, trigger:button}})); return; }
     selected = selected === button.dataset.world ? null : button.dataset.world!;
     render(true);
   });
 });
 // Detect distance to each stable button box, never to the moving glyph.
 document.addEventListener('pointermove', event => {
-  if (event.pointerType !== 'mouse') return;
+  if (event.pointerType !== 'mouse' || document.documentElement.hasAttribute('data-transition') || document.querySelector<HTMLElement>('[data-home]')?.hidden) return;
+  focused = null;
   let nearest: HTMLButtonElement | undefined;
   let distance = 86;
   buttons.forEach(button => {
@@ -44,6 +53,17 @@ document.addEventListener('pointermove', event => {
     const value = Math.hypot(dx, dy);
     if (value < distance) { nearest = button; distance = value; }
   });
+  if (desktop.matches) {
+    const targetWorld = (event.target as Element).closest<HTMLElement>('[data-letter-world]');
+    if (targetWorld?.hasAttribute('data-active') || targetWorld?.querySelector('.letter')?.contains(event.target as Node)) {
+      nearest = buttons.find(button => button.dataset.world === targetWorld.dataset.letterWorld);
+    } else if (!nearest && shown) {
+      const owner = buttons.find(button => button.dataset.world === shown)!;
+      const glyph = owner.getBoundingClientRect();
+      const detail = owner.parentElement!.querySelector('.letter-detail')!.getBoundingClientRect();
+      if (event.clientY >= glyph.bottom && event.clientY <= detail.bottom && event.clientX >= Math.min(glyph.left, detail.left) - 8 && event.clientX <= Math.max(glyph.right, detail.right) + 8) nearest = owner;
+    }
+  }
   hovered = nearest?.dataset.world ?? null;
   if (!nearest) selected = null;
   resetMovement();
@@ -56,16 +76,18 @@ document.addEventListener('pointermove', event => {
 });
 document.documentElement.addEventListener('pointerleave', () => { hovered = null; selected = null; resetMovement(); render(); });
 document.addEventListener('pointerdown', event => {
-  if (!(event.target instanceof Element) || event.target.closest('[data-world],.controls')) return;
+  if (!(event.target instanceof Element) || event.target.closest('[data-letter-world],.controls')) return;
   selected = null; hovered = null; focused = null; resetMovement(); render();
 });
 document.addEventListener('keydown', event => {
-  if (event.key !== 'Escape') return;
+  if (event.key !== 'Escape' || document.documentElement.hasAttribute('data-transition')) return;
   selected = hovered = focused = null; resetMovement(); render(true);
 });
 reduced.addEventListener('change', resetMovement);
 document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button => {
   button.addEventListener('click', () => {
+    if (document.documentElement.hasAttribute('data-transition')) return;
+    if (desktop.matches && button.dataset.world) { document.dispatchEvent(new CustomEvent('thishi:navigate', {detail:{id:button.dataset.world, trigger:button}})); return; }
     language = button.dataset.language as Language;
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
     document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
@@ -75,12 +97,16 @@ document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button =
       panel.querySelector('[data-detail-title]')!.textContent = worlds[index][language];
       panel.querySelector('[data-detail-note]')!.textContent = language === 'en' ? worlds[index].note : worlds[index].noteZh;
     });
+    document.querySelectorAll<HTMLElement>('[data-lang]').forEach(element => { element.hidden = element.dataset.lang !== language; });
+    document.dispatchEvent(new Event('thishi:language'));
     document.querySelector('[data-tap-hint]')!.textContent = language === 'en' ? 'TAP A LETTER' : '轻触一个字母';
     render(true);
   });
 });
 document.querySelectorAll<HTMLButtonElement>('[data-mode]').forEach(button => {
   button.addEventListener('click', () => {
+    if (document.documentElement.hasAttribute('data-transition')) return;
+    if (desktop.matches && button.dataset.world) { document.dispatchEvent(new CustomEvent('thishi:navigate', {detail:{id:button.dataset.world, trigger:button}})); return; }
     const field = button.dataset.mode === 'field';
     document.documentElement.dataset.mode = field ? 'field' : 'index';
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', field ? '#0A0A0A' : '#FFFFFF');
@@ -111,3 +137,28 @@ function measureCaptionAnchors() {
 void document.fonts.ready.then(measureCaptionAnchors);
 window.addEventListener('resize', measureCaptionAnchors);
 reduced.addEventListener('change', measureCaptionAnchors);
+
+document.querySelectorAll<HTMLElement>('[data-letter-world]').forEach(wrapper => {
+  wrapper.addEventListener('focusin', () => {
+    if (!desktop.matches) return;
+    focused = wrapper.dataset.letterWorld!;
+    render();
+  });
+  wrapper.addEventListener('focusout', event => {
+    if (wrapper.contains(event.relatedTarget as Node)) return;
+    focused = null;
+    render();
+  });
+});
+
+document.addEventListener('thishi:freeze', event => {
+  const id = (event as CustomEvent<{id?: string}>).detail.id;
+  selected = id ?? null; hovered = focused = null; render(true);
+});
+document.addEventListener('thishi:scene-ready', () => {
+  selected = hovered = focused = null; resetMovement(); render(true);
+  requestAnimationFrame(measureCaptionAnchors);
+});
+setupPointer();
+setupScenes();
+

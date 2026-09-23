@@ -1,61 +1,67 @@
-# THISHI — Homepage v0.4
+# THISHI — Desktop Interaction System V1
 
-A deliberately minimal Astro + TypeScript hero. Work stays on `rebuild/thishi-v3`; production main and Pages settings are unchanged.
+Astro + TypeScript, static output. Development branch: `rebuild/thishi-v3`. The approved pure-white hero remains the default view; this increment adds desktop objects, scene-entry prototypes, and one global DOT pointer.
 
-## Local preview
+## Run locally
 
-Node.js 22.12+ and pnpm 11:
+Use Node.js 22.12+ and pnpm 11.
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Open http://localhost:4321. `pnpm build` checks types and generates `dist/`; `pnpm preview` serves that output.
+Open http://localhost:4321. `pnpm build` runs Astro/TypeScript checks and generates `dist/`. `pnpm preview` serves the build.
 
-## Structure and scope
+## Six interactions
 
-- `src/components/LetterHero.astro`: isolated full-viewport hero and revealed text.
-- `src/components/LetterNav.astro`: six semantic letter buttons, without visible category labels or grid framing.
-- `src/components/SiteHeader.astro`: small maker mark and quiet language/appearance controls.
-- `src/content/worlds.ts`: the six supplied personal statements; stable IDs reserve future scene destinations.
-- `src/scripts/home.ts`: proximity, focus, selection, language and appearance state.
-- `src/styles/global.css`: desktop composition, mobile two-row arrangement and reduced motion.
-- `src/layouts/BaseLayout.astro`: document metadata and font imports.
-- `src/pages/index.astro`: header, hero and scroll cue only.
+| Letter | Object | Destination |
+| --- | --- | --- |
+| T | Silver-filled, black-outline identity keywords | /about |
+| H₁ | Fuping / Shaanxi ↔ Shanghai markers and line | /place |
+| I₁ | Flat silver folder with three paper sheets | /work |
+| S | Five loose social notes | /social |
+| H₂ | Three monochrome placeholder photo frames | /life |
+| I₂ | Three tabbed catalogue cards | /archive |
 
-No footer, cards, projects, Six Worlds section or physics. The scroll cue is a visual placeholder; no content section is built below it in this phase.
+All destinations are empty SceneShell prototypes with shared typography, metadata, header and letter navigation. No project content, personal photos, coordinates or external social accounts have been invented. Social cards currently open the Social shell; connect their real external destinations in a later content pass.
 
-## Behavior
+## Source map
 
-Desktop proximity within 86px reveals one letter's statement. The active letter scales to 1.06, lifts 5px and moves subtly with the pointer; other letters become light grey. Tab reveals the same information with a visible focus outline. Click selects; another click toggles selection. Escape or tapping empty space clears selection. Pointer exit restores any selected or keyboard-focused letter, otherwise the quiet default.
+- `src/components/Experience.astro`: persistent header, homepage, scene shell and transition layer.
+- `src/components/LetterNav.astro`: each glyph owns its annotation and object.
+- `IdentityKeywords`, `PlaceArtifact`, `FolderArtifact`, `SocialArtifact`, `PhotoArtifact`, `ArchiveArtifact`: separate object implementations.
+- `SceneShell.astro`: minimal shared destination view.
+- `DotPointer.astro`: single SVG cursor overlay, hidden from accessibility APIs.
+- `src/content/worlds.ts`: existing statements and stable letter IDs.
+- `src/content/scenes.ts`: route/letter/object mapping. Internal IDs `work`, `games`, `ideas` retain their original identities; their routes are explicitly mapped to `/place`, `/work`, `/archive`.
+- `src/scripts/home.ts`: hover/focus/tap state, shared glyph-to-object region, language, appearance and optical caption anchoring.
+- `src/scripts/transitions.ts`: navigation lifecycle, scene state, history, focus and Web Animations choreography.
+- `src/scripts/pointer.ts`: global idle/active/loading pointer state and fallback handling.
+- `src/styles/global.css`: approved base composition and unchanged mobile styles.
+- `src/styles/worlds.css`, `scenes.css`, `pointer.css`: new desktop layer.
+- `src/pages/[scene].astro`: statically generates all six direct-entry routes; no server adapter or React runtime.
 
-Mobile uses a 2 × 3 arrangement and 80–92px letters. First tap reveals a statement, tapping it again clears selection. Scene navigation is intentionally deferred. Appearance controls are hidden on mobile. Desktop FIELD retains palette switching only.
+## State and motion
 
-Reduced motion removes all letter translation and scaling while retaining a simple color fade.
+The active world comes from keyboard focus, pointer ownership, or selection. Its interaction region includes glyph, the gap to the annotation, copy and object; it remains active as the pointer travels downward. Hidden panels are inert so Tab cannot enter invisible objects. Desktop glyph clicks and object links enter scenes; the existing mobile tap behavior is retained and all new objects are hidden on narrow screens.
 
-## Typography
+Reveals: letter immediately, rule at 40ms, copy at 80ms, object at 140ms. Object movement uses 160–320ms transitions with `cubic-bezier(.22,.61,.36,1)`; location markers finish at about 400ms. Cards rotate no more than 3 degrees.
 
-The main word and body now use neutral system Arial / Helvetica with a sans-serif fallback. No system font binaries are distributed. IBM Plex Mono and Noto Sans SC remain self-hosted OFL Fontsource dependencies; their license texts are included in `public/fonts`. Syne is no longer imported by the page; its existing dependency and license are retained for possible later use, without loading it.
+Scene entry freezes the world and rejects duplicate navigation, fades inactive letters/copy, performs the object's signature gesture, and expands its letter, seam, sheet, note, photo or index surface. Total durations are 580ms (T), 600ms (place), and 620ms (the other four). The archive border becomes the shell frame. Navigation updates the address and page title, focuses the destination heading, and restores normal cursor state. Browser back/forward work; Escape cancels an in-flight transition. Empty shells are already available in the document so no artificial loading or network dependency is introduced. Direct URLs also work as static pages.
+
+## DOT pointer
+
+One 18px SVG overlay: outlined idle ring, filled interactive dot, or dashed transition ring. Fill changes over 140ms; loading rotation takes 1100ms. Very short interpolation (0.82 per frame) settles quickly, with no trailing copies or perpetual idle animation loop. Native cursor is hidden only after a valid overlay frame renders. Touch/coarse pointers, inactive windows and editable controls retain native cursor behavior. Pointer events pass through the overlay and text selection is preserved. The pointer uses the existing foreground color for contrast in FIELD mode.
+
+## Accessibility and fallback
+
+Semantic buttons/links support Tab, Enter and Space. Focus activates the same world as hover. Hidden annotations are inert, headings receive focus after navigation, and current scene links use aria-current. Reduced motion removes object choreography, translation, scale and cursor smoothing/spin; routes change immediately. Native pointer remains available if the custom overlay is unsupported or cannot render. The static scene routes remain navigable without client-side transition support.
 
 ## Verification
 
-Astro check and production build pass without errors or warnings. Browser checks cover 1440 × 900 desktop proportions (word approximately 619px wide), default and INTEREST screenshots, hover reset, Tab focus, Escape, mobile selection/reset, Chinese copy, reduced motion and horizontal overflow at 320–1536px widths. Visual reference images were not attached to this correction request; implementation follows the supplied written dimensions and behavior.
+Astro check: zero errors, warnings or hints. Production build: seven static pages. Browser verification covered all six object entries and all six letter entries, cursor idle/active/loading/restoration, Tab-to-folder and Space entry, Escape cancellation, back/forward and scene-to-scene navigation, Chinese and FIELD controls, direct scene loads with JavaScript disabled, reduced-motion entry, native cursor over form controls, and unchanged narrow-screen tap behavior. Default, object, scene and intermediate-transition screenshots were reviewed. Desktop widths 1024, 1280, 1440 and 1536 were checked for overflow; narrow-screen regression used 390px.
 
-Stop here for visual review before adding any other sections.
+## Deployment boundary
 
-## v0.3 correction
-
-Default background is pure white (#FFFFFF). Each `.hero-letter` owns its button and unique copy panel, linked by aria-controls/aria-describedby. Desktop panels are absolutely positioned at 50% of their own wrapper and translated by half their width, with left-aligned text. Six independent panels fade locally over 150ms. No global changing tooltip exists.
-
-On mobile the six panels retain their own DOM ownership but appear below the complete matrix to avoid covering the lower row. Column-based positioning is clamped to a readable 260px width within the matrix; the selected glyph remains the visual anchor. Pointer exit clears mouse selection; keyboard focus and touch remain supported.
-
-Verified all six desktop panel centers against their owning buttons, unchanged wordmark bounds across all states, pure-white body background, keyboard behavior and pointer exit. All six mobile states fit at 320px and 390px without horizontal overflow. No layout shift was found. No new sections were added.
-
-
-
-## v0.4 annotation alignment
-
-Desktop captions now start at their own glyph's left ink edge, with a 1px vertical rule and 16px text inset. Font metrics account for the distinct side bearings of narrow I versus wide T without changing letter advances or wordmark positioning. Caption widths vary (220–300px) and available viewport width constrains the right-hand captions. The anchor stays fixed during subtle pointer magnetism. Rule and text fade together with a 4px vertical reveal; reduced motion removes that translation.
-
-The mobile readable-width fallback from v0.3 remains in place. Build/type checks and browser verification passed: all six desktop anchor positions, 1px rules, unchanged wordmark bounds, keyboard/exit behavior, and all six mobile panels at 320px and 390px. No other sections or deployment changes.
+No merge to main, no deployment workflow, and no Pages setting changes. Old generated assets remain preserved in main/history. Fontsource OFL licenses remain in `public/fonts`; no proprietary font binaries are committed. This is an interaction prototype, not the completed site. Stop for visual review before building scene content or mobile interactions.

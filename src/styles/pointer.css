@@ -1,0 +1,12 @@
+.dot-pointer { position: fixed; top: 0; left: 0; width: 18px; height: 18px; z-index: 100; pointer-events: none; color: var(--ink); will-change: transform; }
+.dot-pointer svg { display: block; overflow: visible; }
+.dot-pointer circle { stroke: currentColor; stroke-width: 1.5; fill: transparent; transition: fill 140ms ease; }
+.dot-pointer[data-state='active'] circle { fill: currentColor; }
+.dot-pointer[data-state='loading'] circle { fill: transparent; stroke-dasharray: 3.4 3.4; }
+.dot-pointer[data-state='loading'] svg { animation: dot-turn 1100ms linear infinite; }
+@keyframes dot-turn { to { transform: rotate(360deg); } }
+@media (min-width:601px) and (hover:hover) and (pointer:fine) {
+html[data-dot-ready], html[data-dot-ready] * { cursor: none !important; }
+}
+@media (prefers-reduced-motion:reduce) { .dot-pointer[data-state='loading'] svg { animation: none; } }
+
