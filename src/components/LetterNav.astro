@@ -1,11 +1,7 @@
 ---
 import { worlds } from '../content/worlds';
-import IdentityKeywords from './IdentityKeywords.astro';
-import PlaceArtifact from './PlaceArtifact.astro';
-import FolderArtifact from './FolderArtifact.astro';
-import SocialArtifact from './SocialArtifact.astro';
-import PhotoArtifact from './PhotoArtifact.astro';
-import ArchiveArtifact from './ArchiveArtifact.astro';
+import CreatorIdentity from './worlds/CreatorIdentity.astro';
+import JourneyMap from './worlds/JourneyMap.astro';
 ---
 <div class="letters" role="group" aria-label="THISHI" data-letters>
 {worlds.map((world, index) => (
@@ -14,15 +10,12 @@ import ArchiveArtifact from './ArchiveArtifact.astro';
 <div class="letter-detail" id={`copy-${world.id}`} aria-hidden="true">
 <span class="letter-rule" aria-hidden="true"></span><div class="letter-copy-content"><span class="detail-title metadata" data-detail-title>{world.en}</span>
 <p data-detail-note>{world.note}</p>
-{world.id === 'about' && <IdentityKeywords />}
-{world.id === 'work' && <PlaceArtifact />}
-{world.id === 'games' && <FolderArtifact />}
-{world.id === 'social' && <SocialArtifact />}
-{world.id === 'life' && <PhotoArtifact />}
-{world.id === 'ideas' && <ArchiveArtifact />}
+{world.id === 'about' && <CreatorIdentity />}
+{world.id === 'work' && <JourneyMap />}
 </div>
 </div>
 </div>
 ))}
 </div>
+
 

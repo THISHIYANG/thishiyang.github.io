@@ -1,0 +1,30 @@
+---
+import { journey } from '../../content/journey';
+// Original schematic studies, inspired by terrain and waterways. Not exact cartography.
+const contours = {
+  fuping: ['M12 35 8 23 18 19 15 12 28 9 35 3 45 9 58 5 66 16 62 27 70 34 56 40 36 37 24 43Z', 'M15 18 26 16 31 10M23 24 34 17 43 19 51 12 61 14M19 30 33 26 44 29 53 21 64 24M29 34 40 33 49 37'],
+  suzhou: ['M12 8C24 2 36 10 31 19S37 33 24 42L9 40 4 30 8 21Z', 'M42 0 40 14 50 20 45 32 55 46M60 0 55 12 67 22 58 34 69 43M32 12 76 12M34 27 73 30M43 5 70 39'],
+  london: ['M0 26C14 14 18 35 29 29S34 14 44 21 49 37 59 29 67 19 80 26', 'M13 8 64 39M24 2 49 46M3 13 73 36M5 38 66 8M39 2 35 44M15 13 30 6 55 10 69 22 62 38 39 43 17 35Z'],
+  paris: ['M0 9C18 10 10 27 25 23S41 13 46 25 60 31 80 45', 'M10 6 69 37M5 33 68 7M25 1 44 46M52 1 26 46M14 15 29 5 52 9 68 26 52 42 27 39 11 26Z'],
+  shanghai: ['M46 0C39 12 57 13 50 23S28 24 36 34 44 39 37 46', 'M4 8 38 8M9 18 39 18M6 30 28 30M13 40 30 40M17 1 17 46M28 2 28 22M60 0 65 46M55 10 80 10M55 34 80 34M0 43 30 13'],
+};
+const positions = [{x:0,y:0},{x:97,y:18},{x:194,y:0},{x:145,y:106},{x:48,y:118}];
+const paths = ['M10 9 107 27','M107 27 204 9','M204 9 238 81 155 115','M155 115 58 127'];
+---
+<div class="journey-map desktop-object" aria-label="Personal journey" data-journey>
+<svg class="journey-route" viewBox="0 0 280 202" aria-hidden="true">{paths.map((d,index) => <path d={d} pathLength="1" style={`--delay:${60 + index * 120}ms`} />)}</svg>
+<ol class="journey-stations">
+{journey.map((place,index) => <li class="journey-station" style={`--x:${positions[index].x}px;--y:${positions[index].y}px;--delay:${index * 120}ms`}>
+<button type="button" class="journey-node" aria-label={[place.city, place.school, place.degree ?? place.role].filter(Boolean).join(', ')}>
+<span class="station-heading"><svg class="journey-pin" viewBox="0 0 20 22" aria-hidden="true"><path d="M10 21C8 17 2 13 2 9a8 8 0 0 1 16 0c0 4-6 8-8 12Z"/><circle cx="10" cy="9" r="2.5"/></svg><span>{place.city}</span></span>
+<span class="station-role">{place.school ?? place.role}</span>
+<span class="station-degree">{place.degree ?? (place.school ? place.role : '\u00a0')}</span>
+<svg class="contour-frame" viewBox="0 0 80 46" role="img" aria-label={`${place.city} schematic contour`}>
+<path class="contour-secondary" d={contours[place.mapType][1]} /><path class="contour-primary" d={contours[place.mapType][0]} /><circle cx={place.id === 'shanghai' ? 29 : 42} cy={place.id === 'shanghai' ? 34 : 25} r="1.7" />
+</svg>
+</button>
+</li>)}
+</ol>
+</div>
+
+

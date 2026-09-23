@@ -1,67 +1,37 @@
-# THISHI — Desktop Interaction System V1
+# THISHI — Independent Creator
 
-Astro + TypeScript, static output. Development branch: `rebuild/thishi-v3`. The approved pure-white hero remains the default view; this increment adds desktop objects, scene-entry prototypes, and one global DOT pointer.
+Astro + TypeScript source project on `rebuild/thishi-v3`. The current review is **Commit 01: T identity + H1 journey**, desktop only. Main and production are unchanged.
 
 ## Run locally
 
-Use Node.js 22.12+ and pnpm 11.
-
 ```sh
-pnpm install --frozen-lockfile
-pnpm dev
+pnpm install
+pnpm dev --host 127.0.0.1
+pnpm check
+pnpm build
+pnpm preview --host 127.0.0.1
 ```
 
-Open http://localhost:4321. `pnpm build` runs Astro/TypeScript checks and generates `dist/`. `pnpm preview` serves the build.
+Open http://127.0.0.1:4321/. The preview command serves the last production build.
 
-## Six interactions
+## Current review scope
 
-| Letter | Object | Destination |
-| --- | --- | --- |
-| T | Silver-filled, black-outline identity keywords | /about |
-| H₁ | Fuping / Shaanxi ↔ Shanghai markers and line | /place |
-| I₁ | Flat silver folder with three paper sheets | /work |
-| S | Five loose social notes | /social |
-| H₂ | Three monochrome placeholder photo frames | /life |
-| I₂ | Three tabbed catalogue cards | /archive |
+The homepage retains its existing wordmark, header, white background, caption alignment and mobile fallback. Only T and H1 mount interactive artifacts. Previous scene, other artifact and DOT pointer files are retained as dormant scaffolding; the homepage does not mount or initialize them. No further scene content or mobile interaction is part of this review.
 
-All destinations are empty SceneShell prototypes with shared typography, metadata, header and letter navigation. No project content, personal photos, coordinates or external social accounts have been invented. Social cards currently open the Social shell; connect their real external destinations in a later content pass.
+- `src/components/worlds/CreatorIdentity.astro` tokenizes the current `worlds.ts` copy, preserving its line breaks. Each identity has a button and its own 44 × 56 numbered empty portrait proof. The frames are positioned in a shared gutter, do not reflow the text, and only one is active at a time.
+- `src/content/journey.ts` contains the ordered route and editable city, role, school, degree and mapType fields.
+- `src/components/worlds/JourneyMap.astro` renders five semantic location buttons, a folded SVG route and five original schematic geographic studies. Its map paths are hand-authored SVG, not traced or embedded screenshots and not exact cartography.
+- `src/components/LetterNav.astro` owns the six letters and mounts the two components.
+- `src/scripts/home.ts` handles world ownership, keyboard focus, portrait ownership, language and display controls.
+- `src/styles/worlds.css` contains desktop-only presentation and choreography. `global.css` and hero geometry are unchanged.
+- `src/pages/index.astro` mounts the current homepage without the previous transition or pointer system.
 
-## Source map
+## Interaction and accessibility
 
-- `src/components/Experience.astro`: persistent header, homepage, scene shell and transition layer.
-- `src/components/LetterNav.astro`: each glyph owns its annotation and object.
-- `IdentityKeywords`, `PlaceArtifact`, `FolderArtifact`, `SocialArtifact`, `PhotoArtifact`, `ArchiveArtifact`: separate object implementations.
-- `SceneShell.astro`: minimal shared destination view.
-- `DotPointer.astro`: single SVG cursor overlay, hidden from accessibility APIs.
-- `src/content/worlds.ts`: existing statements and stable letter IDs.
-- `src/content/scenes.ts`: route/letter/object mapping. Internal IDs `work`, `games`, `ideas` retain their original identities; their routes are explicitly mapped to `/place`, `/work`, `/archive`.
-- `src/scripts/home.ts`: hover/focus/tap state, shared glyph-to-object region, language, appearance and optical caption anchoring.
-- `src/scripts/transitions.ts`: navigation lifecycle, scene state, history, focus and Web Animations choreography.
-- `src/scripts/pointer.ts`: global idle/active/loading pointer state and fallback handling.
-- `src/styles/global.css`: approved base composition and unchanged mobile styles.
-- `src/styles/worlds.css`, `scenes.css`, `pointer.css`: new desktop layer.
-- `src/pages/[scene].astro`: statically generates all six direct-entry routes; no server adapter or React runtime.
+Letter, vertical rule, caption and artifact form a continuous pointer region. Portraits remain active while crossing their adjacent gap. Keyboard focus reveals the same content; hidden world panels are inert. Identity buttons support Enter/Space as well as hover and focus. Journey buttons expose complete city and education labels to assistive technology.
 
-## State and motion
+Journey nodes appear at 0/120/240/360/480ms; connecting strokes start at 60/180/300/420ms. Contours follow their node by 40ms. Reduced motion removes route choreography and portrait translation while preserving opacity state changes. The existing mobile fallback is retained; both new desktop components are hidden there.
 
-The active world comes from keyboard focus, pointer ownership, or selection. Its interaction region includes glyph, the gap to the annotation, copy and object; it remains active as the pointer travels downward. Hidden panels are inert so Tab cannot enter invisible objects. Desktop glyph clicks and object links enter scenes; the existing mobile tap behavior is retained and all new objects are hidden on narrow screens.
+## Review boundary
 
-Reveals: letter immediately, rule at 40ms, copy at 80ms, object at 140ms. Object movement uses 160–320ms transitions with `cubic-bezier(.22,.61,.36,1)`; location markers finish at about 400ms. Cards rotate no more than 3 degrees.
-
-Scene entry freezes the world and rejects duplicate navigation, fades inactive letters/copy, performs the object's signature gesture, and expands its letter, seam, sheet, note, photo or index surface. Total durations are 580ms (T), 600ms (place), and 620ms (the other four). The archive border becomes the shell frame. Navigation updates the address and page title, focuses the destination heading, and restores normal cursor state. Browser back/forward work; Escape cancels an in-flight transition. Empty shells are already available in the document so no artificial loading or network dependency is introduced. Direct URLs also work as static pages.
-
-## DOT pointer
-
-One 18px SVG overlay: outlined idle ring, filled interactive dot, or dashed transition ring. Fill changes over 140ms; loading rotation takes 1100ms. Very short interpolation (0.82 per frame) settles quickly, with no trailing copies or perpetual idle animation loop. Native cursor is hidden only after a valid overlay frame renders. Touch/coarse pointers, inactive windows and editable controls retain native cursor behavior. Pointer events pass through the overlay and text selection is preserved. The pointer uses the existing foreground color for contrast in FIELD mode.
-
-## Accessibility and fallback
-
-Semantic buttons/links support Tab, Enter and Space. Focus activates the same world as hover. Hidden annotations are inert, headings receive focus after navigation, and current scene links use aria-current. Reduced motion removes object choreography, translation, scale and cursor smoothing/spin; routes change immediately. Native pointer remains available if the custom overlay is unsupported or cannot render. The static scene routes remain navigable without client-side transition support.
-
-## Verification
-
-Astro check: zero errors, warnings or hints. Production build: seven static pages. Browser verification covered all six object entries and all six letter entries, cursor idle/active/loading/restoration, Tab-to-folder and Space entry, Escape cancellation, back/forward and scene-to-scene navigation, Chinese and FIELD controls, direct scene loads with JavaScript disabled, reduced-motion entry, native cursor over form controls, and unchanged narrow-screen tap behavior. Default, object, scene and intermediate-transition screenshots were reviewed. Desktop widths 1024, 1280, 1440 and 1536 were checked for overflow; narrow-screen regression used 390px.
-
-## Deployment boundary
-
-No merge to main, no deployment workflow, and no Pages setting changes. Old generated assets remain preserved in main/history. Fontsource OFL licenses remain in `public/fonts`; no proprietary font binaries are committed. This is an interaction prototype, not the completed site. Stop for visual review before building scene content or mobile interactions.
+Validate at 1440 × 900 and 1536 × 960. Run `pnpm check` and `pnpm build` before committing. Do not merge to main or deploy. Stop for visual approval before implementing I1, S, H2 or I2.

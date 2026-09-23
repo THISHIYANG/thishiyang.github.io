@@ -1,0 +1,17 @@
+---
+import { worlds } from '../../content/worlds';
+const creator = worlds.find(world => world.id === 'about')!;
+const identities = ['Illustrator', 'Game Designer', 'Educator', '插画师', '游戏设计师', '教育者'];
+const tokens = (copy: string) => copy.split(/(Illustrator|Game Designer|Educator|插画师|游戏设计师|教育者)/g);
+---
+<div class="creator-identity desktop-object" data-creator>
+{(['en', 'zh'] as const).map(language => (
+<p data-lang={language} hidden={language !== 'en'}>{tokens(language === 'en' ? creator.note : creator.noteZh).map(token => {
+  const index = identities.indexOf(token);
+  const number = index % 3;
+  return index < 0 ? token : <span class="identity-unit" style={`--row:${number}`} data-identity-unit><button type="button" class="identity-keyword" data-identity data-width-text={token} aria-controls={`portrait-${language}-${number}`} aria-expanded="false"><span>{token}</span></button><span class="portrait-proof" id={`portrait-${language}-${number}`} role="img" aria-label={`${token} — portrait placeholder ${number + 1}`} aria-hidden="true"><span>0{number + 1}</span></span></span>;
+})}</p>
+))}
+</div>
+
+
