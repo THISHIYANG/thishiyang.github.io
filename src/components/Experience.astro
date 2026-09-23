@@ -2,8 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from './SiteHeader.astro';
 import LetterHero from './LetterHero.astro';
-import SceneShell from './SceneShell.astro';
-import DotPointer from './DotPointer.astro';
+import SceneShell from './scene/SceneShell.astro';
+import DotCursor from './cursor/DotCursor.astro';
+import SceneTransition from './transition/SceneTransition.astro';
 import type { Scene } from '../content/scenes';
 interface Props { scene?: Scene }
 const { scene } = Astro.props;
@@ -15,10 +16,10 @@ const { scene } = Astro.props;
 <div data-home hidden={!!scene}><LetterHero /></div>
 <SceneShell scene={scene} />
 </main>
-<span class="scroll-cue metadata" data-scroll-cue hidden={!!scene}>SCROLL ↓</span>
 </div>
-<div class="transition-layer" data-transition-layer aria-hidden="true"></div>
-<DotPointer />
-<script>import '../scripts/home';</script>
+<SceneTransition />
+<DotCursor />
+<script>import '../scripts/home'; import { setupPointer } from '../scripts/dot-cursor'; import { setupScenes } from '../scripts/scene-transition'; setupPointer(); setupScenes();</script>
 </BaseLayout>
+
 

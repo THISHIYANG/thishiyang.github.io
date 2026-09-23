@@ -5,7 +5,7 @@ if (!dot || !window.requestAnimationFrame) return;
 const supported = matchMedia('(min-width:601px) and (hover:hover) and (pointer:fine)');
 const reduced = matchMedia('(prefers-reduced-motion:reduce)');
 let targetX=0, targetY=0, x=0, y=0, frame=0, visible=false, failed=false;
-const interactive = 'a[href],button:not(:disabled),[role="button"],[data-cursor="active"]';
+const interactive = 'a[href],button:not(:disabled),[role="button"],[data-cursor="interactive"],.portrait-proof,[data-portfolio],[data-social-carousel],[data-life-album]';
 const native = 'input,textarea,select,[contenteditable]:not([contenteditable="false"]),[data-native-cursor]';
 function hide() {
 visible=false; cancelAnimationFrame(frame); frame=0;
@@ -13,7 +13,7 @@ dot!.hidden=true; document.documentElement.removeAttribute('data-dot-ready');
 }
 function state() {
 dot!.dataset.state = document.documentElement.hasAttribute('data-transition') ? 'loading'
-: document.elementFromPoint(targetX,targetY)?.closest(interactive) ? 'active' : 'idle';
+: document.elementFromPoint(targetX,targetY)?.closest(interactive) ? 'interactive' : 'idle';
 }
 function draw() {
 frame=0; if (!visible) return;
@@ -41,3 +41,4 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)hide();});
 document.addEventListener('thishi:transition-state',state);
 supported.addEventListener('change',hide);
 }
+

@@ -1,6 +1,6 @@
 export const scenes = [
   { id: 'about', path: '/about', letter: 'T', title: 'ABOUT', zh: '关于', number: '01', kind: 'type' },
-  { id: 'work', path: '/place', letter: 'H', title: 'PLACE', zh: '此地', number: '02', kind: 'place' },
+  { id: 'work', path: '/journey', letter: 'H', title: 'JOURNEY', zh: '旅程', number: '02', kind: 'place' },
   { id: 'games', path: '/work', letter: 'I', title: 'WORK', zh: '作品', number: '03', kind: 'folder' },
   { id: 'social', path: '/social', letter: 'S', title: 'SOCIAL', zh: '社交', number: '04', kind: 'social' },
   { id: 'life', path: '/life', letter: 'H', title: 'LIFE', zh: '生活', number: '05', kind: 'photo' },
@@ -10,3 +10,4 @@ export type Scene = typeof scenes[number];
 export function sceneAt(path: string) {
   return scenes.find(scene => scene.path === path.replace(/\/$/, ''));
 }
+

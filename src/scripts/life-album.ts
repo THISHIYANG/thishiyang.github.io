@@ -53,6 +53,7 @@ if (album) {
     if(queued){const step=Math.sign(queued);queued-=step;advance(step,queuedFocus);}
   }
   function advance(step:number, focus=false) {
+    if (document.documentElement.hasAttribute('data-transition')) return;
     if(moving){queuedFocus=focus;queued=Math.max(-7,Math.min(7,queued+step));return;}
     current+=step;moving=true;paint();
     if(focus) cards.find(card=>indices.get(card)===current)?.focus({preventScroll:true});
@@ -80,4 +81,5 @@ if (album) {
   new MutationObserver(()=>{if(!album.closest('[data-letter-world]')!.hasAttribute('data-active'))queued=0;}).observe(album.closest('[data-letter-world]')!,{attributes:true,attributeFilter:['data-active']});
   paint();
 }
+
 

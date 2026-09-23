@@ -8,9 +8,10 @@ let selected: string | null = null;
 let hovered: string | null = null;
 let focused: string | null = null;
 let shown: string | null | undefined;
-function render() {
+function render(force = false) {
+  if (document.documentElement.hasAttribute('data-transition') && !force) return;
   const active = focused ?? hovered ?? selected;
-  if (active === shown) return;
+  if (active === shown && !force) return;
   shown = active;
   hero.toggleAttribute('data-active', !!active);
   letters.toggleAttribute('data-active', !!active);
@@ -39,7 +40,7 @@ buttons.forEach(button => {
 // The caption and artifact belong to their letter. The union bridges the small
 // gap below the glyph without leaving a timer that could select a stale world.
 document.addEventListener('pointermove', event => {
-  if (event.pointerType !== 'mouse') return;
+  if (event.pointerType !== 'mouse' || document.documentElement.hasAttribute('data-transition') || document.querySelector<HTMLElement>('[data-home]')?.hidden) return;
   focused = null;
   let nearest: HTMLButtonElement | undefined;
   let distance = 86;
@@ -119,6 +120,7 @@ document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button =
     document.querySelectorAll<HTMLElement>('[data-lang]').forEach(item => { item.hidden = item.dataset.lang !== language; });
     clearIdentity();
     document.querySelector('[data-tap-hint]')!.textContent = language === 'en' ? 'TAP A LETTER' : '轻触一个字母';
+    document.dispatchEvent(new Event('thishi:language'));
   });
 });
 document.querySelectorAll<HTMLButtonElement>('[data-mode]').forEach(button => {
@@ -150,3 +152,14 @@ reduced.addEventListener('change',measureCaptionAnchors);
 render();
 
 
+
+document.addEventListener('thishi:freeze', event => {
+  const identity = activeIdentity;
+  selected = (event as CustomEvent<{id?:string}>).detail.id ?? null;
+  focused = hovered = null; render(true);
+  if (identity && selected === 'about') setIdentity(identity);
+});
+document.addEventListener('thishi:scene-ready', () => {
+  selected = hovered = focused = null; resetMovement(); render(true);
+  requestAnimationFrame(measureCaptionAnchors);
+});

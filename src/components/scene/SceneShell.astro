@@ -1,5 +1,5 @@
 ---
-import { scenes, type Scene } from '../content/scenes';
+import { scenes, type Scene } from '../../content/scenes';
 interface Props { scene?: Scene }
 const { scene } = Astro.props;
 ---
@@ -12,5 +12,7 @@ const { scene } = Astro.props;
 <h1 id="scene-title" tabindex="-1" aria-label={scene?.title}><span data-scene-glyph>{scene?.letter}</span></h1>
 <span class="metadata" data-scene-title>{scene?.title}</span>
 </div>
+<a class="scene-return metadata" href="/" data-scene="home">← THISHI</a>
 </section>
+
 

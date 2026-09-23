@@ -1,13 +1,4 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import SiteHeader from '../components/SiteHeader.astro';
-import LetterHero from '../components/LetterHero.astro';
+import Experience from '../components/Experience.astro';
 ---
-<BaseLayout>
-<div class="landing" data-experience data-scene="home">
-<SiteHeader />
-<main id="main" tabindex="-1"><div data-home><LetterHero /></div></main>
-<span class="scroll-cue metadata">SCROLL ↓</span>
-</div>
-<script>import '../scripts/home';</script>
-</BaseLayout>
+<Experience />

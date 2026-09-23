@@ -55,7 +55,7 @@
   .identity .metadata { font-size:11px; }
   .control-group { font-size:12px; }
   .detail-title { font-size:14px; line-height:1.4; }
-  .scroll-cue { font-size:13px; }
+  
   .tagline { font-size:24px; }
   .letter-detail p { font-size:clamp(28px,1.55vw,30px); line-height:1.28; margin-top:20px; }
   .hero-letter:has([data-world='about']) { --copy-width:380px; }
@@ -132,3 +132,4 @@
 @media (min-width:601px) { .life-space { overflow:clip; } }
 /* Invisible perspective buffers must not enlarge the page's scrollable width. */
 @media (min-width:601px) { .landing { overflow-x:clip; } }
+

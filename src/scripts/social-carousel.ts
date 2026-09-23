@@ -8,6 +8,7 @@ if (carousel) {
   let lastWheelEvent = 0;
   let hoverTimer: ReturnType<typeof setTimeout> | undefined;
   function select(index: number, focus = false) {
+    if (document.documentElement.hasAttribute('data-transition')) return;
     active = (index + cards.length) % cards.length;
     cards.forEach((card,i) => {
       let offset = (i - active + cards.length) % cards.length;
@@ -55,5 +56,6 @@ if (carousel) {
   reduced.addEventListener('change',()=>select(active));
   select(0);
 }
+
 
 

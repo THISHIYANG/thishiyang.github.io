@@ -4,6 +4,7 @@ if (folder) {
   let progress = 0;
   let pointerY: number | null = null;
   function update(value: number) {
+    if (document.documentElement.hasAttribute('data-transition')) return;
     progress = Math.max(0, Math.min(1, value));
     folder!.dataset.progress = progress.toFixed(3);
     sheets.forEach((sheet, i) => {
@@ -38,3 +39,4 @@ if (folder) {
   new MutationObserver(() => { if (!owner.hasAttribute('data-active')) { update(0); pointerY = null; } }).observe(owner,{attributes:true,attributeFilter:['data-active']});
   update(0);
 }
+

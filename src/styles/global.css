@@ -37,7 +37,7 @@ button:focus-visible,a:focus-visible{outline:1px solid var(--ink);outline-offset
 .hero[data-active] .tagline{opacity:0;visibility:hidden}
 .hero-letter[data-active] .letter-detail{opacity:1;visibility:visible;transform:translateY(0);transition-delay:0s}
 .tap-hint{display:none}
-.scroll-cue{position:absolute;right:48px;bottom:32px;color:var(--muted);font-size:9px}
+
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .skip-link{position:fixed;top:10px;left:10px;transform:translateY(-200%);z-index:5;background:var(--paper);padding:12px}
 .skip-link:focus{transform:none}
@@ -55,12 +55,13 @@ button:focus-visible,a:focus-visible{outline:1px solid var(--ink);outline-offset
 .hero[data-active] .tap-hint{visibility:hidden}
 .hero-letter{position:static;justify-content:center}.letter-detail{top:calc(100% + 24px);left:clamp(0px,calc((var(--column) + .5)*92px - 130px),16px);transform:none;width:260px}
 .letter-detail p{font-size:20px;margin-top:26px;overflow-wrap:anywhere}
-.scroll-cue{right:24px;bottom:28px}
+
 }
 @media(max-height:550px){.hero{min-height:600px}.hero-anchor{top:260px}}
 @media(prefers-reduced-motion:reduce){
 .letter-glyph,.letter[data-active] .letter-glyph{transform:none;transition:color 180ms ease}.letter-detail,.hero-letter[data-active] .letter-detail{transform:none;transition:opacity 160ms ease,visibility 0s linear 160ms}
 }
+
 
 
 

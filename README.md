@@ -1,8 +1,8 @@
 # THISHI — Independent Creator
 
-Astro + TypeScript source project on `rebuild/thishi-v3`. The current review is **Commit 03: life album + research archive cabinet**, desktop only. Main and production are unchanged.
+Astro + TypeScript source project on `rebuild/thishi-v3`. Current review: **Commit 04 — final desktop hero, DOT cursor and signature transitions**. Main and production remain unchanged.
 
-## Run locally
+## Local development
 
 ```sh
 pnpm install
@@ -12,60 +12,41 @@ pnpm build
 pnpm preview --host 127.0.0.1
 ```
 
-Open http://127.0.0.1:4321/. The preview command serves the last production build.
+Open http://127.0.0.1:4321/. Preview serves the last production build. In the bundled local pnpm environment, `--config.verify-deps-before-run=false` avoids an unnecessary dependency reinstall when running checks against the existing installed lockfile.
 
-## Current review scope
+## Six approved worlds
 
-The homepage retains its existing wordmark, header, white background, caption alignment and mobile fallback. All six letters now mount their own interactive artifacts. Previous scene, remaining artifact and DOT pointer files are retained as dormant scaffolding; the homepage does not mount or initialize them. No further scene content or mobile interaction is part of this review.
+`src/components/worlds/` contains CreatorIdentity, JourneyMap, PortfolioFolder, SocialCarousel, LifeAlbum and ArchiveCabinet. `LetterNav.astro` owns each letter, rule, caption and artifact as one continuous interaction region. Hidden panels are inert. `worlds.css` preserves the desktop typography and approved artifact geometry; the final pass standardizes reveal easing and motion tokens in `scenes.css`.
 
-- `src/components/worlds/CreatorIdentity.astro` tokenizes the current `worlds.ts` copy, preserving its line breaks. Each identity has a button and its own 44 × 56 numbered empty portrait proof. The frames are positioned in a shared gutter, do not reflow the text, and only one is active at a time.
-- `src/content/journey.ts` contains the ordered route and editable city, role, school, degree and mapType fields.
-- `src/components/worlds/JourneyMap.astro` renders five semantic location buttons, a folded SVG route and five original schematic geographic studies. Its map paths are hand-authored SVG, not traced or embedded screenshots and not exact cartography.
-- `src/components/LetterNav.astro` owns the six letters and mounts the two components.
-- `src/scripts/home.ts` handles world ownership, keyboard focus, portrait ownership, language and display controls.
-- `src/styles/worlds.css` contains desktop-only presentation and choreography. `global.css` and hero geometry are unchanged.
-- `src/pages/index.astro` mounts the current homepage without the previous transition or pointer system.
+Content remains separate in `src/content/worlds.ts`, `journey.ts`, `portfolio.ts`, `socials.ts`, `life.ts` and `archive.ts`. All project/social/photo images and destination links are placeholders. Journey contours are original schematic SVGs. The life album uses modular indexing with hidden recycling buffers; the archive has independent rows and a bounded internal scroll region. No real content was added.
 
-## Interaction and accessibility
+## DOT cursor
 
-Letter, vertical rule, caption and artifact form a continuous pointer region. Portraits remain active while crossing their adjacent gap. Keyboard focus reveals the same content; hidden world panels are inert. Identity buttons support Enter/Space as well as hover and focus. Journey buttons expose complete city and education labels to assistive technology.
+`src/components/cursor/DotCursor.astro` is one aria-hidden SVG overlay, controlled by `src/scripts/dot-cursor.ts` and `styles/pointer.css`. States are idle (hollow), interactive (filled) and loading (rotating dashed ring). A short 0.82 interpolation runs only until the pointer settles; no duplicate circles or perpetual idle animation loop. Scene transitions share one root state. Native cursor is hidden only after a valid overlay is rendered. Touch/coarse pointers, editable controls, inactive windows and unsupported environments retain the native cursor. Reduced motion removes smoothing and loading rotation.
 
-Journey nodes appear at 0/120/240/360/480ms; connecting strokes start at 60/180/300/420ms. Contours follow their node by 40ms. Reduced motion removes route choreography and portrait translation while preserving opacity state changes. The existing mobile fallback is retained; both new desktop components are hidden there.
+## Scene transitions
 
-## Review boundary
+`src/components/Experience.astro` mounts the shared hero, `scene/SceneShell.astro`, cursor and `transition/SceneTransition.astro`. `scripts/scene-transition.ts` handles locking, capture-phase click ownership, overlay animations, history, cancellation and cleanup. Originals retain their geometry; selected surfaces are cloned into a fixed layer and temporarily hidden during handoff. SVG borders remain hairlines independently of the expanding surface.
 
-Validate at 1440 × 900 and 1536 × 960. Run `pnpm check` and `pnpm build` before committing. Do not merge to main or deploy. Stop for visual approval before implementing I1, S, H2 or I2.
+| World | Route | Signature | Duration |
+| --- | --- | --- | --- |
+| T | `/about` | Active identity styling and portrait gesture; typographic T moves into the destination composition | 580ms |
+| H1 | `/journey` | Journey extends into a horizontal seam that reveals the scene | 600ms |
+| I1 | `/work` | Folder releases its sheet, which expands into the page surface | 620ms |
+| S | `/social` | Active front-facing card expands as adjacent cards recede | 620ms |
+| H2 | `/life` | Album locks; active photo expands while surrounding photos recede | 620ms |
+| I2 | `/archive` | Selected drawer pulls farther out and its outline becomes the page frame | 620ms |
 
-## Commit 02 — readability, portfolio and social
+All six routes are statically generated by `src/pages/[scene].astro` from `content/scenes.ts`; they support direct entry without JavaScript. Each minimal shell contains the shared header, six-letter navigation, scene number/glyph/title and a return control. There is no destination-page content.
 
-The current review adds desktop supporting typography at 28–30px for body copy, 14px for section labels, 12px for city names, 11px for school names and 9px for degree text. Header typography increases modestly. Hero glyph geometry and mobile styles are unchanged; T/H1 keep their existing interaction model.
+Click/Enter/Space on a letter or eligible artifact enters a scene. Social side cards and non-active album photos select first; only active cards enter. Wheel input never initiates navigation. Repeated input is locked during transitions; Escape cancels and restores focus, while browser back/forward restores the correct route. Returning home uses a short fade. The previous bottom-right cue and all its source styles/references were removed.
 
-New files:
-- `src/components/worlds/PortfolioFolder.astro`
-- `src/components/worlds/SocialCarousel.astro`
-- `src/content/portfolio.ts`
-- `src/content/socials.ts`
-- `src/scripts/portfolio-folder.ts`
-- `src/scripts/social-carousel.ts`
+## Accessibility and motion
 
-`LetterNav.astro` mounts the new components and `worlds.css` supplies their desktop styles. The unused old `SocialArtifact.astro` stack, including TikTok, has been removed.
+Semantic controls, accessible route titles, current-page navigation, inert hidden panels and destination heading focus are retained. Cursor overlays are non-interactive and ignored by assistive technology. Reduced motion bypasses signature choreography with an 80ms opacity handoff. Desktop navigation capture leaves the existing narrow-screen tap fallback intact; mobile redesign is outside this review.
 
-Portfolio uses bounded extraction progress, five staggered CSS transforms and numbered semantic buttons. Wheel up extracts, wheel down returns; vertical pointer movement also adjusts extraction. Only wheel input that changes extraction is consumed, only within the artifact. Arrow up/down and Home/End provide keyboard control; focusing a sheet exposes the full stack. Future images and destinations live in `portfolio.ts`, separate from animation logic.
+## Verification and boundary
 
-Social uses eight data-driven cards and a CSS perspective orbit, without WebGL or animation dependencies. Five cards are visible at a time, with independently reachable transformed hit areas. Moving onto a side card selects it after a brief dwell; wheel down/right advances, up/left reverses. Selection wraps in both directions. Roving keyboard focus uses left/right arrows, with Enter invoking a destination once its currently-null href is supplied. Status is announced through a polite live region. Each card has a dedicated `.social-card-media` container for future images.
+`pnpm check` and `pnpm build` pass. Browser verification at 1440×900, 1536×960 and 1920×1080 covers six letter routes, three cursor states and position, unchanged hero bounds, return/back/Escape, wheel isolation, no horizontal overflow or overlay residue, and reduced-motion keyboard entry. Additional checks cover six keyboard artifact entries, scene language switching, side-card selection, native input cursor fallback, coarse-pointer cursor fallback, direct-entry return and six no-JavaScript routes. Intermediate transition screenshots were inspected to remove duplicate source visuals and scaled text/border artifacts.
 
-Reduced motion disables extraction transitions and replaces animated perspective with immediate planar selection. Tests cover 1440×900, 1536×960 and 1920×1080: reverse extraction, five keyboard-accessible sheets, all visible carousel hit areas, wraparound, wheel ownership, stable hero bounds and reduced motion. `pnpm check` and `pnpm build` pass. H2/I2, DOT, scene transitions, real images, mobile redesign and production remain outside this commit. Stop for visual review.
-
-
-## Commit 03 — life album and research cabinet
-
-New components: `LifeAlbum.astro` and `ArchiveCabinet.astro` under `src/components/worlds/`. Each has a small matching TypeScript controller under `src/scripts/`. `LetterNav.astro` only imports and mounts them; desktop presentation is in `worlds.css`. No changes to the four approved interaction controllers or their data.
-
-`src/content/life.ts` supplies seven records with `id`, `image`, `alt`, `date`, and `place`. Add image paths and descriptive alternative text there without changing animation code. Nine reusable display slots represent seven visible photos and two invisible edge buffers. An unbounded logical index maps into the seven records with modulo arithmetic. Only an invisible edge slot is recycled, so visible cards travel continuously through the 007/001 boundary. Wheel down advances and wheel up reverses; input is consumed only inside the album. Up/down keys and direct photo buttons also select photos. The active photo participates in the tab order and a polite live region announces selection.
-
-`src/content/archive.ts` supplies eight generic entries with `id`, `type`, `title`, `year`, and nullable `href`. Each renders one independent, keyboard-focusable 30px drawer. Hover/focus slides the front 20px to expose a silver body; its category gives way to the title inside that same row. Enter uses the href once provided. The cabinet has a bounded internal scroll region, so additional entries do not grow the hero or move the page. The prototype does not invent real publications.
-
-Reduced motion replaces the album's depth with immediate planar selection and disables drawer translation while retaining title reveal. Both artifacts retain the shared letter/caption interaction ownership. Invisible perspective buffers are prevented from increasing desktop page width. No mobile styles, scene transitions, custom cursor, real images or article pages are added.
-
-Validation: 1440×900, 1536×960, 1920×1080; six-world screenshots and stable hero bounds, twenty bidirectional album wheel steps through wraparound, visible-photo hit areas, keyboard selection, eight independent drawers, synthetic 88-row internal scrolling, no page scrolling or horizontal overflow, and reduced-motion behavior. Run `pnpm check` and `pnpm build`, then `pnpm preview --host 127.0.0.1`. Stop for visual review.
-
+No new animation library, WebGL, Three.js or framework runtime is used. Motion primarily uses transforms and opacity; the scene seam/surface handoff uses short clip-path animations. No measured 60fps guarantee is implied by functional checks. Stop for visual review before destination design, mobile work, real media, merging main or deployment.
