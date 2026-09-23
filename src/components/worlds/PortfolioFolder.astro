@@ -1,0 +1,11 @@
+---
+import { portfolio } from '../../content/portfolio';
+---
+<div class="portfolio-folder desktop-object" data-portfolio role="group" aria-label="Portfolio. Scroll up to extract sheets; down to return. Arrow up and down also work.">
+<div class="folder-back" aria-hidden="true"></div>
+{portfolio.map((item, index) => <button type="button" class="portfolio-sheet" data-sheet data-href={item.href} aria-label={item.title} style={`--sheet:${index};--deal:0;z-index:${6-index}`}>
+<span class="portfolio-sheet-media">{item.image && <img src={item.image} alt="" />}</span><span class="sheet-index">{item.id}</span>
+</button>)}
+<div class="folder-front" aria-hidden="true"><span>PORTFOLIO</span></div>
+</div>
+<script>import '../../scripts/portfolio-folder';</script>

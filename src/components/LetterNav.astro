@@ -2,6 +2,8 @@
 import { worlds } from '../content/worlds';
 import CreatorIdentity from './worlds/CreatorIdentity.astro';
 import JourneyMap from './worlds/JourneyMap.astro';
+import PortfolioFolder from './worlds/PortfolioFolder.astro';
+import SocialCarousel from './worlds/SocialCarousel.astro';
 ---
 <div class="letters" role="group" aria-label="THISHI" data-letters>
 {worlds.map((world, index) => (
@@ -12,10 +14,13 @@ import JourneyMap from './worlds/JourneyMap.astro';
 <p data-detail-note>{world.note}</p>
 {world.id === 'about' && <CreatorIdentity />}
 {world.id === 'work' && <JourneyMap />}
+{world.id === 'games' && <PortfolioFolder />}
+{world.id === 'social' && <SocialCarousel />}
 </div>
 </div>
 </div>
 ))}
 </div>
+
 
 
