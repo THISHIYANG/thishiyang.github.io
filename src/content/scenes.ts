@@ -11,3 +11,8 @@ export function sceneAt(path: string) {
   return scenes.find(scene => scene.path === path.replace(/\/$/, ''));
 }
 
+
+// A current-world link is also the return-home link. Shared by SSR and client navigation.
+export function letterDestination(target: Scene, current?: Scene) {
+  return target.id === current?.id ? undefined : target;
+}

@@ -1,4 +1,4 @@
-import { scenes, sceneAt, type Scene } from '../content/scenes';
+import { scenes, sceneAt, letterDestination, type Scene } from '../content/scenes';
 
 export function setupScenes() {
   const root=document.documentElement;
@@ -39,10 +39,13 @@ export function setupScenes() {
       shell.querySelector('[data-scene-title]')!.textContent=zh?scene.zh:scene.title;
       heading.setAttribute('aria-label',zh?scene.zh:scene.title);
     }
-    shell.querySelectorAll<HTMLElement>('[data-scene]').forEach(link=>{
+    shell.querySelectorAll<HTMLAnchorElement>('[data-scene]').forEach(link=>{
+      const target=scenes.find(item=>item.id===link.dataset.scene)!;
+      link.href=letterDestination(target,scene)?.path??'/';
+      link.setAttribute('aria-label',target.id===scene?.id ? `${zh?target.zh:target.title} — ${zh?'返回首页':'return home'}` : (zh?target.zh:target.title));
       if(link.dataset.scene===scene?.id)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');
     });
-    document.title=scene?`THISHI — ${zh?scene.zh:scene.title}`:'THISHI — Independent Creator';
+    document.title='this is ishi.';
     document.dispatchEvent(new CustomEvent('thishi:scene-ready',{detail:{scene:scene?.id??'home'}}));
     if(focus)(scene?heading:document.querySelector<HTMLElement>('#main'))?.focus({preventScroll:true});
   }
@@ -87,6 +90,15 @@ export function setupScenes() {
     if(!home.hidden)home.getAnimations({subtree:true}).forEach(a=>{if(a.playState==='running'){a.pause();paused.add(a);}});
     root.dataset.transition=scene?.kind??'return';document.querySelector('#main')?.setAttribute('aria-busy','true');cursor();
     try {
+      if(!scene && !reduced.matches && desktop.matches && typeof Element.prototype.animate === 'function'){
+        // Keep the active navigation letter visible while the scene contracts.
+        await animate(shell.querySelector('.scene-identity')!,[{opacity:1,transform:'scale(1)'},{opacity:0,transform:'scale(.97)'}],240);
+        if(ticket!==generation)return;
+        reveal(undefined);
+        await animate(home,[{opacity:0},{opacity:1}],180);
+        if(ticket!==generation)return;
+        commit(undefined);return;
+      }
       if(!scene||reduced.matches||!desktop.matches||!Element.prototype.animate){
         if(typeof Element.prototype.animate === 'function')await animate(home.hidden?shell:home,[{opacity:1},{opacity:0}],reduced.matches?80:140);
         if(ticket!==generation)return;
@@ -127,7 +139,7 @@ export function setupScenes() {
     if(event.button!==0||event.ctrlKey||event.metaKey||event.altKey||event.shiftKey)return;
     const target=event.target as Element;
     const link=target.closest<HTMLElement>('a[data-scene]');
-    if(link){event.preventDefault();event.stopImmediatePropagation();void navigate(scenes.find(s=>s.id===link.dataset.scene),link);return;}
+    if(link){event.preventDefault();event.stopImmediatePropagation();const targetScene=scenes.find(s=>s.id===link.dataset.scene);void navigate(targetScene?letterDestination(targetScene,current):undefined,link);return;}
     if(!desktop.matches||home.hidden)return;
     const trigger=target.closest<HTMLElement>('[data-world],[data-identity],.journey-node,[data-sheet],[data-social-card],[data-life-photo],[data-archive-drawer],[data-portfolio]');
     if(!trigger)return;
@@ -147,6 +159,7 @@ export function setupScenes() {
   document.addEventListener('thishi:language',()=>reveal(current,false));
   reveal(current,false);
 }
+
 
 
 

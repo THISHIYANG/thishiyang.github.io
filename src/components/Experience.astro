@@ -9,7 +9,7 @@ import type { Scene } from '../content/scenes';
 interface Props { scene?: Scene }
 const { scene } = Astro.props;
 ---
-<BaseLayout title={scene ? `THISHI — ${scene.title}` : undefined}>
+<BaseLayout>
 <div class="landing" data-experience data-scene={scene?.id ?? 'home'}>
 <SiteHeader />
 <main id="main" tabindex="-1">

@@ -3,13 +3,12 @@
 .scene-shell { min-height:100svh; position:relative; background:var(--paper); }
 [data-experience][data-scene='ideas'] .scene-shell::after { content:''; position:absolute; inset:24px; border:1px solid var(--ink); pointer-events:none; }
 .scene-nav { position:absolute; right:48px; top:110px; display:flex; gap:12px; font-size:14px; }
-.scene-nav a { padding:5px; color:var(--muted); }
+.scene-nav a { padding:5px; color:var(--silver); }
 .scene-nav a[aria-current] { color:var(--ink); text-decoration:underline; text-underline-offset:5px; }
 .scene-identity { position:absolute; top:29svh; left:15vw; }
 .scene-identity .metadata { font-size:14px; }
 .scene-identity h1 { font:700 clamp(160px,19vw,290px)/1 Arial,Helvetica,sans-serif; letter-spacing:-.035em; margin:20px 0; outline:none; }
 .scene-identity h1:focus-visible { outline:1px solid var(--ink); outline-offset:12px; }
-.scene-return { position:absolute; bottom:48px; left:48px; font-size:14px; }
 .transition-layer { position:fixed; inset:0; z-index:20; pointer-events:none; overflow:hidden; }
 .transition-surface { position:absolute; box-sizing:border-box; margin:0; pointer-events:none; overflow:hidden; transform-origin:top left; border:0; background:var(--paper); }
 .transition-surface[data-kind='type'] { border:0; background:transparent; overflow:visible; font-family:Arial,Helvetica,sans-serif; font-weight:700; line-height:1; }

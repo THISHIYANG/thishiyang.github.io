@@ -1,18 +1,17 @@
 ---
-import { scenes, type Scene } from '../../content/scenes';
+import { scenes, letterDestination, type Scene } from '../../content/scenes';
 interface Props { scene?: Scene }
 const { scene } = Astro.props;
 ---
 <section class="scene-shell" data-scene-shell hidden={!scene} aria-labelledby="scene-title">
 <nav class="scene-nav metadata" aria-label="Letter worlds">
-{scenes.map(item => <a href={item.path} data-scene={item.id} aria-label={item.title} aria-current={scene?.id === item.id ? 'page' : undefined}>{item.letter}</a>)}
+{scenes.map(item => <a href={letterDestination(item, scene)?.path ?? "/"} data-scene={item.id} aria-label={scene?.id === item.id ? `${item.title} — return home` : item.title} aria-current={scene?.id === item.id ? 'page' : undefined}>{item.letter}</a>)}
 </nav>
 <div class="scene-identity">
 <span class="metadata" data-scene-number>{scene?.number}</span>
 <h1 id="scene-title" tabindex="-1" aria-label={scene?.title}><span data-scene-glyph>{scene?.letter}</span></h1>
 <span class="metadata" data-scene-title>{scene?.title}</span>
 </div>
-<a class="scene-return metadata" href="/" data-scene="home">← THISHI</a>
 </section>
 
 
