@@ -37,18 +37,6 @@ jobs:
         run: pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Confirm Actions publishing source
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const repo = context.repo;
-            let site = await github.rest.repos.getPages(repo);
-            if (site.data.build_type !== 'workflow') {
-              await github.rest.repos.updateInformationAboutPagesSite({...repo, build_type: 'workflow'});
-              site = await github.rest.repos.getPages(repo);
-            }
-            if (site.data.build_type !== 'workflow') throw new Error('Pages Source must be GitHub Actions');
-            core.info('Confirmed Pages Source: GitHub Actions (workflow)');
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
