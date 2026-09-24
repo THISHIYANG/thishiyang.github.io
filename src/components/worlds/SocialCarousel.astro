@@ -1,7 +1,7 @@
 ---
 import { socials } from '../../content/socials';
 ---
-<div class="social-carousel desktop-object" data-social-carousel role="region" aria-roledescription="carousel" aria-label="Social platforms. Use left and right arrow keys or scroll.">
+<div class="social-carousel world-object" data-social-carousel role="region" aria-roledescription="carousel" aria-label="Social platforms. Swipe horizontally, use left and right arrow keys or scroll.">
 <div class="social-orbit">
 {socials.map((item,index) => <button type="button" class="social-card" data-social-card data-href={item.href} aria-label={item.label} aria-pressed={index===0?'true':'false'} tabindex={index===0?0:-1}>
 <span class="social-card-label">{item.label}</span><span class="social-card-media">{item.image && <img src={item.image} alt="" />}</span><span class="social-card-index">{String(index+1).padStart(2,'0')}</span>

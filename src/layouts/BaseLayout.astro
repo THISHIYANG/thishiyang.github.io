@@ -6,6 +6,9 @@ import '../styles/global.css';
 import '../styles/worlds.css';
 import '../styles/scenes.css';
 import '../styles/pointer.css';
+import '../styles/mobile.css';
+import '../styles/surface.css';
+import SurfaceTreatment from '../components/SurfaceTreatment.astro';
 const title = 'this is ishi.';
 ---
 <!doctype html>
@@ -23,6 +26,7 @@ const title = 'this is ishi.';
   <body>
     <a class="skip-link" href="#main">Skip to content / 跳转到正文</a>
     <slot />
+    <SurfaceTreatment />
   </body>
 </html>
 

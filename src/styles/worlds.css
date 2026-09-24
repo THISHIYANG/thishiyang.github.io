@@ -1,6 +1,6 @@
-.desktop-object { display: none; }
-@media (min-width: 601px) {
-  .desktop-object { display: block; }
+.world-object { display: block; }
+@media all {
+  .world-object { display: block; }
   .hero-letter[data-active] { z-index: 3; }
   .hero-letter[data-active] .letter-detail { pointer-events: auto; }
   .hero-letter[data-active] .letter-detail::before { content: ''; position: absolute; bottom: 100%; left: -12px; width: calc(100% + 24px); height: 52px; }
@@ -50,7 +50,7 @@
 
 
 /* Commit 02: desktop readability, preserving the approved hero geometry. */
-@media (min-width:601px) {
+@media all {
   .identity-name { font-size:14px; }
   .identity .metadata { font-size:11px; }
   .control-group { font-size:12px; }
@@ -93,12 +93,12 @@
   .portfolio-sheet,.social-card { transition:none !important; transition-delay:0s !important; }
 }
 
-@media (min-width:601px) {
+@media all {
   .journey-station:nth-child(n+4) { top:calc(var(--y)*1.13); }
   .journey-map { height:232px; }
 }
 /* Commit 03: the two final desktop worlds. Existing worlds are unchanged. */
-@media (min-width:601px) {
+@media all {
   .hero-letter:has([data-world='life']) { --copy-width:460px; }
   .hero-letter:has([data-world='ideas']) { --copy-width:390px; }
   .life-album { position:relative; width:220px; height:220px; margin-top:8px; }
@@ -129,7 +129,7 @@
   .archive-drawer { transition:none !important; }
   .archive-drawer:is(:hover,:focus) { transform:none; background:#c7c9cc; }
 }
-@media (min-width:601px) { .life-space { overflow:clip; } }
+@media all { .life-space { overflow:clip; } }
 /* Invisible perspective buffers must not enlarge the page's scrollable width. */
 @media (min-width:601px) { .landing { overflow-x:clip; } }
 

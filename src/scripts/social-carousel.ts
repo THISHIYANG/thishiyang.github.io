@@ -1,3 +1,4 @@
+import { onSwipe } from './touch-swipe';
 const carousel = document.querySelector<HTMLElement>('[data-social-carousel]');
 if (carousel) {
   const cards = [...carousel.querySelectorAll<HTMLButtonElement>('[data-social-card]')];
@@ -54,6 +55,7 @@ if (carousel) {
   });
   carousel.addEventListener('pointerleave',()=>clearTimeout(hoverTimer));
   reduced.addEventListener('change',()=>select(active));
+  onSwipe(carousel,'x',step=>select(active+step));
   select(0);
 }
 

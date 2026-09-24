@@ -8,9 +8,29 @@ let selected: string | null = null;
 let hovered: string | null = null;
 let focused: string | null = null;
 let shown: string | null | undefined;
+// Resolve a touch tap before compatibility mouse events (and layout changes).
+// Suppress only the duplicate native click, never the deliberate button.click().
+let touchLetter: {button:HTMLButtonElement;x:number;y:number;id:number}|undefined;
+let lastTouchLetter: HTMLButtonElement|undefined;
+let lastTouchTime=0;
+letters.addEventListener('pointerdown',event=>{
+  const button=(event.target as Element).closest<HTMLButtonElement>('[data-world]');
+  if(event.pointerType==='touch' && button)touchLetter={button,x:event.clientX,y:event.clientY,id:event.pointerId};
+});
+letters.addEventListener('pointercancel',()=>{touchLetter=undefined;});
+letters.addEventListener('pointerup',event=>{
+  const tap=touchLetter;touchLetter=undefined;
+  if(!tap || tap.id!==event.pointerId || Math.hypot(event.clientX-tap.x,event.clientY-tap.y)>12)return;
+  lastTouchLetter=tap.button;lastTouchTime=performance.now();tap.button.click();
+});
+document.addEventListener('click',event=>{
+  if(event.isTrusted && performance.now()-lastTouchTime<700 && (event.target as Element).closest('[data-world]')===lastTouchLetter){
+    event.preventDefault();event.stopImmediatePropagation();
+  }
+},true);
 function render(force = false) {
   if (document.documentElement.hasAttribute('data-transition') && !force) return;
-  const active = focused ?? hovered ?? selected;
+  const active = desktop.matches && matchMedia('(hover:hover) and (pointer:fine)').matches ? focused ?? hovered ?? selected : selected;
   if (active === shown && !force) return;
   shown = active;
   hero.toggleAttribute('data-active', !!active);
@@ -40,7 +60,7 @@ buttons.forEach(button => {
 // The caption and artifact belong to their letter. The union bridges the small
 // gap below the glyph without leaving a timer that could select a stale world.
 document.addEventListener('pointermove', event => {
-  if (event.pointerType !== 'mouse' || document.documentElement.hasAttribute('data-transition') || document.querySelector<HTMLElement>('[data-home]')?.hidden) return;
+  if (!desktop.matches || event.pointerType !== 'mouse' || document.documentElement.hasAttribute('data-transition') || document.querySelector<HTMLElement>('[data-home]')?.hidden) return;
   focused = null;
   let nearest: HTMLButtonElement | undefined;
   let distance = 86;
@@ -71,7 +91,7 @@ document.addEventListener('pointermove', event => {
   render();
 });
 function clearWorld() { selected = hovered = focused = null; resetMovement(); render(); }
-document.documentElement.addEventListener('pointerleave', clearWorld);
+document.documentElement.addEventListener('pointerleave', event => { if(event.pointerType==='mouse') clearWorld(); });
 document.addEventListener('pointerdown', event => { if (!(event.target as Element).closest('[data-letter-world],.controls')) clearWorld(); });
 document.addEventListener('keydown', event => { if (event.key === 'Escape') clearWorld(); });
 reduced.addEventListener('change', resetMovement);
@@ -90,13 +110,13 @@ function setIdentity(unit: HTMLElement | null) {
 function clearIdentity() { setIdentity(null); }
 identityUnits.forEach(unit => {
   const button = unit.querySelector<HTMLButtonElement>('button')!;
-  button.addEventListener('pointerenter', () => setIdentity(unit));
+  button.addEventListener('pointerenter', event => { if(event.pointerType==='mouse') setIdentity(unit); });
   button.addEventListener('focus', () => setIdentity(unit));
   button.addEventListener('click', () => setIdentity(unit));
   button.addEventListener('blur', clearIdentity);
 });
 document.querySelector('[data-creator]')?.addEventListener('pointermove', event => {
-  if (!activeIdentity) return;
+  if (!activeIdentity || (event as PointerEvent).pointerType !== 'mouse') return;
   const pointer = event as PointerEvent;
   const target = (pointer.target as Element).closest<HTMLElement>('[data-identity-unit]');
   if (target) { setIdentity(target); return; }
@@ -104,7 +124,7 @@ document.querySelector('[data-creator]')?.addEventListener('pointermove', event 
   const frame = activeIdentity.querySelector('.portrait-proof')!.getBoundingClientRect();
   if (pointer.clientX < word.left || pointer.clientX > frame.right || pointer.clientY < Math.min(word.top,frame.top) || pointer.clientY > Math.max(word.bottom,frame.bottom)) clearIdentity();
 });
-document.querySelector('[data-creator]')?.addEventListener('pointerleave', clearIdentity);
+document.querySelector('[data-creator]')?.addEventListener('pointerleave', event => { if((event as PointerEvent).pointerType==='mouse') clearIdentity(); });
 
 document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button => {
   button.addEventListener('click', () => {
@@ -119,7 +139,6 @@ document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button =
     });
     document.querySelectorAll<HTMLElement>('[data-lang]').forEach(item => { item.hidden = item.dataset.lang !== language; });
     clearIdentity();
-    document.querySelector('[data-tap-hint]')!.textContent = language === 'en' ? 'TAP A LETTER' : '轻触一个字母';
     document.dispatchEvent(new Event('thishi:language'));
   });
 });

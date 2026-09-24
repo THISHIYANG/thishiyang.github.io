@@ -1,3 +1,4 @@
+import { onSwipe } from './touch-swipe';
 const folder = document.querySelector<HTMLElement>('[data-portfolio]');
 if (folder) {
   const sheets = [...folder.querySelectorAll<HTMLButtonElement>('[data-sheet]')];
@@ -32,9 +33,10 @@ if (folder) {
     }
   });
   sheets.forEach(sheet => {
-    sheet.addEventListener('focus', () => update(1));
+    sheet.addEventListener('focus', () => { if(sheet.matches(':focus-visible')) update(1); });
     sheet.addEventListener('click', () => { if (sheet.dataset.href) location.assign(sheet.dataset.href); });
   });
+  onSwipe(folder,'y',step=>update(progress+step*.25));
   const owner = folder.closest('[data-letter-world]')!;
   new MutationObserver(() => { if (!owner.hasAttribute('data-active')) { update(0); pointerY = null; } }).observe(owner,{attributes:true,attributeFilter:['data-active']});
   update(0);

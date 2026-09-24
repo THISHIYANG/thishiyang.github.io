@@ -1,7 +1,7 @@
 ---
 import { archive } from '../../content/archive';
 ---
-<div class="archive-cabinet desktop-object" role="region" aria-label="Research archive" data-archive>
+<div class="archive-cabinet world-object" role="region" aria-label="Research archive" data-archive>
 <ol class="archive-rows">
 {archive.map(entry => <li class="archive-row">
 <button type="button" class="archive-drawer" data-archive-drawer data-href={entry.href} aria-label={`${entry.type} ${entry.id}: ${entry.title}, ${entry.year}`} aria-expanded="false" aria-controls={`archive-title-${entry.id}`}>

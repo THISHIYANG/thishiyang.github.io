@@ -1,7 +1,7 @@
 ---
 import { portfolio } from '../../content/portfolio';
 ---
-<div class="portfolio-folder desktop-object" data-portfolio tabindex="0" role="group" aria-label="Portfolio. Scroll up to extract sheets; down to return. Arrow up and down also work.">
+<div class="portfolio-folder world-object" data-portfolio tabindex="0" role="group" aria-label="Portfolio. Swipe or scroll up to extract sheets; down to return. Arrow up and down also work.">
 <div class="folder-back" aria-hidden="true"></div>
 {portfolio.map((item, index) => <button type="button" class="portfolio-sheet" data-sheet data-href={item.href} aria-label={item.title} style={`--sheet:${index};--deal:0;z-index:${6-index}`}>
 <span class="portfolio-sheet-media">{item.image && <img src={item.image} alt="" />}</span><span class="sheet-index">{item.id}</span>

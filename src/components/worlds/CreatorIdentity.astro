@@ -4,7 +4,7 @@ const creator = worlds.find(world => world.id === 'about')!;
 const identities = ['Illustrator', 'Game Designer', 'Educator', '插画师', '游戏设计师', '教育者'];
 const tokens = (copy: string) => copy.split(/(Illustrator|Game Designer|Educator|插画师|游戏设计师|教育者)/g);
 ---
-<div class="creator-identity desktop-object" data-creator>
+<div class="creator-identity world-object" data-creator>
 {(['en', 'zh'] as const).map(language => (
 <p data-lang={language} hidden={language !== 'en'}>{tokens(language === 'en' ? creator.note : creator.noteZh).map(token => {
   const index = identities.indexOf(token);

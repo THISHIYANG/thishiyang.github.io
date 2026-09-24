@@ -1,3 +1,4 @@
+import { onSwipe } from './touch-swipe';
 import type { LifePhoto } from '../content/life';
 const album = document.querySelector<HTMLElement>('[data-life-album]');
 if (album) {
@@ -79,6 +80,7 @@ if (album) {
   });
   reduced.addEventListener('change',paint);
   new MutationObserver(()=>{if(!album.closest('[data-letter-world]')!.hasAttribute('data-active'))queued=0;}).observe(album.closest('[data-letter-world]')!,{attributes:true,attributeFilter:['data-active']});
+  onSwipe(album,'y',step=>advance(step));
   paint();
 }
 

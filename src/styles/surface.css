@@ -1,0 +1,24 @@
+/* Static print texture and display memory: no animation loop or canvas. */
+.surface-definitions{position:absolute;pointer-events:none;overflow:hidden}
+.surface-grain,.surface-crt{position:fixed;inset:0;z-index:40;pointer-events:none;user-select:none}
+.surface-grain{
+  opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch' seed='23'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23n)' d='M0 0h160v160H0z'/%3E%3C/svg%3E");
+}
+.surface-crt{
+  background:repeating-linear-gradient(0deg,transparent 0px,transparent 3px,rgba(10,10,10,.025) 3px,rgba(10,10,10,.025) 4px),radial-gradient(ellipse at center,transparent 55%,rgba(35,30,22,.035) 100%);
+}
+.letter-glyph,.scene-nav a,.scene-identity [data-scene-glyph]{filter:url(#ink-print)}
+@media(max-width:600px){
+  .surface-grain{opacity:.035}
+  .surface-crt{opacity:.55}
+  .scene-nav a{filter:none}
+}
+@media(prefers-reduced-motion:reduce){
+  /* The surface is already static; only the existing UI owns motion. */
+  .surface-grain,.surface-crt{animation:none}
+}
+@media(forced-colors:active){
+  .surface-grain,.surface-crt{display:none}
+  .letter-glyph,.scene-nav a,.scene-identity [data-scene-glyph]{filter:none}
+}

@@ -140,7 +140,15 @@ export function setupScenes() {
     const target=event.target as Element;
     const link=target.closest<HTMLElement>('a[data-scene]');
     if(link){event.preventDefault();event.stopImmediatePropagation();const targetScene=scenes.find(s=>s.id===link.dataset.scene);void navigate(targetScene?letterDestination(targetScene,current):undefined,link);return;}
-    if(!desktop.matches||home.hidden)return;
+    if(home.hidden)return;
+    if(!desktop.matches || matchMedia('(hover:none), (pointer:coarse)').matches){
+      const letter=target.closest<HTMLElement>('[data-world]');
+      if(letter?.getAttribute('aria-pressed')==='true'){
+        event.preventDefault();event.stopImmediatePropagation();
+        void navigate(scenes.find(s=>s.id===letter.dataset.world),letter);
+      }
+      return;
+    }
     const trigger=target.closest<HTMLElement>('[data-world],[data-identity],.journey-node,[data-sheet],[data-social-card],[data-life-photo],[data-archive-drawer],[data-portfolio]');
     if(!trigger)return;
     if(trigger.matches('[data-social-card],[data-life-photo]')&&trigger.getAttribute('aria-pressed')!=='true')return;

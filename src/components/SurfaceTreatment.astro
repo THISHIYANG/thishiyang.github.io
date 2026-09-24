@@ -1,0 +1,13 @@
+<svg class="surface-definitions" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="ink-print" x="-3%" y="-3%" width="106%" height="106%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="2" seed="17" result="grain" />
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale=".65" xChannelSelector="R" yChannelSelector="G" result="edge" />
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .16 0 0 0 0" result="dust" />
+      <feComposite in="dust" in2="SourceAlpha" operator="in" result="ink-grain" />
+      <feBlend in="edge" in2="ink-grain" mode="screen" />
+    </filter>
+  </defs>
+</svg>
+<div class="surface-grain" aria-hidden="true"></div>
+<div class="surface-crt" aria-hidden="true"></div>

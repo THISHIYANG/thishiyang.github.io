@@ -8,8 +8,8 @@ import LifeAlbum from './worlds/LifeAlbum.astro';
 import ArchiveCabinet from './worlds/ArchiveCabinet.astro';
 ---
 <div class="letters" role="group" aria-label="THISHI" data-letters>
-{worlds.map((world, index) => (
-<div class="hero-letter" data-letter-world={world.id} style={`--column: ${index % 3}`}>
+{worlds.map((world) => (
+<div class="hero-letter" data-letter-world={world.id}>
 <button class="letter" type="button" data-world={world.id} aria-label={`${world.letter} — ${world.en}`} aria-pressed="false" aria-controls={`copy-${world.id}`} aria-describedby={`copy-${world.id}`}><span class="letter-glyph" aria-hidden="true">{world.letter}</span></button>
 <div class="letter-detail" id={`copy-${world.id}`} aria-hidden="true">
 <span class="letter-rule" aria-hidden="true"></span><div class="letter-copy-content"><span class="detail-title metadata" data-detail-title>{world.en}</span>

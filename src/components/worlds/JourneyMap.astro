@@ -11,7 +11,7 @@ const contours = {
 const positions = [{x:0,y:0},{x:97,y:18},{x:194,y:0},{x:145,y:106},{x:48,y:118}];
 const paths = ['M10 9 107 27','M107 27 204 9','M204 9 238 81 155 115','M155 115 58 127'];
 ---
-<div class="journey-map desktop-object" aria-label="Personal journey" data-journey>
+<div class="journey-map world-object" aria-label="Personal journey" data-journey>
 <svg class="journey-route" viewBox="0 0 280 202" aria-hidden="true">{paths.map((d,index) => <path d={d} pathLength="1" style={`--delay:${60 + index * 120}ms`} />)}</svg>
 <ol class="journey-stations">
 {journey.map((place,index) => <li class="journey-station" style={`--x:${positions[index].x}px;--y:${positions[index].y}px;--delay:${index * 120}ms`}>
