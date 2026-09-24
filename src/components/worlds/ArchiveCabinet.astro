@@ -1,0 +1,13 @@
+---
+import { archive } from '../../content/archive';
+---
+<div class="archive-cabinet desktop-object" role="region" aria-label="Research archive" data-archive>
+<ol class="archive-rows">
+{archive.map(entry => <li class="archive-row">
+<button type="button" class="archive-drawer" data-archive-drawer data-href={entry.href} aria-label={`${entry.type} ${entry.id}: ${entry.title}, ${entry.year}`} aria-expanded="false" aria-controls={`archive-title-${entry.id}`}>
+<span class="archive-category">{entry.type}</span><span class="archive-title" id={`archive-title-${entry.id}`}>{entry.title}</span><span class="archive-number">{entry.id}</span><span class="archive-pull" aria-hidden="true"></span>
+</button>
+</li>)}
+</ol>
+</div>
+<script>import '../../scripts/archive-cabinet';</script>

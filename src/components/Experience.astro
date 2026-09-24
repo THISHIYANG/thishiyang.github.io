@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from './SiteHeader.astro';
+import LetterHero from './LetterHero.astro';
+import SceneShell from './scene/SceneShell.astro';
+import DotCursor from './cursor/DotCursor.astro';
+import SceneTransition from './transition/SceneTransition.astro';
+import type { Scene } from '../content/scenes';
+interface Props { scene?: Scene }
+const { scene } = Astro.props;
+---
+<BaseLayout title={scene ? `THISHI — ${scene.title}` : undefined}>
+<div class="landing" data-experience data-scene={scene?.id ?? 'home'}>
+<SiteHeader />
+<main id="main" tabindex="-1">
+<div data-home hidden={!!scene}><LetterHero /></div>
+<SceneShell scene={scene} />
+</main>
+</div>
+<SceneTransition />
+<DotCursor />
+<script>import '../scripts/home'; import { setupPointer } from '../scripts/dot-cursor'; import { setupScenes } from '../scripts/scene-transition'; setupPointer(); setupScenes();</script>
+</BaseLayout>
+
+
