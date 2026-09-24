@@ -1,0 +1,25 @@
+name: Preserve production rollback tag
+on:
+  push:
+    branches: [rebuild/thishi-v3]
+    paths: [.github/workflows/preserve-production.yml]
+permissions:
+  contents: write
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const expected = '7865b5d3e3101318baea31e8a0014eafff759fb3';
+            const repo = context.repo;
+            const main = await github.rest.git.getRef({...repo, ref: 'heads/main'});
+            if (main.data.object.sha !== expected) throw new Error('Production moved; stop for review');
+            try {
+              const tag = await github.rest.git.getRef({...repo, ref: 'tags/legacy-site-final'});
+              if (tag.data.object.sha !== expected) throw new Error('Existing rollback tag points elsewhere');
+            } catch (error) {
+              if (error.status !== 404) throw error;
+              await github.rest.git.createRef({...repo, ref: 'refs/tags/legacy-site-final', sha: expected});
+            }
