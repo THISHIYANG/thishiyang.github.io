@@ -1,52 +1,42 @@
 # THISHI — Independent Creator
 
-Astro + TypeScript source project on `rebuild/thishi-v3`. Current review: **Commit 04 — final desktop hero, DOT cursor and signature transitions**. Main and production remain unchanged.
+Personal website built with Astro and TypeScript, published at https://thishiyang.github.io/.
 
 ## Local development
 
+Use Node.js 22.12+ and pnpm 11.19.0 (pinned in package.json).
+
 ```sh
-pnpm install
-pnpm dev --host 127.0.0.1
+pnpm install --frozen-lockfile
+pnpm dev
 pnpm check
 pnpm build
-pnpm preview --host 127.0.0.1
+pnpm preview
 ```
 
-Open http://127.0.0.1:4321/. Preview serves the last production build. In the bundled local pnpm environment, `--config.verify-deps-before-run=false` avoids an unnecessary dependency reinstall when running checks against the existing installed lockfile.
+Open http://localhost:4321/. Preview serves the production build from dist/.
 
-## Six approved worlds
+## Source structure
 
-`src/components/worlds/` contains CreatorIdentity, JourneyMap, PortfolioFolder, SocialCarousel, LifeAlbum and ArchiveCabinet. `LetterNav.astro` owns each letter, rule, caption and artifact as one continuous interaction region. Hidden panels are inert. `worlds.css` preserves the desktop typography and approved artifact geometry; the final pass standardizes reveal easing and motion tokens in `scenes.css`.
+- src/components/worlds/: Creator Identity, Journey Map, Portfolio Folder, Social Carousel, Life Album and Archive Cabinet.
+- src/components/cursor/, transition/, scene/: DOT pointer, signature transitions and destination shells.
+- src/content/: editable typed content and route definitions.
+- src/layouts/, pages/: document layout and seven statically generated routes.
+- src/scripts/, styles/: interactions, accessible navigation and responsive styling.
+- public/: current favicon and OFL licenses for the two fonts bundled from Fontsource. Font license links are included in the document head.
 
-Content remains separate in `src/content/worlds.ts`, `journey.ts`, `portfolio.ts`, `socials.ts`, `life.ts` and `archive.ts`. All project/social/photo images and destination links are placeholders. Journey contours are original schematic SVGs. The life album uses modular indexing with hidden recycling buffers; the archive has independent rows and a bounded internal scroll region. No real content was added.
+Routes: /, /about, /journey, /work, /social, /life, /archive.
 
-## DOT cursor
+The six worlds retain their individual hover/focus behavior and transitions. Semantic controls, keyboard focus, reduced motion, touch fallback and direct route entry are supported. Destination content and media remain intentional placeholders.
 
-`src/components/cursor/DotCursor.astro` is one aria-hidden SVG overlay, controlled by `src/scripts/dot-cursor.ts` and `styles/pointer.css`. States are idle (hollow), interactive (filled) and loading (rotating dashed ring). A short 0.82 interpolation runs only until the pointer settles; no duplicate circles or perpetual idle animation loop. Scene transitions share one root state. Native cursor is hidden only after a valid overlay is rendered. Touch/coarse pointers, editable controls, inactive windows and unsupported environments retain the native cursor. Reduced motion removes smoothing and loading rotation.
+IBM Plex Mono and Noto Sans SC are bundled locally under the SIL Open Font License. Display text uses the system Arial/Helvetica stack. No external font request is required.
 
-## Scene transitions
+## Automatic deployment
 
-`src/components/Experience.astro` mounts the shared hero, `scene/SceneShell.astro`, cursor and `transition/SceneTransition.astro`. `scripts/scene-transition.ts` handles locking, capture-phase click ownership, overlay animations, history, cancellation and cleanup. Originals retain their geometry; selected surfaces are cloned into a fixed layer and temporarily hidden during handoff. SVG borders remain hairlines independently of the expanding surface.
+.github/workflows/deploy.yml installs locked dependencies, checks and builds Astro on Node.js 22, uploads dist/, and deploys it to GitHub Pages. pnpm/action-setup reads the pinned pnpm version from package.json.
 
-| World | Route | Signature | Duration |
-| --- | --- | --- | --- |
-| T | `/about` | Active identity styling and portrait gesture; typographic T moves into the destination composition | 580ms |
-| H1 | `/journey` | Journey extends into a horizontal seam that reveals the scene | 600ms |
-| I1 | `/work` | Folder releases its sheet, which expands into the page surface | 620ms |
-| S | `/social` | Active front-facing card expands as adjacent cards recede | 620ms |
-| H2 | `/life` | Album locks; active photo expands while surrounding photos recede | 620ms |
-| I2 | `/archive` | Selected drawer pulls farther out and its outline becomes the page frame | 620ms |
+The publishing source in repository Settings → Pages → Build and deployment must be **GitHub Actions**. The workflow runs on pushes to main and can also be started manually from Actions. The site is served at the domain root without a base subpath or custom domain.
 
-All six routes are statically generated by `src/pages/[scene].astro` from `content/scenes.ts`; they support direct entry without JavaScript. Each minimal shell contains the shared header, six-letter navigation, scene number/glyph/title and a return control. There is no destination-page content.
+Daily workflow: edit → pnpm dev → review localhost:4321 → pnpm check → pnpm build → commit → push main → Actions automatically deploys.
 
-Click/Enter/Space on a letter or eligible artifact enters a scene. Social side cards and non-active album photos select first; only active cards enter. Wheel input never initiates navigation. Repeated input is locked during transitions; Escape cancels and restores focus, while browser back/forward restores the correct route. Returning home uses a short fade. The previous bottom-right cue and all its source styles/references were removed.
-
-## Accessibility and motion
-
-Semantic controls, accessible route titles, current-page navigation, inert hidden panels and destination heading focus are retained. Cursor overlays are non-interactive and ignored by assistive technology. Reduced motion bypasses signature choreography with an 80ms opacity handoff. Desktop navigation capture leaves the existing narrow-screen tap fallback intact; mobile redesign is outside this review.
-
-## Verification and boundary
-
-`pnpm check` and `pnpm build` pass. Browser verification at 1440×900, 1536×960 and 1920×1080 covers six letter routes, three cursor states and position, unchanged hero bounds, return/back/Escape, wheel isolation, no horizontal overflow or overlay residue, and reduced-motion keyboard entry. Additional checks cover six keyboard artifact entries, scene language switching, side-card selection, native input cursor fallback, coarse-pointer cursor fallback, direct-entry return and six no-JavaScript routes. Intermediate transition screenshots were inspected to remove duplicate source visuals and scaled text/border artifacts.
-
-No new animation library, WebGL, Three.js or framework runtime is used. Motion primarily uses transforms and opacity; the scene seam/surface handoff uses short clip-path animations. No measured 60fps guarantee is implied by functional checks. Stop for visual review before destination design, mobile work, real media, merging main or deployment.
+Never commit node_modules/, .astro/ or dist/. No manual HTML export or build upload is needed. Check the Actions run and deployed URL after each production change.
