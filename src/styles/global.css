@@ -4,7 +4,6 @@
 font-family:Arial,Helvetica,'Noto Sans SC',sans-serif;
 color:var(--ink); background:var(--paper); color-scheme:light;
 }
-:root[data-mode=field] {--paper:#0a0a0a;--ink:#ffffff;--muted:#a0a0a0;--inactive:#444;color-scheme:dark}
 *{box-sizing:border-box} body{margin:0} body,.landing,.hero{background:var(--paper)}
 button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 a{color:inherit;text-decoration:none} button{font:inherit;color:inherit;cursor:pointer}
@@ -46,8 +45,392 @@ button:focus-visible,a:focus-visible{outline:1px solid var(--ink);outline-offset
 .letter-glyph,.letter[data-active] .letter-glyph{transform:none;transition:color 180ms ease}.letter-detail,.hero-letter[data-active] .letter-detail{transform:none;transition:opacity 160ms ease,visibility 0s linear 160ms}
 }
 
+:root {
+  --paper: #f8f8f4;
+  --ink: #0a0a0a;
+  --silver: #c7c9cc;
+}
+
+/* 整体底色稍微偏纸张感 */
+html,
+body {
+  background: var(--paper);
+}
+
+/* 网站主体 */
+.screen-shell {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+/* 全局 CRT/INK 覆盖层 */
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* 1. 老电视的矩形屏幕框 */
+.crt-frame {
+  position: absolute;
+  inset: 12px;
+  border-radius: 28px / 20px;
+  box-shadow:
+    inset 0 0 0 1px rgba(10, 10, 10, 0.28),
+    inset 0 0 0 6px rgba(255, 255, 255, 0.08),
+    inset 0 0 28px rgba(0, 0, 0, 0.06),
+    inset 0 0 80px rgba(0, 0, 0, 0.04);
+  transform: perspective(1400px) scale(0.998, 0.996);
+}
+
+/* 2. 暗角 / 屏幕边缘压暗 */
+.crt-vignette {
+  position: absolute;
+  inset: 12px;
+  border-radius: 28px / 20px;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 0) 55%,
+      rgba(0, 0, 0, 0.08) 100%
+    );
+  opacity: 0.95;
+}
+
+/* 3. 扫描线：这个就是CRT味道最直接的部分 */
+.crt-scanlines {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05) 0px,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  opacity: 0.42;
+  mix-blend-mode: multiply;
+}
+
+/* 4. 轻微噪点 / 印刷颗粒感 */
+.crt-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.14) 0.6px, transparent 0.7px),
+    radial-gradient(rgba(0, 0, 0, 0.08) 0.5px, transparent 0.6px);
+  background-size: 7px 7px, 11px 11px;
+  background-position: 0 0, 3px 4px;
+  mix-blend-mode: multiply;
+}
+
+/* 大字更有“墨印”感 */
+.hero-word,
+.scene-word,
+.letter,
+.big-title {
+  text-shadow:
+    0.4px 0 rgba(0, 0, 0, 0.18),
+    -0.4px 0 rgba(0, 0, 0, 0.08),
+    0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* 小字保持清晰，不要过度脏化 */
+p,
+small,
+label,
+span,
+a,
+button,
+input {
+  text-shadow: none;
+}
+
+.hero-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-intro-main {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.hero-intro-note {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.3;
+  color: rgba(10, 10, 10, 0.72);
+  letter-spacing: 0.02em;
+}
+
+.bg-color-control {
+  position: fixed;
+  top: 108px;
+  right: 48px;
+  z-index: 100;
+}
+
+/* =========================================================
+   BACKGROUND COLOR EDITOR
+   ========================================================= */
+
+.bg-color-control {
+  position: fixed;
+  top: 88px;
+  right: 30px;
+  z-index: 100;
+}
 
 
+/* Trigger */
+
+.bg-color-trigger {
+  width: 20px;
+  height: 20px;
+
+  padding: 0;
+
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+
+  background: transparent;
+
+  display: grid;
+  place-items: center;
+}
 
 
+.bg-color-dot {
+  width: 10px;
+  height: 10px;
 
+  border-radius: 50%;
+  border: 1px solid var(--ink);
+
+  background: var(--paper);
+}
+
+
+/* Panel */
+
+.bg-color-panel {
+  position: absolute;
+
+  top: 32px;
+  right: 0;
+
+  width: 190px;
+
+  padding: 14px;
+
+  background: var(--paper);
+
+  border: 1px solid var(--ink);
+
+  font-family: var(--mono);
+
+  box-shadow: none;
+}
+
+
+.bg-color-panel-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+
+  font-size: 10px;
+
+  letter-spacing: 0.03em;
+}
+
+
+/* =========================================================
+   SATURATION / VALUE AREA
+   ========================================================= */
+
+.color-sv {
+  position: relative;
+
+  width: 100%;
+  height: 112px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--ink);
+
+  background: red;
+
+  touch-action: none;
+
+}
+
+
+/* left = white */
+
+.color-sv-white {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      #fff,
+      transparent
+    );
+}
+
+
+/* bottom = black */
+
+.color-sv-black {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #000
+    );
+}
+
+
+/* =========================================================
+   HUE
+   ========================================================= */
+
+.color-hue {
+  position: relative;
+
+  height: 12px;
+
+  margin-top: 12px;
+
+  border: 1px solid var(--ink);
+
+  background:
+    linear-gradient(
+      to right,
+      #ff0000 0%,
+      #ffff00 16.66%,
+      #00ff00 33.33%,
+      #00ffff 50%,
+      #0000ff 66.66%,
+      #ff00ff 83.33%,
+      #ff0000 100%
+    );
+
+  touch-action: none;
+
+}
+
+
+/* =========================================================
+   HANDLES
+   ========================================================= */
+
+.color-picker-handle {
+  position: absolute;
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  border: 2px solid white;
+
+  box-shadow:
+    0 0 0 1px var(--ink);
+
+  pointer-events: none;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+
+.color-sv-handle {
+  top: 50%;
+  left: 50%;
+
+  background: transparent;
+}
+
+
+.color-hue-handle {
+  top: 50%;
+  left: 0;
+
+  width: 10px;
+  height: 16px;
+
+  border-radius: 2px;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.bg-color-footer {
+  display: grid;
+
+  grid-template-columns:
+    18px
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 14px;
+}
+
+
+.bg-color-preview {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--ink);
+
+  background: var(--paper);
+}
+
+
+.bg-color-value {
+  font-size: 10px;
+
+  letter-spacing: 0.025em;
+}
+
+
+.bg-color-reset {
+  padding: 0;
+
+  border: none;
+
+  border-bottom:
+    1px solid var(--ink);
+
+  background: transparent;
+
+  font-family: var(--mono);
+
+  font-size: 9px;
+}

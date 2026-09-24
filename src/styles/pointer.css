@@ -1,4 +1,4 @@
-.dot-pointer { position: fixed; top: 0; left: 0; width: 18px; height: 18px; z-index: 100; pointer-events: none; color: var(--ink); will-change: transform; }
+.dot-pointer { position: fixed; top: 0; left: 0; width: 18px; height: 18px; z-index: 9999; pointer-events: none; color: var(--ink); will-change: transform; }
 .dot-pointer svg { display: block; overflow: visible; }
 .dot-pointer circle { stroke: currentColor; stroke-width: 1.5; fill: transparent; transition: fill 140ms ease; }
 .dot-pointer[data-state='interactive'] circle { fill: currentColor; }

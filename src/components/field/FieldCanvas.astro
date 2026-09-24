@@ -1,0 +1,92 @@
+---
+import FieldCard from './FieldCard.astro';
+import { fieldItems } from '../../content/field';
+---
+
+<section
+  class="field-canvas"
+  data-field-canvas
+  aria-label="THISHI Field"
+>
+ <div class="field-origin">
+  <span>THISHI FIELD</span>
+  <span>PERSONAL CREATIVE SYSTEM</span>
+
+  <button
+    class="field-reset"
+    type="button"
+    data-field-reset
+    data-cursor="interactive"
+  >
+    RESET FIELD
+  </button>
+</div>
+
+  {fieldItems.map((item) => (
+    <FieldCard item={item} />
+  ))}
+
+<button
+  class="field-token field-token--game"
+  type="button"
+
+  data-field-token
+  data-field-id="token-game"
+
+  data-filter="type"
+  data-filter-value="GAME"
+
+  data-cursor="interactive"
+  aria-pressed="false"
+>
+  ● GAME
+</button>
+
+<button
+  class="field-token field-token--wip"
+  type="button"
+
+  data-field-token
+  data-field-id="token-wip"
+
+  data-filter="status"
+  data-filter-value="WIP"
+
+  data-cursor="interactive"
+  aria-pressed="false"
+>
+  △ WIP
+</button>
+
+<button
+  class="field-token field-token--year"
+  type="button"
+
+  data-field-token
+  data-field-id="token-year"
+
+  data-filter="year"
+  data-filter-value="2026"
+
+  data-cursor="interactive"
+  aria-pressed="false"
+>
+  ○ 2026
+</button>
+
+<button
+  class="field-token field-token--article"
+  type="button"
+
+  data-field-token
+  data-field-id="token-article"
+
+  data-filter="type"
+  data-filter-value="ARTICLE"
+
+  data-cursor="interactive"
+  aria-pressed="false"
+>
+  □ ARTICLE
+</button>
+</section>

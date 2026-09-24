@@ -4,11 +4,13 @@ import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/noto-sans-sc/400.css';
 import '../styles/global.css';
 import '../styles/worlds.css';
+import '../styles/field.css';
 import '../styles/scenes.css';
 import '../styles/pointer.css';
 import '../styles/mobile.css';
 import '../styles/surface.css';
 import SurfaceTreatment from '../components/SurfaceTreatment.astro';
+import BackgroundColorPicker from '../components/BackgroundColorPicker.astro';
 const title = 'this is ishi.';
 ---
 <!doctype html>
@@ -16,18 +18,28 @@ const title = 'this is ishi.';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <meta name="description" content="THISHI — Independent Creator. This is ishi." />
-    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="theme-color" content="#F8F8F5" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="license" href="/fonts/IBM-Plex-Mono-OFL.txt" />
     <link rel="license" href="/fonts/Noto-Sans-SC-OFL.txt" />
-    <title>{title}</title>
+
+   <title>{title}</title>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content / 跳转到正文</a>
-    <slot />
-    <SurfaceTreatment />
-  </body>
+  <a class="skip-link" href="#main">Skip to content / 跳转到正文</a>
+
+  <div class="crt-screen">
+    <div class="crt-content">
+      <slot />
+    </div>
+  </div>
+
+  <BackgroundColorPicker />
+
+  <SurfaceTreatment />
+</body>
 </html>
 
 

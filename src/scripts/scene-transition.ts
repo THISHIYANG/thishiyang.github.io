@@ -6,6 +6,7 @@ export function setupScenes() {
   const home=document.querySelector<HTMLElement>('[data-home]')!;
   const shell=document.querySelector<HTMLElement>('[data-scene-shell]')!;
   const layer=document.querySelector<HTMLElement>('[data-transition-layer]')!;
+  document.body.appendChild(layer); // Fixed transition geometry must stay outside the transformed CRT screen.
   const heading=document.querySelector<HTMLElement>('#scene-title')!;
   const desktop=matchMedia('(min-width:601px)');
   const reduced=matchMedia('(prefers-reduced-motion:reduce)');

@@ -1,0 +1,63 @@
+---
+import type { FieldItem } from '../../content/field';
+
+interface Props {
+  item: FieldItem;
+}
+
+const { item } = Astro.props;
+
+const style = `
+  --field-x:${item.x};
+  --field-y:${item.y};
+  --field-r:${item.rotation}deg;
+  --field-w:${item.width}px;
+  --field-h:${item.height}px;
+  --field-z:${item.z};
+`;
+---
+
+{item.href ? (
+  <a
+    class={`field-card field-card--${item.type.toLowerCase()}`}
+    href={item.href}
+    draggable="false"
+    style={style}
+    data-field-card
+    data-field-id={item.id}
+    data-field-type={item.type}
+    data-field-year={item.year}
+    data-field-status={item.status ?? ''}
+    data-cursor="interactive"
+  >
+    <span class="field-card-type">{item.type}</span>
+
+    <span class="field-card-title">
+      {item.title}
+    </span>
+
+    <span class="field-card-number">
+      {item.number}
+    </span>
+  </a>
+) : (
+  <div
+    class={`field-card field-card--${item.type.toLowerCase()}`}
+    style={style}
+    data-field-card
+    data-field-id={item.id}
+    data-field-type={item.type}
+    data-field-year={item.year}
+    data-field-status={item.status ?? ''}
+  >
+    <span class="field-card-type">{item.type}</span>
+
+    <span class="field-card-title">
+      {item.title}
+    </span>
+
+    <span class="field-card-number">
+      {item.number}
+    </span>
+  </div>
+)}

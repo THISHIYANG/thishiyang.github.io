@@ -140,13 +140,21 @@ document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button =
     document.querySelectorAll<HTMLElement>('[data-lang]').forEach(item => { item.hidden = item.dataset.lang !== language; });
     clearIdentity();
     document.dispatchEvent(new Event('thishi:language'));
+    const tagline = document.querySelector<HTMLElement>('.hero-tagline');
+
+if (tagline) {
+  tagline.textContent =
+    language === 'zh'
+      ? tagline.dataset.copyZh ??''
+      : tagline.dataset.copyEn ??'';
+}
   });
 });
 document.querySelectorAll<HTMLButtonElement>('[data-mode]').forEach(button => {
   button.addEventListener('click', () => {
     const field = button.dataset.mode === 'field';
     document.documentElement.dataset.mode = field ? 'field' : 'index';
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content',field ? '#0A0A0A' : '#FFFFFF');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content',getComputedStyle(document.documentElement).getPropertyValue('--paper').trim());
     document.querySelectorAll('[data-mode]').forEach(item => item.setAttribute('aria-pressed',String(item === button)));
   });
 });

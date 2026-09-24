@@ -1,13 +1,131 @@
-<svg class="surface-definitions" width="0" height="0" aria-hidden="true" focusable="false">
+<svg
+  class="surface-definitions"
+  width="0"
+  height="0"
+  aria-hidden="true"
+  focusable="false"
+>
   <defs>
-    <filter id="ink-print" x="-3%" y="-3%" width="106%" height="106%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="2" seed="17" result="grain" />
-      <feDisplacementMap in="SourceGraphic" in2="grain" scale=".65" xChannelSelector="R" yChannelSelector="G" result="edge" />
-      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .16 0 0 0 0" result="dust" />
-      <feComposite in="dust" in2="SourceAlpha" operator="in" result="ink-grain" />
-      <feBlend in="edge" in2="ink-grain" mode="screen" />
+
+    <!-- =====================================================
+         INK / PRINT
+         ===================================================== -->
+    <filter
+      id="ink-print"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%"
+      color-interpolation-filters="sRGB"
+    >
+      <!-- 有机墨水颗粒 -->
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency=".42"
+        numOctaves="3"
+        seed="17"
+        result="grain"
+      />
+
+      <!-- 字体边缘轻微不规则 -->
+      <feDisplacementMap
+        in="SourceGraphic"
+        in2="grain"
+        scale="1.9"
+        xChannelSelector="R"
+        yChannelSelector="G"
+        result="edge"
+      />
+
+      <!-- 墨水压印 / dot gain -->
+      <feMorphology
+        in="edge"
+        operator="dilate"
+        radius=".55"
+        result="pressed-ink"
+      />
+
+      <!-- 墨水内部颗粒 -->
+      <feColorMatrix
+        in="grain"
+        type="matrix"
+        values="
+          0 0 0 0 1
+          0 0 0 0 1
+          0 0 0 0 1
+          .16 0 0 0 0
+        "
+        result="dust"
+      />
+
+      <feComposite
+        in="dust"
+        in2="SourceAlpha"
+        operator="in"
+        result="ink-grain"
+      />
+
+      <!-- 合并扩散墨边和颗粒 -->
+      <feBlend
+        in="pressed-ink"
+        in2="ink-grain"
+        mode="screen"
+      />
     </filter>
+
+
+    <!-- =====================================================
+         CRT SIGNAL DISTORTION
+         ===================================================== -->
+    <filter
+      id="crt-ink"
+      x="-4%"
+      y="-4%"
+      width="108%"
+      height="108%"
+      color-interpolation-filters="sRGB"
+    >
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency=".006 .028"
+        numOctaves="2"
+        seed="31"
+        result="warp-noise"
+      />
+
+      <feDisplacementMap
+        in="SourceGraphic"
+        in2="warp-noise"
+        scale="3.2"
+        xChannelSelector="R"
+        yChannelSelector="G"
+        result="warped"
+      />
+
+      <feComponentTransfer in="warped">
+        <feFuncR
+          type="gamma"
+          amplitude="1"
+          exponent=".96"
+          offset="0"
+        />
+        <feFuncG
+          type="gamma"
+          amplitude="1"
+          exponent=".96"
+          offset="0"
+        />
+        <feFuncB
+          type="gamma"
+          amplitude="1"
+          exponent=".96"
+          offset="0"
+        />
+      </feComponentTransfer>
+    </filter>
+
   </defs>
 </svg>
+
 <div class="surface-grain" aria-hidden="true"></div>
 <div class="surface-crt" aria-hidden="true"></div>

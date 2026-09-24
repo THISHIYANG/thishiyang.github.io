@@ -1,0 +1,421 @@
+/* =========================================================
+   FIELD CANVAS
+   ========================================================= */
+
+.field-canvas {
+  position: fixed;
+  inset: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: scale(.985);
+
+  transition:
+    opacity 360ms cubic-bezier(.22,.61,.36,1),
+    transform 420ms cubic-bezier(.22,.61,.36,1),
+    visibility 0s linear 420ms;
+
+  background: var(--paper);
+}
+
+
+/* FIELD active */
+
+:root[data-mode="field"] .field-canvas {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: scale(1);
+
+  transition-delay: 80ms;
+}
+
+
+/* =========================================================
+   FIELD ORIGIN
+   ========================================================= */
+
+.field-origin {
+  position: absolute;
+
+  left: 48px;
+  bottom: 34px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  font: 10px/1.4 var(--mono);
+
+  color: var(--muted);
+}
+
+.field-reset {
+  width: max-content;
+
+  margin-top: 8px;
+  padding: 0;
+
+  border: 0;
+  border-bottom: 1px solid var(--muted);
+
+  background: transparent;
+
+  color: var(--muted);
+
+  font: 9px/1.4 var(--mono);
+
+  letter-spacing: .025em;
+
+  transition:
+    color 140ms ease,
+    border-color 140ms ease;
+}
+
+.field-reset:hover,
+.field-reset:focus-visible {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+
+/* =========================================================
+   FIELD CARD
+   ========================================================= */
+
+.field-card {
+  position: absolute;
+
+  left: calc(var(--field-x) * 1%);
+  top: calc(var(--field-y) * 1%);
+
+  width: var(--field-w);
+  height: var(--field-h);
+
+  z-index: var(--field-z);
+
+  min-height: 110px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 12px;
+
+  border: 1px solid var(--ink);
+
+  background: var(--paper);
+
+  color: var(--ink);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--field-r));
+
+  transform-origin: center;
+
+  text-decoration: none;
+
+  transition:
+    transform 220ms cubic-bezier(.22,.61,.36,1),
+    background 160ms ease,
+    color 160ms ease;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+  user-select: none;
+  touch-action: none;
+}
+
+
+/* hover */
+
+.field-card:hover,
+.field-card:focus-visible {
+  transform:
+    translate(-50%, -50%)
+    rotate(0deg)
+    scale(1.035);
+
+  z-index: 20;
+}
+
+
+/* card type */
+
+.field-card-type {
+  font: 10px/1.2 var(--mono);
+
+  color: var(--muted);
+}
+
+
+/* main title */
+
+.field-card-title {
+  margin-top: auto;
+
+  max-width: 90%;
+
+  font-size: 20px;
+  line-height: 1.05;
+}
+
+
+/* number */
+
+.field-card-number {
+  margin-top: 14px;
+
+  text-align: right;
+
+  font: 10px/1 var(--mono);
+}
+
+
+/* =========================================================
+   CARD SPECIES
+   ========================================================= */
+
+
+/* GAME = slightly taller */
+
+.field-card--game {
+  min-height: 150px;
+}
+
+
+/* WORK = wide editorial card */
+
+.field-card--work {
+  min-height: 125px;
+}
+
+
+/* ARTICLE = paper-like */
+
+.field-card--article {
+  min-height: 135px;
+}
+
+
+/* SOCIAL = compact */
+
+.field-card--social {
+  min-height: 105px;
+}
+
+
+/* LIFE = image placeholder feeling */
+
+.field-card--life {
+  min-height: 130px;
+
+  background:
+    linear-gradient(
+      var(--inactive),
+      var(--inactive)
+    )
+    center / calc(100% - 24px) 70px
+    no-repeat,
+    var(--paper);
+}
+
+
+/* NOTE = mostly metadata */
+
+.field-card--note {
+  min-height: 78px;
+
+  border-style: dashed;
+}
+
+
+/* =========================================================
+   TOKENS
+   ========================================================= */
+
+.field-token {
+  position: absolute;
+  z-index: 30;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: var(--ink);
+
+  font: 11px/1 var(--mono);
+
+  white-space: nowrap;
+
+  user-select: none;
+
+  touch-action: none;
+}
+
+
+.field-token--game {
+  left: 8%;
+  top: 42%;
+}
+
+.field-token--wip {
+  left: 34%;
+  top: 26%;
+}
+
+.field-token--article {
+  left: 55%;
+  top: 52%;
+}
+
+.field-token--year {
+  left: 62%;
+  top: 84%;
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .field-canvas,
+  .field-card {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   INDEX → FIELD
+   ========================================================= */
+
+[data-home] .hero {
+  transition:
+    opacity 320ms cubic-bezier(.22,.61,.36,1),
+    transform 400ms cubic-bezier(.22,.61,.36,1);
+}
+
+
+:root[data-mode="field"] [data-home] .hero {
+  opacity: 0;
+
+  transform: scale(.97);
+
+  pointer-events: none;
+}
+
+.field-card--game {
+  border-width: 1.5px;
+}
+
+.field-card--game .field-card-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.field-card--work {
+  padding: 14px 16px;
+}
+
+.field-card--article {
+  padding: 14px;
+}
+
+.field-card--social {
+  padding-top: 10px;
+}
+
+.field-card--life {
+  padding-top: 80px;
+
+  background:
+    linear-gradient(
+      var(--inactive),
+      var(--inactive)
+    )
+    12px 12px / calc(100% - 24px) 60px
+    no-repeat,
+    var(--paper);
+}
+
+.field-card--note {
+  border-style: dashed;
+  opacity: .82;
+}
+
+.field-card,
+.field-token {
+  touch-action: none;
+}
+
+.field-card[data-grabbed],
+.field-token[data-grabbed] {
+  transition:
+    transform 140ms cubic-bezier(.22,.61,.36,1);
+}
+
+.field-card[data-grabbed] {
+  border-color: var(--ink);
+}
+
+.field-token[data-grabbed] {
+  font-weight: 700;
+}
+
+/* =========================================================
+   FIELD FILTER
+   ========================================================= */
+
+.field-card {
+  transition:
+    transform 220ms cubic-bezier(.22,.61,.36,1),
+    opacity 180ms ease,
+    filter 180ms ease;
+}
+
+
+/* 非目标卡片 */
+
+.field-canvas[data-filtering] .field-card[data-filter-match="false"] {
+  opacity: .16;
+}
+
+
+/* 目标卡片 */
+
+.field-canvas[data-filtering] .field-card[data-filter-match="true"] {
+  opacity: 1;
+}
+
+
+/* active token */
+
+.field-token[aria-pressed="true"] {
+  font-weight: 700;
+}
+
+
+/* 给激活 token 一个非常小的反转 */
+
+.field-token[aria-pressed="true"]::after {
+  content: "";
+
+  position: absolute;
+
+  left: -6px;
+  right: -6px;
+  top: -4px;
+  bottom: -4px;
+
+  z-index: -1;
+
+  border: 1px solid var(--ink);
+}

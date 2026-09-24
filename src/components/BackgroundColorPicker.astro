@@ -1,0 +1,416 @@
+<div class="bg-color-control" data-bg-color-control>
+  <button
+    class="bg-color-trigger"
+    type="button"
+    aria-label="Change background color"
+    aria-expanded="false"
+    data-bg-trigger
+  >
+    <span class="bg-color-dot" data-bg-dot></span>
+  </button>
+
+  <div class="bg-color-panel" data-bg-panel hidden>
+
+    <div class="bg-color-panel-header">
+      <span>BACKGROUND</span>
+      <span>COLOR</span>
+    </div>
+
+    <!-- Saturation / Value -->
+    <div
+      class="color-sv"
+      data-color-sv
+      data-cursor="interactive"
+      role="slider"
+      tabindex="0"
+      aria-label="Saturation and brightness"
+    >
+      <div class="color-sv-white"></div>
+      <div class="color-sv-black"></div>
+
+      <span
+        class="color-picker-handle color-sv-handle"
+        data-sv-handle
+      ></span>
+    </div>
+
+    <!-- Hue -->
+    <div
+      class="color-hue"
+      data-color-hue
+      data-cursor="interactive"
+      role="slider"
+      tabindex="0"
+      aria-label="Hue"
+    >
+      <span
+        class="color-picker-handle color-hue-handle"
+        data-hue-handle
+      ></span>
+    </div>
+
+    <div class="bg-color-footer">
+      <span class="bg-color-preview" data-bg-preview></span>
+
+      <span class="bg-color-value" data-bg-value>
+        #F8F8F5
+      </span>
+
+      <button
+        class="bg-color-reset"
+        type="button"
+        data-bg-reset
+      >
+        RESET
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const control =
+    document.querySelector<HTMLElement>('[data-bg-color-control]');
+
+  const trigger =
+    control?.querySelector<HTMLButtonElement>('[data-bg-trigger]');
+
+  const panel =
+    control?.querySelector<HTMLElement>('[data-bg-panel]');
+
+  const sv =
+    control?.querySelector<HTMLElement>('[data-color-sv]');
+
+  const hue =
+    control?.querySelector<HTMLElement>('[data-color-hue]');
+
+  const svHandle =
+    control?.querySelector<HTMLElement>('[data-sv-handle]');
+
+  const hueHandle =
+    control?.querySelector<HTMLElement>('[data-hue-handle]');
+
+  const dot =
+    control?.querySelector<HTMLElement>('[data-bg-dot]');
+
+  const preview =
+    control?.querySelector<HTMLElement>('[data-bg-preview]');
+
+  const value =
+    control?.querySelector<HTMLElement>('[data-bg-value]');
+
+  const reset =
+    control?.querySelector<HTMLButtonElement>('[data-bg-reset]');
+
+
+  const DEFAULT_COLOR = '#f8f8f5';
+
+  let H = 60;
+  let S = 67;
+  let V = 60;
+
+
+  function hsvToRgb(h: number, s: number, v: number) {
+    s /= 100;
+    v /= 100;
+
+    const c = v * s;
+    const x =
+      c *
+      (1 - Math.abs(((h / 60) % 2) - 1));
+
+    const m = v - c;
+
+    let r = 0;
+    let g = 0;
+    let b = 0;
+
+    if (h < 60) {
+      r = c;
+      g = x;
+    } else if (h < 120) {
+      r = x;
+      g = c;
+    } else if (h < 180) {
+      g = c;
+      b = x;
+    } else if (h < 240) {
+      g = x;
+      b = c;
+    } else if (h < 300) {
+      r = x;
+      b = c;
+    } else {
+      r = c;
+      b = x;
+    }
+
+    return {
+      r: Math.round((r + m) * 255),
+      g: Math.round((g + m) * 255),
+      b: Math.round((b + m) * 255),
+    };
+  }
+
+
+  function rgbToHex(r: number, g: number, b: number) {
+    return (
+      '#' +
+      [r, g, b]
+        .map(v => v.toString(16).padStart(2, '0'))
+        .join('')
+    );
+  }
+
+
+  function hexToRgb(hex: string) {
+    const clean = hex.replace('#', '');
+
+    if (!/^[0-9a-f]{6}$/i.test(clean)) return null;
+
+    return {
+      r: parseInt(clean.slice(0, 2), 16),
+      g: parseInt(clean.slice(2, 4), 16),
+      b: parseInt(clean.slice(4, 6), 16),
+    };
+  }
+
+
+  function rgbToHsv(r: number, g: number, b: number) {
+    r /= 255;
+    g /= 255;
+    b /= 255;
+
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+
+    const delta = max - min;
+
+    let h = 0;
+
+    if (delta !== 0) {
+      if (max === r) {
+        h = 60 * (((g - b) / delta) % 6);
+      } else if (max === g) {
+        h = 60 * ((b - r) / delta + 2);
+      } else {
+        h = 60 * ((r - g) / delta + 4);
+      }
+    }
+
+    if (h < 0) h += 360;
+
+    const s = max === 0 ? 0 : delta / max;
+    const v = max;
+
+    return {
+      h,
+      s: s * 100,
+      v: v * 100,
+    };
+  }
+
+
+  function currentHex() {
+    const rgb = hsvToRgb(H, S, V);
+
+    return rgbToHex(
+      rgb.r,
+      rgb.g,
+      rgb.b
+    );
+  }
+
+
+  function applyColor(
+    hex: string,
+    save = true
+  ) {
+    document.documentElement.style.setProperty(
+      '--paper',
+      hex
+    );
+
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content',hex);
+
+    if (dot) {
+      dot.style.backgroundColor = hex;
+    }
+
+    if (preview) {
+      preview.style.backgroundColor = hex;
+    }
+
+    if (value) {
+      value.textContent = hex.toUpperCase();
+    }
+
+    if (save) {
+      try { localStorage.setItem('thishi-background', hex); } catch { /* Color remains usable without storage. */ }
+    }
+  }
+
+
+  function updateVisuals() {
+    const pureHue = `hsl(${H} 100% 50%)`;
+
+    if (sv) {
+      sv.style.backgroundColor = pureHue;
+    }
+
+    if (svHandle) {
+      svHandle.style.left = `${S}%`;
+      svHandle.style.top = `${100 - V}%`;
+    }
+
+    if (hueHandle) {
+      hueHandle.style.left = `${(H / 360) * 100}%`;
+    }
+
+    applyColor(currentHex());
+  }
+
+
+  function setFromHex(hex: string) {
+    const rgb = hexToRgb(hex);
+
+    if (!rgb) return;
+
+    const hsv = rgbToHsv(
+      rgb.r,
+      rgb.g,
+      rgb.b
+    );
+
+    H = hsv.h;
+    S = hsv.s;
+    V = hsv.v;
+
+    updateVisuals();
+  }
+
+
+  function handleSV(
+    event: PointerEvent
+  ) {
+    if (!sv) return;
+
+    const rect =
+      sv.getBoundingClientRect();
+
+    const x = Math.min(
+      Math.max(event.clientX - rect.left, 0),
+      rect.width
+    );
+
+    const y = Math.min(
+      Math.max(event.clientY - rect.top, 0),
+      rect.height
+    );
+
+    S = (x / rect.width) * 100;
+    V = 100 - (y / rect.height) * 100;
+
+    updateVisuals();
+  }
+
+
+  function handleHue(
+    event: PointerEvent
+  ) {
+    if (!hue) return;
+
+    const rect =
+      hue.getBoundingClientRect();
+
+    const x = Math.min(
+      Math.max(event.clientX - rect.left, 0),
+      rect.width
+    );
+
+    H = (x / rect.width) * 360;
+
+    updateVisuals();
+  }
+
+
+  function bindDrag(
+    element: HTMLElement | null | undefined,
+    handler: (event: PointerEvent) => void
+  ) {
+    if (!element) return;
+
+    element.addEventListener(
+      'pointerdown',
+      event => {
+        element.setPointerCapture(
+          event.pointerId
+        );
+
+        handler(event);
+      }
+    );
+
+    element.addEventListener(
+      'pointermove',
+      event => {
+        if (
+          element.hasPointerCapture(
+            event.pointerId
+          )
+        ) {
+          handler(event);
+        }
+      }
+    );
+  }
+
+
+  bindDrag(sv, handleSV);
+  bindDrag(hue, handleHue);
+
+
+  trigger?.addEventListener(
+    'click',
+    () => {
+      if (!panel) return;
+
+      const isOpen =
+        !panel.hasAttribute('hidden');
+
+      if (isOpen) {
+        panel.setAttribute('hidden', '');
+
+        trigger.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+      } else {
+        panel.removeAttribute('hidden');
+
+        trigger.setAttribute(
+          'aria-expanded',
+          'true'
+        );
+      }
+    }
+  );
+
+
+  reset?.addEventListener(
+    'click',
+    () => {
+      try { localStorage.removeItem('thishi-background'); } catch { /* Reset still applies. */ }
+
+      setFromHex(DEFAULT_COLOR);
+    }
+  );
+
+
+  let saved: string | null = null;
+  try { saved = localStorage.getItem('thishi-background'); } catch { /* Use default. */ }
+
+  setFromHex(
+    saved && hexToRgb(saved) ? saved : DEFAULT_COLOR
+  );
+</script>

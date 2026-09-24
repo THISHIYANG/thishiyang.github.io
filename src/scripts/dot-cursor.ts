@@ -2,6 +2,8 @@
 export function setupPointer() {
 const dot = document.querySelector<HTMLElement>('[data-dot-pointer]');
 if (!dot || !window.requestAnimationFrame) return;
+// Keep the custom pointer above CRT filters and floating UI panels.
+document.body.appendChild(dot);
 const supported = matchMedia('(min-width:601px) and (hover:hover) and (pointer:fine)');
 const reduced = matchMedia('(prefers-reduced-motion:reduce)');
 let targetX=0, targetY=0, x=0, y=0, frame=0, visible=false, failed=false;

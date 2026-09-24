@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import FieldCanvas from './field/FieldCanvas.astro';
 import SiteHeader from './SiteHeader.astro';
 import LetterHero from './LetterHero.astro';
 import SceneShell from './scene/SceneShell.astro';
@@ -13,13 +14,19 @@ const { scene } = Astro.props;
 <div class="landing" data-experience data-scene={scene?.id ?? 'home'}>
 <SiteHeader />
 <main id="main" tabindex="-1">
-<div data-home hidden={!!scene}><LetterHero /></div>
+<div data-home hidden={!!scene}><LetterHero /><FieldCanvas /></div>
 <SceneShell scene={scene} />
 </main>
 </div>
 <SceneTransition />
 <DotCursor />
-<script>import '../scripts/home'; import { setupPointer } from '../scripts/dot-cursor'; import { setupScenes } from '../scripts/scene-transition'; setupPointer(); setupScenes();</script>
+<script>
+    import '../scripts/home';
+    import '../scripts/field-canvas';
+    import { setupPointer } from '../scripts/dot-cursor';
+    import { setupScenes } from '../scripts/scene-transition';
+    setupPointer();
+    setupScenes();</script>
 </BaseLayout>
 
 
