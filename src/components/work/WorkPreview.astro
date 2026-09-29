@@ -1,0 +1,27 @@
+---
+import type { Project } from '../../content/projects';
+interface Props { projects: Project[] }
+const { projects } = Astro.props;
+---
+<aside class="work-preview" data-work-preview aria-hidden="true">
+  <div class="work-preview-heading"><span>LIVE PREVIEW</span><span>THISHI / WORK</span></div>
+  <div class="work-preview-body">
+    {projects.map((project, index) => (
+      <div class="work-preview-panel" data-work-preview-panel data-project-slug={project.data.slug} data-active={index === 0 ? '' : undefined}>
+        <div class="work-preview-media">
+          {project.data.thumbnail ? (
+            <img src={project.data.thumbnail} alt="" loading="lazy" />
+          ) : (
+            <div class="work-preview-fallback">
+              <span class="work-preview-fallback-number">{project.data.number} / {project.data.type}</span>
+              <strong>{project.data.title}</strong>
+              <span class="work-preview-fallback-year">{project.data.year}</span>
+            </div>
+          )}
+        </div>
+        <div class="work-preview-meta"><span>{project.data.number} / {project.data.type}</span><span>{project.data.year}</span></div>
+        <p class="work-preview-summary">{project.data.summary}</p>
+      </div>
+    ))}
+  </div>
+</aside>

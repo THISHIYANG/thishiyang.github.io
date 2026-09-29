@@ -1,6 +1,11 @@
 ---
 import { getProjects } from '../../content/projects';
+import WorkRow from './WorkRow.astro';
+import WorkPreview from './WorkPreview.astro';
 const projects = await getProjects();
+const types = [...new Set(projects.map((project) => project.data.type))];
+const total = projects.length;
+const latestYear = Math.max(...projects.map((project) => project.data.year));
 ---
 <section class="work-index" data-work-index aria-labelledby="work-index-title">
   <header class="work-index-intro">
@@ -8,23 +13,23 @@ const projects = await getProjects();
       <p class="work-kicker">THISHI / WORK</p>
       <h2 id="work-index-title">WORK</h2>
     </div>
-    <p class="work-index-note">PROJECT INDEX<br />2026—</p>
+    <p class="work-index-note">PROJECT INDEX<br />{latestYear}—</p>
   </header>
-  <div class="work-index-columns" aria-hidden="true">
-    <span>NO.</span><span>TYPE</span><span>PROJECT</span><span>YEAR</span><span>STATUS</span>
+  <div class="work-catalogue">
+    <div class="work-catalogue-main">
+      <div class="work-filters" role="group" aria-label="Project type">
+        <button type="button" data-work-filter="ALL" aria-pressed="true">ALL</button>
+        {types.map((type) => <button type="button" data-work-filter={type} aria-pressed="false">{type}</button>)}
+      </div>
+      <div class="work-index-columns" aria-hidden="true">
+        <span>NO.</span><span>TYPE</span><span>PROJECT</span><span>YEAR</span><span>STATUS</span>
+      </div>
+      <ol class="work-projects" data-work-projects>
+        {projects.map((project) => <WorkRow project={project} />)}
+      </ol>
+      <p class="work-index-footnote"><span data-work-count aria-live="polite">{String(total).padStart(2, '0')} PROJECTS</span><span>LATEST {latestYear}</span></p>
+    </div>
+    <WorkPreview projects={projects} />
   </div>
-  <ol class="work-projects">
-    {projects.map((project) => (
-      <li>
-        <a class="work-project-row" href={`/work/${project.data.slug}`} data-cursor="interactive">
-          <span class="work-project-number">{project.data.number}</span>
-          <span class="work-project-type">{project.data.type}</span>
-          <span class="work-project-title">{project.data.title}</span>
-          <span class="work-project-year">{project.data.year}</span>
-          <span class="work-project-status">{project.data.status}</span>
-        </a>
-      </li>
-    ))}
-  </ol>
-  <p class="work-index-footnote">{String(projects.length).padStart(2, '0')} PROJECTS / ONGOING INDEX</p>
 </section>
+<script>import '../../scripts/work-index';</script>

@@ -1,0 +1,15 @@
+---
+import type { Project } from '../../content/projects';
+interface Props { project: Project }
+const { project } = Astro.props;
+const data = project.data;
+---
+<li class="work-project-item" data-work-item data-project-type={data.type}>
+  <a class="work-project-row" href={`/work/${data.slug}`} data-work-row data-project-slug={data.slug} data-cursor="interactive">
+    <span class="work-project-number">{data.number}</span>
+    <span class="work-project-type">{data.type}</span>
+    <span class="work-project-title">{data.title}</span>
+    <span class="work-project-year">{data.year}</span>
+    <span class="work-project-status">{data.status}</span>
+  </a>
+</li>

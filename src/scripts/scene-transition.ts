@@ -134,11 +134,50 @@ export function setupScenes() {
     }catch(error){console.error('Scene transition fallback',error);if(ticket===generation){commit(scene);reveal(scene);}}
     finally{if(ticket===generation)cleanup();}
   }
+  // Project links leave the scene router, but use its existing transition layer
+  // and cursor state before the browser loads the statically generated detail page.
+  async function navigateProject(link: HTMLAnchorElement) {
+    if (busy) return;
+    busy = true;
+    origin = link;
+    root.dataset.transition = 'folder';
+    document.querySelector('#main')?.setAttribute('aria-busy', 'true');
+    cursor();
+    const box = link.getBoundingClientRect();
+    const surface = document.createElement('div');
+    surface.className = 'transition-surface';
+    Object.assign(surface.style, {
+      left: `${box.left}px`,
+      top: `${box.top}px`,
+      width: `${box.width}px`,
+      height: `${box.height}px`,
+      border: '1px solid var(--ink)',
+    });
+    layer.append(surface);
+    try {
+      await animate(surface, [
+        { transform: 'translate(0,0) scale(1,1)' },
+        { transform: `translate(${-box.left}px,${-box.top}px) scale(${innerWidth / box.width},${innerHeight / box.height})` },
+      ], 260);
+      window.location.assign(link.href);
+      window.setTimeout(() => { if (document.visibilityState === 'visible') cleanup(); }, 1500);
+    } catch {
+      cleanup();
+      window.location.assign(link.href);
+    }
+  }
   // Capture before artifact selection handlers: side cards select, active cards enter.
   document.addEventListener('click',event=>{
     if(busy){event.preventDefault();event.stopImmediatePropagation();return;}
     if(event.button!==0||event.ctrlKey||event.metaKey||event.altKey||event.shiftKey)return;
     const target=event.target as Element;
+    const projectLink=target.closest<HTMLAnchorElement>('.work-project-row, [data-field-peek] [data-peek-open][href^="/work/"]');
+    if (projectLink && !reduced.matches) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      void navigateProject(projectLink);
+      return;
+    }
     const link=target.closest<HTMLElement>('a[data-scene]');
     if(link){event.preventDefault();event.stopImmediatePropagation();const targetScene=scenes.find(s=>s.id===link.dataset.scene);void navigate(targetScene?letterDestination(targetScene,current):undefined,link);return;}
     if(home.hidden)return;
