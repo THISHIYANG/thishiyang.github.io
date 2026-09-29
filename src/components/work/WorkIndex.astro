@@ -1,0 +1,30 @@
+---
+import { getProjects } from '../../content/projects';
+const projects = await getProjects();
+---
+<section class="work-index" data-work-index aria-labelledby="work-index-title">
+  <header class="work-index-intro">
+    <div>
+      <p class="work-kicker">THISHI / WORK</p>
+      <h2 id="work-index-title">WORK</h2>
+    </div>
+    <p class="work-index-note">PROJECT INDEX<br />2026—</p>
+  </header>
+  <div class="work-index-columns" aria-hidden="true">
+    <span>NO.</span><span>TYPE</span><span>PROJECT</span><span>YEAR</span><span>STATUS</span>
+  </div>
+  <ol class="work-projects">
+    {projects.map((project) => (
+      <li>
+        <a class="work-project-row" href={`/work/${project.data.slug}`} data-cursor="interactive">
+          <span class="work-project-number">{project.data.number}</span>
+          <span class="work-project-type">{project.data.type}</span>
+          <span class="work-project-title">{project.data.title}</span>
+          <span class="work-project-year">{project.data.year}</span>
+          <span class="work-project-status">{project.data.status}</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+  <p class="work-index-footnote">{String(projects.length).padStart(2, '0')} PROJECTS / ONGOING INDEX</p>
+</section>

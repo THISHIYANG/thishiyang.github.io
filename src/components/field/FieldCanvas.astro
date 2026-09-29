@@ -1,7 +1,13 @@
 ---
 import FieldCard from './FieldCard.astro';
 import FieldPeek from './FieldPeek.astro';
-import { fieldItems } from '../../content/field';
+import { nonProjectFieldItems, projectToFieldItem } from '../../content/field';
+import { getProjects } from '../../content/projects';
+const projects = await getProjects();
+const fieldItems = [
+  ...projects.filter((project) => project.data.featuredInField).map(projectToFieldItem),
+  ...nonProjectFieldItems,
+];
 ---
 
 <section

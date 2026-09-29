@@ -1,3 +1,5 @@
+import type { Project } from './projects';
+
 export type FieldItemType =
   | 'GAME'
   | 'WORK'
@@ -23,7 +25,7 @@ export interface FieldItem {
   z: number;
 
   year: number;
-  status?: 'WIP' | 'RELEASED' | 'ARCHIVE';
+  status?: 'WIP' | 'RELEASED' | 'ARCHIVE' | 'STUDY';
 
   href?: string;
   eyebrow?: string;
@@ -32,67 +34,28 @@ export interface FieldItem {
   openLabel?: string;
 }
 
-export const fieldItems: FieldItem[] = [
-  {
-    id: 'game-stone-myth',
-    eyebrow: 'GAME / PROTOTYPE',
-    summary: 'Stone × Myth × Puzzle',
-    meta: ['WIP', '2026'],
-    openLabel: 'OPEN WORK',
-    type: 'GAME',
-    title: 'STONE MYTH',
-    number: '001',
-    x: 18,
-    y: 30,
-    rotation: -0.5,
-    width: 240,
-    height: 200,
-    z: 6,
-    year: 2026,
-    status: 'WIP',
-    href: '/work',
-  },
+export function projectToFieldItem(project: Project): FieldItem {
+  const data = project.data;
+  if (!data.featuredInField || !data.fieldId || !data.field) {
+    throw new Error(`Project ${data.slug} is not configured as a FIELD card.`);
+  }
+  return {
+    id: data.fieldId,
+    title: data.title,
+    number: data.number,
+    type: data.fieldType ?? data.type,
+    year: data.year,
+    status: data.status,
+    href: `/work/${data.slug}`,
+    eyebrow: data.eyebrow ?? [data.type, data.category].filter(Boolean).join(' / '),
+    summary: data.summary,
+    meta: data.fieldMeta ?? [data.status, String(data.year)],
+    openLabel: data.openLabel ?? 'OPEN WORK',
+    ...data.field,
+  };
+}
 
-  {
-    id: 'work-motion',
-    eyebrow: 'WORK / MOTION',
-    summary: 'Visual motion study',
-    meta: ['2026'],
-    openLabel: 'OPEN WORK',
-    type: 'WORK',
-    title: 'PIXEL MOTION',
-    number: '003',
-    x: 38,
-    y: 38,
-    rotation: 1,
-    width: 205,
-    height: 125,
-    z: 4,
-    year: 2026,
-    status: 'WIP',
-    href: '/work',
-  },
-
-  {
-    id: 'game-prototype',
-    eyebrow: 'GAME / PROTOTYPE',
-    summary: 'Prototype in progress',
-    meta: ['WIP', '2026'],
-    openLabel: 'OPEN WORK',
-    type: 'GAME',
-    title: 'PROTOTYPE 002',
-    number: '002',
-    x: 30,
-    y: 18,
-    rotation: 2,
-    width: 155,
-    height: 130,
-    z: 3,
-    year: 2026,
-    status: 'WIP',
-    href: '/work',
-  },
-
+export const nonProjectFieldItems: FieldItem[] = [
   {
     id: 'article-stone',
     eyebrow: 'ARTICLE / ARCHIVE',

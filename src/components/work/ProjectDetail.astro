@@ -1,0 +1,40 @@
+---
+import type { Project } from '../../content/projects';
+import { scenes } from '../../content/scenes';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../SiteHeader.astro';
+import DotCursor from '../cursor/DotCursor.astro';
+interface Props { project: Project }
+const { project } = Astro.props;
+const data = project.data;
+---
+<BaseLayout>
+  <div class="landing work-document" data-work-document>
+    <SiteHeader />
+    <nav class="scene-nav metadata" aria-label="Letter worlds">
+      {scenes.map((scene) => <a href={scene.path} aria-label={scene.title} aria-current={scene.id === 'games' ? 'page' : undefined}>{scene.letter}</a>)}
+    </nav>
+    <main id="main" tabindex="-1">
+      <article class="project-detail">
+        <a class="project-back" href="/work">← WORK INDEX</a>
+        <header class="project-detail-header">
+          <p class="project-detail-kicker">{data.number} / {data.type}{data.category && ` / ${data.category}`}</p>
+          <h1>{data.title}</h1>
+          <div class="project-detail-facts"><span>{data.year}</span><span>{data.status}</span></div>
+          <p class="project-detail-summary">{data.summary}</p>
+        </header>
+        {data.heroImage && <figure class="project-hero-image"><img src={data.heroImage} alt={data.title} /></figure>}
+        <div class="project-body"><slot /></div>
+        {data.links.length > 0 && (
+          <section class="project-links" aria-label="Project links">
+            <h2>LINKS</h2>
+            <ul>{data.links.map((link) => <li><a href={link.href}>{link.label} ↗</a></li>)}</ul>
+          </section>
+        )}
+        <footer class="project-footer"><a href="/work">← ALL PROJECTS</a></footer>
+      </article>
+    </main>
+  </div>
+  <DotCursor />
+  <script>import { setupPointer } from '../../scripts/dot-cursor'; setupPointer();</script>
+</BaseLayout>
