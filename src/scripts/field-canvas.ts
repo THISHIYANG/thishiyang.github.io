@@ -139,6 +139,9 @@ tokens.forEach((token) => {
         return;
       }
 
+      if (canvas.hasAttribute('data-peek-open')) {
+        canvas.dispatchEvent(new CustomEvent('field:close-peek', { detail: { restoreFocus: false, immediate: true } }));
+      }
       applyFilter(token);
     }
   );
@@ -150,7 +153,8 @@ document.addEventListener(
 
     if (
       event.key === 'Escape' &&
-      activeFilterToken
+      activeFilterToken &&
+      !canvas.hasAttribute('data-peek-open')
     ) {
       clearFilter();
     }
@@ -287,7 +291,7 @@ document.addEventListener(
       'pointerdown',
       (event) => {
 
-        if (!event.isPrimary || event.button !== 0) {
+        if (canvas.hasAttribute('data-peek-open') || !event.isPrimary || event.button !== 0) {
           return;
         }
 
@@ -304,12 +308,12 @@ document.addEventListener(
         dragging = false;
 
 
-        /* bring to front */
-
-        topZ += 1;
-
-        object.style.zIndex =
-          String(topZ);
+        /* Tokens come forward on grab. Cards only change z-order after
+           crossing the drag threshold; a Peek click never writes layout. */
+        if (object.matches('[data-field-token]')) {
+          topZ += 1;
+          object.style.zIndex = String(topZ);
+        }
 
 
         object.setPointerCapture(
@@ -352,8 +356,12 @@ document.addEventListener(
 
         /* 5px threshold */
 
-        if (distance > 5) {
+        if (distance > 5 && !dragging) {
           dragging = true;
+          if (object.matches('[data-field-card]')) {
+            topZ += 1;
+            object.style.zIndex = String(topZ);
+          }
         }
 
 
@@ -465,9 +473,9 @@ document.addEventListener(
         object.style.removeProperty(
           'transform'
         );
-        saveObject(object);
-
-
+        if (dragging || object.matches('[data-field-token]')) {
+          saveObject(object);
+        }
 
         if (dragging) {
 
@@ -511,6 +519,7 @@ document.addEventListener(
     'click',
     () => {
 
+      canvas.dispatchEvent(new CustomEvent('field:close-peek', { detail: { restoreFocus: false, immediate: true } }));
       try { localStorage.removeItem(STORAGE_KEY); } catch { /* Reset still restores the in-memory layout. */ }
 
       savedLayout = {};

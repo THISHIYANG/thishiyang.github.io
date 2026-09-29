@@ -26,11 +26,19 @@ export interface FieldItem {
   status?: 'WIP' | 'RELEASED' | 'ARCHIVE';
 
   href?: string;
+  eyebrow?: string;
+  summary?: string;
+  meta?: string[];
+  openLabel?: string;
 }
 
 export const fieldItems: FieldItem[] = [
   {
     id: 'game-stone-myth',
+    eyebrow: 'GAME / PROTOTYPE',
+    summary: 'Stone × Myth × Puzzle',
+    meta: ['WIP', '2026'],
+    openLabel: 'OPEN WORK',
     type: 'GAME',
     title: 'STONE MYTH',
     number: '001',
@@ -47,6 +55,10 @@ export const fieldItems: FieldItem[] = [
 
   {
     id: 'work-motion',
+    eyebrow: 'WORK / MOTION',
+    summary: 'Visual motion study',
+    meta: ['2026'],
+    openLabel: 'OPEN WORK',
     type: 'WORK',
     title: 'PIXEL MOTION',
     number: '003',
@@ -63,6 +75,10 @@ export const fieldItems: FieldItem[] = [
 
   {
     id: 'game-prototype',
+    eyebrow: 'GAME / PROTOTYPE',
+    summary: 'Prototype in progress',
+    meta: ['WIP', '2026'],
+    openLabel: 'OPEN WORK',
     type: 'GAME',
     title: 'PROTOTYPE 002',
     number: '002',
@@ -79,6 +95,10 @@ export const fieldItems: FieldItem[] = [
 
   {
     id: 'article-stone',
+    eyebrow: 'ARTICLE / ARCHIVE',
+    summary: 'Research note',
+    meta: ['2026'],
+    openLabel: 'OPEN ARTICLE',
     type: 'ARTICLE',
     title: 'STONE MYTHOLOGY',
     number: '005',
@@ -95,6 +115,10 @@ export const fieldItems: FieldItem[] = [
 
   {
     id: 'article-game',
+    eyebrow: 'ARTICLE / GAME STUDIES',
+    summary: 'Research note',
+    meta: ['2026'],
+    openLabel: 'OPEN ARTICLE',
     type: 'ARTICLE',
     title: 'GAME STUDY 001',
     number: '006',
@@ -111,6 +135,10 @@ export const fieldItems: FieldItem[] = [
 
   {
     id: 'social-instagram',
+    eyebrow: 'SOCIAL',
+    summary: 'Platform archive',
+    meta: [],
+    openLabel: 'OPEN SOCIAL',
     type: 'SOCIAL',
     title: 'INSTAGRAM',
     number: '007',
@@ -127,6 +155,10 @@ export const fieldItems: FieldItem[] = [
 
   {
     id: 'social-xhs',
+    eyebrow: 'SOCIAL',
+    summary: 'Platform archive',
+    meta: [],
+    openLabel: 'OPEN SOCIAL',
     type: 'SOCIAL',
     title: 'XIAOHONGSHU',
     number: '008',
@@ -143,6 +175,10 @@ export const fieldItems: FieldItem[] = [
 
   {
     id: 'life-photo-01',
+    eyebrow: 'LIFE',
+    summary: 'Personal visual memory',
+    meta: [],
+    openLabel: 'OPEN LIFE',
     type: 'LIFE',
     title: 'PHOTO 001',
     number: '009',
@@ -159,6 +195,10 @@ export const fieldItems: FieldItem[] = [
 
   {
     id: 'life-photo-02',
+    eyebrow: 'LIFE',
+    summary: 'Personal visual memory',
+    meta: [],
+    openLabel: 'OPEN LIFE',
     type: 'LIFE',
     title: 'PHOTO 002',
     number: '010',
@@ -175,6 +215,9 @@ export const fieldItems: FieldItem[] = [
 
   {
     id: 'note-making',
+    eyebrow: 'NOTE',
+    summary: 'Currently making',
+    meta: [],
     type: 'NOTE',
     title: 'CURRENTLY MAKING',
     number: '011',
@@ -190,6 +233,9 @@ export const fieldItems: FieldItem[] = [
 
   {
     id: 'note-thinking',
+    eyebrow: 'NOTE',
+    summary: 'Recently thinking',
+    meta: [],
     type: 'NOTE',
     title: 'RECENTLY THINKING',
     number: '012',
