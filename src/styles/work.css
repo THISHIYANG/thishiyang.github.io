@@ -17,9 +17,9 @@ html:has([data-work-document]) .crt-content {
   transform: none;
 }
 [data-experience]:not([data-scene="games"]) .work-index { display: none; }
-[data-experience][data-scene="games"] .scene-shell { min-height: 290px; }
-[data-experience][data-scene="games"] .scene-identity { top: 135px; left: max(48px,8vw); }
-[data-experience][data-scene="games"] .scene-identity h1 { font-size: 105px; margin: 0; }
+[data-experience][data-scene="games"] .scene-shell { min-height: 200px; }
+[data-experience][data-scene="games"] .scene-identity { top: 95px; left: max(48px,8vw); }
+[data-experience][data-scene="games"] .scene-identity h1 { font-size: 85px; margin: 0; }
  .work-index,.project-detail { width: min(1120px,calc(100% - 96px)); margin-inline: auto; color: var(--ink); }
 .work-index { width: min(1240px,calc(100% - 96px)); padding: 24px 0 100px; }
 .work-index-intro { display: flex; justify-content: space-between; gap: 24px; align-items: end; border-bottom: 1px solid var(--ink); padding-bottom: 30px; }
@@ -27,7 +27,7 @@ html:has([data-work-document]) .crt-content {
 .work-kicker { margin: 0 0 18px; color: var(--muted); }
 .work-index h2 { margin: 0; font: 700 clamp(68px,10vw,150px)/.9 Arial,Helvetica,sans-serif; letter-spacing: -.055em; }
 .work-index-note { margin: 0 0 4px; text-align: right; color: var(--muted); }
-.work-catalogue { display: grid; grid-template-columns: minmax(0,1.75fr) minmax(290px,.9fr); gap: clamp(44px,5vw,88px); align-items: start; }
+.work-catalogue { display: grid; grid-template-columns: minmax(0,2fr) minmax(290px,.9fr); gap: clamp(40px,4vw,68px); align-items: start; }
 .work-catalogue-main { min-width: 0; }
 .work-filters { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; min-height: 62px; }
 .work-filters button { padding: 3px 0; border: 0; border-bottom: 1px solid transparent; background: transparent; color: var(--muted); font: inherit; letter-spacing: inherit; }
@@ -46,16 +46,17 @@ html:has([data-work-document]) .crt-content {
 .work-index-footnote { display: flex; justify-content: space-between; gap: 12px; margin: 20px 0 0; color: var(--muted); }
 .work-preview { position: sticky; top: 110px; min-width: 0; padding-top: 23px; pointer-events: none; }
 .work-preview-heading,.work-preview-meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); }
-.work-preview-body { position: relative; min-height: 440px; margin-top: 13px; }
+.work-preview-heading { padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
+.work-preview-body { position: relative; min-height: 440px; margin-top: 18px; }
 .work-preview-panel { position: absolute; inset: 0; opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity 190ms ease, transform 190ms cubic-bezier(.22,.61,.36,1), visibility 0s linear 190ms; }
 .work-preview-panel[data-active] { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
-.work-preview-media { aspect-ratio: 1.2; display: block; overflow: hidden; border: 1px solid var(--ink); background: var(--paper); }
+.work-preview-media { aspect-ratio: 1.18; display: block; overflow: hidden; border: 1px solid var(--ink); background: var(--paper); }
 .work-preview-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.work-preview-fallback { width: 100%; height: 100%; min-height: 250px; display: flex; flex-direction: column; padding: 18px; color: var(--ink); }
-.work-preview-fallback strong { margin: auto 0; max-width: 10ch; font: 700 clamp(37px,3.5vw,62px)/.96 Arial,Helvetica,sans-serif; letter-spacing: -.055em; overflow-wrap: anywhere; }
+.work-preview-fallback { width: 100%; height: 100%; min-height: 250px; display: flex; flex-direction: column; padding: 18px 20px 16px; color: var(--ink); }
+.work-preview-fallback strong { margin: auto 0; max-width: 11ch; font: 700 clamp(34px,3.15vw,56px)/.96 Arial,Helvetica,sans-serif; letter-spacing: -.055em; overflow-wrap: anywhere; }
 .work-preview-fallback-year { align-self: end; }
-.work-preview-meta { margin-top: 14px; }
-.work-preview-summary { margin: 12px 0 0; max-width: 34ch; font: 17px/1.35 Arial,Helvetica,sans-serif; }
+.work-preview-meta { padding: 11px 0 8px; border-bottom: 1px solid var(--ink); }
+.work-preview-summary { margin: 13px 0 0; max-width: 34ch; font: 16px/1.4 Arial,Helvetica,sans-serif; }
 .work-document { padding-top: 0; }
 .work-document .site-header { z-index: 4; }
 .work-document .scene-nav { z-index: 4; }

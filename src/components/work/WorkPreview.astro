@@ -4,7 +4,7 @@ interface Props { projects: Project[] }
 const { projects } = Astro.props;
 ---
 <aside class="work-preview" data-work-preview aria-hidden="true">
-  <div class="work-preview-heading"><span>LIVE PREVIEW</span><span>THISHI / WORK</span></div>
+  <div class="work-preview-heading"><span>LIVE PREVIEW</span><span>SELECTED PROJECT</span></div>
   <div class="work-preview-body">
     {projects.map((project, index) => (
       <div class="work-preview-panel" data-work-preview-panel data-project-slug={project.data.slug} data-active={index === 0 ? '' : undefined}>
