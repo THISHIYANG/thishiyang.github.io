@@ -1,0 +1,14 @@
+---
+import type { Project } from '../../content/projects';
+interface Props { project: Project }
+const { project } = Astro.props;
+const { role, tools, duration, platform, medium } = project.data;
+const facts = [
+  { label: 'ROLE', value: role?.join(' / ') },
+  { label: 'TOOLS', value: tools?.join(' / ') },
+  { label: 'DURATION', value: duration },
+  { label: 'PLATFORM', value: platform },
+  { label: 'MEDIUM', value: medium },
+].filter((fact) => fact.value?.trim());
+---
+{facts.length > 0 && <dl class="project-facts">{facts.map((fact) => <div><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl>}

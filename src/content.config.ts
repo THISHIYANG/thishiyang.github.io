@@ -15,6 +15,12 @@ const projects = defineCollection({
   loader: glob({ base: './src/content/projects', pattern: '**/*.md' }),
   schema: z.object({
     title: z.string().min(1),
+    displayTitle: z.array(z.string().min(1)).min(1).optional(),
+    role: z.array(z.string().min(1)).optional(),
+    tools: z.array(z.string().min(1)).optional(),
+    duration: z.string().optional(),
+    platform: z.string().optional(),
+    medium: z.string().optional(),
     slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
     number: z.string().min(1),
     type: z.enum(['GAME', 'WORK', 'ARTICLE']),
@@ -33,6 +39,8 @@ const projects = defineCollection({
     openLabel: z.string().optional(),
     thumbnail: z.string().optional(),
     heroImage: z.string().optional(),
+    heroImageAlt: z.string().optional(),
+    heroCaption: z.string().optional(),
     tags: z.array(z.string()).default([]),
     links: z.array(z.object({ label: z.string(), href: z.url() })).default([]),
   }).superRefine((data, context) => {

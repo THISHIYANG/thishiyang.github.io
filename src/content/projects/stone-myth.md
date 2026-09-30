@@ -1,5 +1,6 @@
 ---
 title: STONE MYTH
+displayTitle: [STONE, MYTH]
 slug: stone-myth
 number: '001'
 type: GAME
@@ -25,8 +26,20 @@ tags: [Game, Prototype]
 
 ## Overview
 
-STONE MYTH is an in-progress game prototype exploring stone, myth, and puzzle ideas.
+STONE MYTH is an independent experimental puzzle prototype built around discovering an unknown divine preference through repeated stone offerings.
 
-## Process
+## Core Loop
 
-This project record will grow as the prototype develops.
+Select → Probe → Feedback → Compare → Final Offering → Result
+
+Stone selection and feedback help the player compare possibilities before making a final offering.
+
+## Rule Experiments
+
+- Weighted judgement
+- Veto judgement
+- Contextual judgement
+
+## Current State
+
+Prototype / WIP. The rules are being explored through small experiments.

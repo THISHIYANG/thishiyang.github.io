@@ -1,0 +1,16 @@
+---
+import type { Project } from '../../content/projects';
+import ProjectMeta from './ProjectMeta.astro';
+interface Props { project: Project }
+const { project } = Astro.props;
+const data = project.data;
+---
+<header class="project-masthead">
+  <p class="project-archive-line"><span>THISHI / WORK / {data.number}</span><span>{data.type} / {data.year} / {data.status}</span></p>
+  <h1 class="project-title" aria-label={data.title}>{data.displayTitle ? data.displayTitle.map((line) => <span>{line}</span>) : data.title}</h1>
+  <div class="project-introduction">
+    <p class="project-summary">{data.summary}</p>
+    <ProjectMeta project={project} />
+  </div>
+  {data.tags.length > 0 && <ul class="project-tags" aria-label="Project tags">{data.tags.map((tag) => <li>{tag}</li>)}</ul>}
+</header>

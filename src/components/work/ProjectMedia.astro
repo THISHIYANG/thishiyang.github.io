@@ -1,0 +1,8 @@
+---
+interface Image { src: string; alt: string; caption?: string }
+interface Props { images: Image[]; layout?: 'wide' | 'pair'; eager?: boolean }
+const { images, layout = 'wide', eager = false } = Astro.props;
+---
+{images.length > 0 && <div class:list={['project-media', { 'project-image-pair': layout === 'pair' }]}>
+  {images.map((image) => <figure><img src={image.src} alt={image.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}
+</div>}

@@ -1,0 +1,12 @@
+---
+import type { Project } from '../../content/projects';
+interface Props { previous?: Project; next?: Project }
+const { previous, next } = Astro.props;
+---
+<nav class="project-navigation" aria-label="Project navigation">
+  <a class="project-index-link" href="/work">← WORK INDEX</a>
+  <div class="project-neighbours">
+    {previous && <a class="project-neighbour project-neighbour--previous" href={'/work/' + previous.data.slug}><span>← PREVIOUS PROJECT</span><strong>{previous.data.title}</strong></a>}
+    {next && <a class="project-neighbour project-neighbour--next" href={'/work/' + next.data.slug}><span>NEXT PROJECT →</span><strong>{next.data.title}</strong></a>}
+  </div>
+</nav>
