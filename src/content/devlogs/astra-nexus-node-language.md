@@ -1,7 +1,7 @@
 ---
-title: "节点之间——从调查草图到〈群星〉的终端语言"
+title: "GAME DEV LOG 02 | 节点之间——从调查草图到〈群星〉的终端语言"
 slug: "astra-nexus-node-language"
-series: "《星群》开发档案"
+series: "GAME DEV LOG"
 sequence: 2
 language: "zh"
 edition: "edited"

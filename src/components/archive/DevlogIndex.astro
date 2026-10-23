@@ -2,7 +2,7 @@
 import { getDevlogs } from '../../content/devlogs';
 const entries = await getDevlogs();
 ---
-{entries.length > 0 && <section class="devlog-index" aria-label="Development logs"><h2>DEVLOG</h2><ol>{entries.map(entry => <li><a href={'/archive/' + entry.data.slug + '/'}><span>DEVLOG {String(entry.data.sequence).padStart(2,'0')}{entry.data.draft && ' / DRAFT'}</span><strong>{entry.data.title}</strong></a></li>)}</ol></section>}
+{entries.length > 0 && <section class="devlog-index" aria-label="Development logs"><h2>GAME DEV LOG</h2><ol>{entries.map(entry => <li><a href={'/archive/' + entry.data.slug + '/'}><span>GAME DEV LOG {String(entry.data.sequence).padStart(2,'0')}{entry.data.draft && ' / DRAFT'}</span><strong>{entry.data.title}</strong></a></li>)}</ol></section>}
 <style>
 .devlog-index { display:none; }
 :global([data-experience][data-scene="ideas"]) .devlog-index { display:block; width:min(900px,calc(100% - 80px)); margin:0 auto; padding:0 0 90px; color:var(--ink); }

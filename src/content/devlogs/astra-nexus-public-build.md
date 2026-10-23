@@ -1,7 +1,7 @@
 ---
-title: "从〈群星〉到〈星群〉——把节点之间的故事交给玩家"
+title: "GAME DEV LOG 04 | 从〈群星〉到〈星群〉——把节点之间的故事交给玩家"
 slug: "astra-nexus-public-build"
-series: "《星群》开发档案"
+series: "GAME DEV LOG"
 sequence: 4
 language: "zh"
 edition: "edited"

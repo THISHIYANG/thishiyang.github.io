@@ -1,7 +1,7 @@
 ---
 title: "GAME DEV LOG 01 | 涌现与回忆 —— 未领取的过去"
 slug: "k-3089-devlog-01"
-series: "《星群》开发档案"
+series: "GAME DEV LOG"
 sequence: 1
 language: "zh"
 edition: "original"

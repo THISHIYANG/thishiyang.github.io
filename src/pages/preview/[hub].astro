@@ -6,4 +6,4 @@ export async function getStaticPaths(){ return import.meta.env.DEV?[{params:{hub
 const entries=await getDevlogReviews();
 if(!import.meta.env.DEV)return new Response(null,{status:404});
 ---
-<BaseLayout lang="zh" noindex><main id="main" class="devlog-document" data-devlog-document data-work-document><h1>《星群》开发档案 · 本地审阅</h1><p>此目录与草稿预览均不进入正式构建。补齐媒体后再决定发布。</p><ol>{entries.map(entry=><li><a href={'/preview/devlogs/'+entry.data.slug+'/'}>{entry.data.title}</a> · {entry.data.draft?'DRAFT':'素材已核对'}</li>)}</ol></main></BaseLayout>
+<BaseLayout lang="zh" noindex><main id="main" class="devlog-document" data-devlog-document data-work-document><h1>GAME DEV LOG · 本地审阅</h1><p>此目录与草稿预览均不进入正式构建。补齐媒体后再决定发布。</p><ol>{entries.map(entry=><li><a href={'/preview/devlogs/'+entry.data.slug+'/'}>{entry.data.title}</a> · {entry.data.draft?'DRAFT':'素材已核对'}</li>)}</ol></main></BaseLayout>

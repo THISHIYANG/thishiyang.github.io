@@ -52,7 +52,7 @@
     },
     {
       "slug": "astra-nexus-node-language",
-      "title": "节点之间——从调查草图到〈群星〉的终端语言",
+      "title": "GAME DEV LOG 02 | 节点之间——从调查草图到〈群星〉的终端语言",
       "sequence": 2,
       "edition": "edited",
       "summary": "从维修流程的纸上草图，走到实体、信息、功能节点与 NODE BLOCK 的早期探索。",
@@ -99,7 +99,7 @@
     },
     {
       "slug": "astra-nexus-first-workday",
-      "title": "欢迎登上群星号——一名维修员怎样开始调查",
+      "title": "GAME DEV LOG 03 | 欢迎登上群星号——一名维修员怎样开始调查",
       "sequence": 3,
       "edition": "edited",
       "summary": "从苏醒、记录地点和终端教学，走进第一台照明设备的维修，以及维修之后仍可继续的调查。",
@@ -137,7 +137,7 @@
     },
     {
       "slug": "astra-nexus-public-build",
-      "title": "从〈群星〉到〈星群〉——把节点之间的故事交给玩家",
+      "title": "GAME DEV LOG 04 | 从〈群星〉到〈星群〉——把节点之间的故事交给玩家",
       "sequence": 4,
       "edition": "edited",
       "summary": "名称更改、实机演示与比赛期间最后一篇日志：记录作品交到玩家面前时的状态与仍需打磨的地方。",
