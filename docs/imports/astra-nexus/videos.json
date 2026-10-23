@@ -1,0 +1,50 @@
+[
+  {
+    "assetId": "C-video-5954725",
+    "sourcePostId": "858060575781949039",
+    "sourceOrder": 79,
+    "sourceUrl": "https://www.taptap.cn/moment/858060575781949039",
+    "localPath": null,
+    "mediaType": "video",
+    "originalCaption": "07.一个简单的实现效果 | Godot",
+    "credit": "THISHI / SZU 原帖",
+    "targetArticle": 2,
+    "targetSection": "从卡片到模块：NODE BLOCK 的形状",
+    "placement": "待补",
+    "status": "Observed source video-resource endpoint provides signed HLS. No portable local video file has been imported. Cover is recorded separately.",
+    "sourceDuration": 12,
+    "resourceDuration": 13
+  },
+  {
+    "assetId": "E-video-5983719",
+    "sourcePostId": "860943497941747954",
+    "sourceOrder": "pinned",
+    "sourceUrl": "https://www.taptap.cn/moment/860943497941747954",
+    "localPath": null,
+    "mediaType": "video",
+    "originalCaption": "实机演示",
+    "credit": "THISHI / SZU 原帖",
+    "targetArticle": 4,
+    "targetSection": "从〈群星〉到〈星群〉",
+    "placement": "待补",
+    "status": "Signed HLS observed; local video migration pending. Cover is not counted as video.",
+    "sourceDuration": 119,
+    "resourceDuration": 120
+  },
+  {
+    "assetId": "F-video-5997159",
+    "sourcePostId": "861777051428851452",
+    "sourceOrder": 0,
+    "sourceUrl": "https://www.taptap.cn/moment/861777051428851452",
+    "localPath": null,
+    "mediaType": "video",
+    "originalCaption": "宣传片也在上面，有点赶工，不过尽力了。",
+    "credit": "THISHI / SZU 原帖",
+    "targetArticle": 4,
+    "targetSection": "比赛期间最后一篇日志",
+    "placement": "待补",
+    "status": "Signed HLS observed; local video migration pending. Cover is not counted as video.",
+    "sourceDuration": 36,
+    "resourceDuration": 36
+  }
+]

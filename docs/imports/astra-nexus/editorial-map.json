@@ -1,0 +1,924 @@
+{
+  "articles": [
+    {
+      "slug": "k-3089-devlog-01",
+      "title": "GAME DEV LOG 01 | 涌现与回忆 —— 未领取的过去",
+      "sequence": 1,
+      "edition": "original",
+      "summary": "保留 TapTap DEV LOG 01 原文；一处源图片地址缺失，暂存草稿。",
+      "letters": [
+        "A"
+      ],
+      "draft": true,
+      "missingMedia": 1,
+      "toc": [
+        {
+          "id": "source-heading-0",
+          "title": "引言 | 维修员不会出现在第一现场"
+        },
+        {
+          "id": "source-heading-1",
+          "title": "1. 故事的开始"
+        },
+        {
+          "id": "source-heading-2",
+          "title": "2. 两颗坏掉的铆钉"
+        },
+        {
+          "id": "source-heading-3",
+          "title": "3. 调查怎样从维修中涌现"
+        },
+        {
+          "id": "source-heading-4",
+          "title": "4. 当解谜者成为谜题"
+        },
+        {
+          "id": "source-heading-5",
+          "title": "5. 没有撒谎的叙述"
+        },
+        {
+          "id": "source-heading-6",
+          "title": "6. 把涌现落实到玩家的动作里"
+        },
+        {
+          "id": "source-heading-7",
+          "title": "7. 尾言｜当故事终于可以被触碰"
+        },
+        {
+          "id": "source-heading-8",
+          "title": "References"
+        }
+      ]
+    },
+    {
+      "slug": "astra-nexus-node-language",
+      "title": "节点之间——从调查草图到〈群星〉的终端语言",
+      "sequence": 2,
+      "edition": "edited",
+      "summary": "从维修流程的纸上草图，走到实体、信息、功能节点与 NODE BLOCK 的早期探索。",
+      "letters": [
+        "B",
+        "C"
+      ],
+      "draft": true,
+      "missingMedia": 1,
+      "toc": [
+        {
+          "id": "sketch",
+          "title": "从房间草图到调查画布"
+        },
+        {
+          "id": "understanding",
+          "title": "读到信息与理解关系之间的距离"
+        },
+        {
+          "id": "grammar",
+          "title": "实体、信息、功能：节点系统的收束"
+        },
+        {
+          "id": "blocks",
+          "title": "从卡片到模块：NODE BLOCK 的形状"
+        },
+        {
+          "id": "name",
+          "title": "名字、人物与终端画面的汇合"
+        },
+        {
+          "id": "questions",
+          "title": "当时仍未解决的问题"
+        },
+        {
+          "id": "references",
+          "title": "References"
+        },
+        {
+          "id": "process",
+          "title": "过程图档"
+        }
+      ]
+    },
+    {
+      "slug": "astra-nexus-first-workday",
+      "title": "欢迎登上群星号——一名维修员怎样开始调查",
+      "sequence": 3,
+      "edition": "edited",
+      "summary": "从苏醒、记录地点和终端教学，走进第一台照明设备的维修，以及维修之后仍可继续的调查。",
+      "letters": [
+        "D"
+      ],
+      "draft": false,
+      "missingMedia": 0,
+      "toc": [
+        {
+          "id": "awakening",
+          "title": "苏醒与第一份工作"
+        },
+        {
+          "id": "terminal",
+          "title": "终端、人物信息和关键词"
+        },
+        {
+          "id": "repair",
+          "title": "第一台照明设备的维修流程"
+        },
+        {
+          "id": "colleagues",
+          "title": "专业分工与同事的生活"
+        },
+        {
+          "id": "unclaimed",
+          "title": "K-3089 与维修之后的追问"
+        },
+        {
+          "id": "process",
+          "title": "过程图档"
+        }
+      ]
+    },
+    {
+      "slug": "astra-nexus-public-build",
+      "title": "从〈群星〉到〈星群〉——把节点之间的故事交给玩家",
+      "sequence": 4,
+      "edition": "edited",
+      "summary": "名称更改、实机演示与比赛期间最后一篇日志：记录作品交到玩家面前时的状态与仍需打磨的地方。",
+      "letters": [
+        "E",
+        "F"
+      ],
+      "draft": true,
+      "missingMedia": 2,
+      "toc": [
+        {
+          "id": "renaming",
+          "title": "从〈群星〉到〈星群〉"
+        },
+        {
+          "id": "relations",
+          "title": "从一项维修到一组关系"
+        },
+        {
+          "id": "last-log",
+          "title": "比赛期间最后一篇日志"
+        },
+        {
+          "id": "questions",
+          "title": "“原来如此”与“是不是漏掉了什么”"
+        },
+        {
+          "id": "handover",
+          "title": "把终端交到玩家面前"
+        },
+        {
+          "id": "process",
+          "title": "过程图档"
+        }
+      ]
+    }
+  ],
+  "sourceBlocks": [
+    {
+      "sourceId": "B",
+      "block": 5,
+      "targetSection": "从房间草图到调查画布"
+    },
+    {
+      "sourceId": "B",
+      "block": 8,
+      "targetSection": "从房间草图到调查画布"
+    },
+    {
+      "sourceId": "B",
+      "block": 9,
+      "targetSection": "从房间草图到调查画布"
+    },
+    {
+      "sourceId": "B",
+      "block": 10,
+      "targetSection": "从房间草图到调查画布"
+    },
+    {
+      "sourceId": "B",
+      "block": 13,
+      "targetSection": "从房间草图到调查画布"
+    },
+    {
+      "sourceId": "B",
+      "block": 16,
+      "targetSection": "从房间草图到调查画布"
+    },
+    {
+      "sourceId": "B",
+      "block": 17,
+      "targetSection": "从房间草图到调查画布"
+    },
+    {
+      "sourceId": "B",
+      "block": 18,
+      "targetSection": "从房间草图到调查画布"
+    },
+    {
+      "sourceId": "B",
+      "block": 21,
+      "targetSection": "从房间草图到调查画布"
+    },
+    {
+      "sourceId": "B",
+      "block": 32,
+      "targetSection": "读到信息与理解关系之间的距离"
+    },
+    {
+      "sourceId": "B",
+      "block": 36,
+      "targetSection": "读到信息与理解关系之间的距离"
+    },
+    {
+      "sourceId": "B",
+      "block": 39,
+      "targetSection": "读到信息与理解关系之间的距离"
+    },
+    {
+      "sourceId": "B",
+      "block": 70,
+      "targetSection": "读到信息与理解关系之间的距离"
+    },
+    {
+      "sourceId": "B",
+      "block": 73,
+      "targetSection": "读到信息与理解关系之间的距离"
+    },
+    {
+      "sourceId": "B",
+      "block": 76,
+      "targetSection": "读到信息与理解关系之间的距离"
+    },
+    {
+      "sourceId": "B",
+      "block": 88,
+      "targetSection": "读到信息与理解关系之间的距离"
+    },
+    {
+      "sourceId": "B",
+      "block": 78,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "B",
+      "block": 81,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 35,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 39,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 40,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 41,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 42,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 43,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 44,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 53,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 54,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 55,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 56,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 57,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 58,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 59,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 60,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 61,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 62,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 63,
+      "targetSection": "实体、信息、功能：节点系统的收束"
+    },
+    {
+      "sourceId": "C",
+      "block": 65,
+      "targetSection": "从卡片到模块：NODE BLOCK 的形状"
+    },
+    {
+      "sourceId": "C",
+      "block": 66,
+      "targetSection": "从卡片到模块：NODE BLOCK 的形状"
+    },
+    {
+      "sourceId": "C",
+      "block": 67,
+      "targetSection": "从卡片到模块：NODE BLOCK 的形状"
+    },
+    {
+      "sourceId": "C",
+      "block": 70,
+      "targetSection": "从卡片到模块：NODE BLOCK 的形状"
+    },
+    {
+      "sourceId": "C",
+      "block": 78,
+      "targetSection": "从卡片到模块：NODE BLOCK 的形状"
+    },
+    {
+      "sourceId": "C",
+      "block": 81,
+      "targetSection": "从卡片到模块：NODE BLOCK 的形状"
+    },
+    {
+      "sourceId": "C",
+      "block": 0,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 1,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 6,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 7,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 22,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 23,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 24,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 25,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 26,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 27,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 28,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 29,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 30,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 31,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 32,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "B",
+      "block": 41,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "B",
+      "block": 44,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 9,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 15,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 16,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 19,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "C",
+      "block": 20,
+      "targetSection": "名字、人物与终端画面的汇合"
+    },
+    {
+      "sourceId": "B",
+      "block": 54,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "B",
+      "block": 55,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "B",
+      "block": 58,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "B",
+      "block": 61,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "B",
+      "block": 62,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "B",
+      "block": 82,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "B",
+      "block": 83,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "B",
+      "block": 86,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "B",
+      "block": 87,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "B",
+      "block": 89,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "C",
+      "block": 87,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "C",
+      "block": 88,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "C",
+      "block": 89,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "C",
+      "block": 90,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "C",
+      "block": 91,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "C",
+      "block": 92,
+      "targetSection": "当时仍未解决的问题"
+    },
+    {
+      "sourceId": "B",
+      "block": 93,
+      "targetSection": "References"
+    },
+    {
+      "sourceId": "B",
+      "block": 94,
+      "targetSection": "References"
+    },
+    {
+      "sourceId": "B",
+      "block": 95,
+      "targetSection": "References"
+    },
+    {
+      "sourceId": "D",
+      "block": 3,
+      "targetSection": "苏醒与第一份工作"
+    },
+    {
+      "sourceId": "D",
+      "block": 4,
+      "targetSection": "苏醒与第一份工作"
+    },
+    {
+      "sourceId": "D",
+      "block": 7,
+      "targetSection": "苏醒与第一份工作"
+    },
+    {
+      "sourceId": "D",
+      "block": 10,
+      "targetSection": "苏醒与第一份工作"
+    },
+    {
+      "sourceId": "D",
+      "block": 14,
+      "targetSection": "终端、人物信息和关键词"
+    },
+    {
+      "sourceId": "D",
+      "block": 15,
+      "targetSection": "终端、人物信息和关键词"
+    },
+    {
+      "sourceId": "D",
+      "block": 18,
+      "targetSection": "终端、人物信息和关键词"
+    },
+    {
+      "sourceId": "D",
+      "block": 23,
+      "targetSection": "终端、人物信息和关键词"
+    },
+    {
+      "sourceId": "D",
+      "block": 30,
+      "targetSection": "终端、人物信息和关键词"
+    },
+    {
+      "sourceId": "D",
+      "block": 32,
+      "targetSection": "第一台照明设备的维修流程"
+    },
+    {
+      "sourceId": "D",
+      "block": 37,
+      "targetSection": "第一台照明设备的维修流程"
+    },
+    {
+      "sourceId": "D",
+      "block": 40,
+      "targetSection": "第一台照明设备的维修流程"
+    },
+    {
+      "sourceId": "D",
+      "block": 43,
+      "targetSection": "第一台照明设备的维修流程"
+    },
+    {
+      "sourceId": "D",
+      "block": 46,
+      "targetSection": "第一台照明设备的维修流程"
+    },
+    {
+      "sourceId": "D",
+      "block": 47,
+      "targetSection": "第一台照明设备的维修流程"
+    },
+    {
+      "sourceId": "D",
+      "block": 50,
+      "targetSection": "第一台照明设备的维修流程"
+    },
+    {
+      "sourceId": "D",
+      "block": 52,
+      "targetSection": "专业分工与同事的生活"
+    },
+    {
+      "sourceId": "D",
+      "block": 53,
+      "targetSection": "专业分工与同事的生活"
+    },
+    {
+      "sourceId": "D",
+      "block": 54,
+      "targetSection": "专业分工与同事的生活"
+    },
+    {
+      "sourceId": "D",
+      "block": 55,
+      "targetSection": "专业分工与同事的生活"
+    },
+    {
+      "sourceId": "D",
+      "block": 56,
+      "targetSection": "专业分工与同事的生活"
+    },
+    {
+      "sourceId": "D",
+      "block": 57,
+      "targetSection": "专业分工与同事的生活"
+    },
+    {
+      "sourceId": "D",
+      "block": 58,
+      "targetSection": "专业分工与同事的生活"
+    },
+    {
+      "sourceId": "D",
+      "block": 62,
+      "targetSection": "K-3089 与维修之后的追问"
+    },
+    {
+      "sourceId": "D",
+      "block": 63,
+      "targetSection": "K-3089 与维修之后的追问"
+    },
+    {
+      "sourceId": "D",
+      "block": 66,
+      "targetSection": "K-3089 与维修之后的追问"
+    },
+    {
+      "sourceId": "D",
+      "block": 67,
+      "targetSection": "K-3089 与维修之后的追问"
+    },
+    {
+      "sourceId": "D",
+      "block": 68,
+      "targetSection": "K-3089 与维修之后的追问"
+    },
+    {
+      "sourceId": "D",
+      "block": 69,
+      "targetSection": "K-3089 与维修之后的追问"
+    },
+    {
+      "sourceId": "D",
+      "block": 72,
+      "targetSection": "K-3089 与维修之后的追问"
+    },
+    {
+      "sourceId": "D",
+      "block": 74,
+      "targetSection": "K-3089 与维修之后的追问"
+    },
+    {
+      "sourceId": "D",
+      "block": 75,
+      "targetSection": "K-3089 与维修之后的追问"
+    },
+    {
+      "sourceId": "E",
+      "block": 3,
+      "targetSection": "从〈群星〉到〈星群〉"
+    },
+    {
+      "sourceId": "E",
+      "block": 4,
+      "targetSection": "从〈群星〉到〈星群〉"
+    },
+    {
+      "sourceId": "E",
+      "block": 5,
+      "targetSection": "从〈群星〉到〈星群〉"
+    },
+    {
+      "sourceId": "E",
+      "block": 8,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "E",
+      "block": 9,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "E",
+      "block": 10,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "E",
+      "block": 11,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "E",
+      "block": 12,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "E",
+      "block": 13,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "E",
+      "block": 14,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "E",
+      "block": 17,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "E",
+      "block": 18,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "E",
+      "block": 19,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "E",
+      "block": 20,
+      "targetSection": "从一项维修到一组关系"
+    },
+    {
+      "sourceId": "F",
+      "block": 1,
+      "targetSection": "比赛期间最后一篇日志"
+    },
+    {
+      "sourceId": "F",
+      "block": 2,
+      "targetSection": "比赛期间最后一篇日志"
+    },
+    {
+      "sourceId": "F",
+      "block": 3,
+      "targetSection": "比赛期间最后一篇日志"
+    },
+    {
+      "sourceId": "F",
+      "block": 5,
+      "targetSection": "比赛期间最后一篇日志"
+    },
+    {
+      "sourceId": "F",
+      "block": 6,
+      "targetSection": "“原来如此”与“是不是漏掉了什么”"
+    },
+    {
+      "sourceId": "F",
+      "block": 7,
+      "targetSection": "“原来如此”与“是不是漏掉了什么”"
+    },
+    {
+      "sourceId": "F",
+      "block": 8,
+      "targetSection": "“原来如此”与“是不是漏掉了什么”"
+    },
+    {
+      "sourceId": "F",
+      "block": 9,
+      "targetSection": "“原来如此”与“是不是漏掉了什么”"
+    },
+    {
+      "sourceId": "F",
+      "block": 10,
+      "targetSection": "“原来如此”与“是不是漏掉了什么”"
+    },
+    {
+      "sourceId": "F",
+      "block": 11,
+      "targetSection": "“原来如此”与“是不是漏掉了什么”"
+    },
+    {
+      "sourceId": "F",
+      "block": 12,
+      "targetSection": "“原来如此”与“是不是漏掉了什么”"
+    },
+    {
+      "sourceId": "F",
+      "block": 13,
+      "targetSection": "“原来如此”与“是不是漏掉了什么”"
+    },
+    {
+      "sourceId": "F",
+      "block": 14,
+      "targetSection": "把终端交到玩家面前"
+    },
+    {
+      "sourceId": "F",
+      "block": 15,
+      "targetSection": "把终端交到玩家面前"
+    },
+    {
+      "sourceId": "F",
+      "block": 16,
+      "targetSection": "把终端交到玩家面前"
+    },
+    {
+      "sourceId": "F",
+      "block": 17,
+      "targetSection": "把终端交到玩家面前"
+    },
+    {
+      "sourceId": "F",
+      "block": 18,
+      "targetSection": "把终端交到玩家面前"
+    },
+    {
+      "sourceId": "F",
+      "block": 19,
+      "targetSection": "把终端交到玩家面前"
+    },
+    {
+      "sourceId": "F",
+      "block": 20,
+      "targetSection": "把终端交到玩家面前"
+    }
+  ],
+  "editorialRemovals": [
+    "Removed C block 56 trailing exported filename fragment nexus9_node_investigation_demo_… from edited prose; full source remains in source-C.json.",
+    "Omitted repeated greetings, hashtag footers and repeated broad node introductions from edited editions; no original A text was omitted."
+  ]
+}

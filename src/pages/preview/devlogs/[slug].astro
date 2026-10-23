@@ -1,0 +1,7 @@
+---
+import { getDevlogReviews } from '../../../content/devlogs';
+import DevlogDocument from '../../../components/archive/DevlogDocument.astro';
+export async function getStaticPaths() { return (await getDevlogReviews()).map(entry=>({params:{slug:entry.data.slug},props:{entry}})); }
+const {entry}=Astro.props;
+---
+<DevlogDocument entry={entry} review />

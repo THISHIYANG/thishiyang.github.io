@@ -54,4 +54,16 @@ const projects = defineCollection({
   }),
 });
 
-export const collections = { projects };
+const devlogs = defineCollection({
+  loader: glob({ base: './src/content/devlogs', pattern: '**/*.md' }),
+  schema: z.object({
+    title: z.string().min(1), slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    series: z.string(), sequence: z.number().int().positive(), language: z.literal('zh'),
+    edition: z.enum(['original','edited']), summary: z.string(), author: z.string(), authorUrl: z.url(),
+    sources: z.array(z.object({ id:z.string(), originalTitle:z.string(), url:z.url(), publishedAt:z.iso.datetime().optional() })).min(1),
+    relatedProjectId: z.string().optional(), editedAt: z.string(),
+    draft: z.boolean().default(true), mediaComplete:z.boolean(), missingMedia:z.number().int().nonnegative().default(0),
+    toc:z.array(z.object({id:z.string(),title:z.string()})).default([]),
+  }),
+});
+export const collections = { projects, devlogs };

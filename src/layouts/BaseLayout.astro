@@ -13,11 +13,14 @@ import '../styles/surface.css';
 import SurfaceTreatment from '../components/SurfaceTreatment.astro';
 import BackgroundColorPicker from '../components/BackgroundColorPicker.astro';
 const title = 'this is ishi.';
+const { lang = 'en', noindex = false, canonical } = Astro.props;
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {canonical && <link rel="canonical" href={canonical} />}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="description" content="THISHI — Independent Creator. This is ishi." />

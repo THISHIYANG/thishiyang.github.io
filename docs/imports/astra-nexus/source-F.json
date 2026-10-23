@@ -1,0 +1,402 @@
+{
+  "sourceId": "F",
+  "postId": "861777051428851452",
+  "url": "https://www.taptap.cn/moment/861777051428851452",
+  "originalTitle": "GAME DEV LOG 06 | 节点之间，星群涌现",
+  "verifiedPublicationDate": "2026-10-21T02:00:00.000Z",
+  "verifiedUpdatedDate": "2026-10-20T17:26:52.000Z",
+  "seoUpdatedDate": "2026-10-20T17:14:20+00:00",
+  "blocks": [
+    {
+      "type": "video",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "video_id": 5997159,
+        "image": {
+          "url": "https://img-tc.tapimg.com/video-recthumb/tid-6ad79cf4478e2de67bb49a35/FrndtRrYZfo7jZ4ZqKoA3uCRILmq.png/_tap_ugc.jpg",
+          "medium_url": "https://img-tc.tapimg.com/video-recthumb/tid-6ad79cf4478e2de67bb49a35/FrndtRrYZfo7jZ4ZqKoA3uCRILmq.png/_tap_ugc_m.jpg",
+          "small_url": "https://img-tc.tapimg.com/video-recthumb/tid-6ad79cf4478e2de67bb49a35/FrndtRrYZfo7jZ4ZqKoA3uCRILmq.png/_tap_ugc_s.jpg",
+          "original_url": "https://img-tc.tapimg.com/video-recthumb/tid-6ad79cf4478e2de67bb49a35/FrndtRrYZfo7jZ4ZqKoA3uCRILmq.png",
+          "original_format": "png",
+          "width": 1920,
+          "height": 1080,
+          "color": "0x73686e",
+          "original_size": 1090567,
+          "large_url": "https://img-tc.tapimg.com/video-recthumb/tid-6ad79cf4478e2de67bb49a35/FrndtRrYZfo7jZ4ZqKoA3uCRILmq.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "大家好，我们是 THISHI 和 SZU，《星群 ASTRA NEXUS》的两位开发者。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "这是聚光灯比赛期间内的最后一次DEVLOG了，无论如何我们完成了这个项目，不管结局会如何，我们都很开心，这是我们作为开发者自己觉得没有辜负初心的作品，20天忙碌的画图、写故事、打磨和完善优化，终于在最后一天可以安心的睡一个好觉了。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "这几天认真修复了所有的BUG，以及完善了最终的一些宣传图，做了好几个版本都不太满意，最后还是决定用人物群像来画上一个句号。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png",
+          "original_format": "png",
+          "width": 1920,
+          "height": 1080,
+          "color": "0x998461",
+          "original_size": 68218,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "宣传片也在上面，有点赶工，不过尽力了。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "最后做个总结吧，《星群》诞生于这次以「涌现」为主题的 Game Jam。面对这个题目，作为解谜游戏爱好者，我们给出的答案是一种在阅读、交谈和生活中都曾出现过的体验："
+        },
+        {
+          "text": "当你去修复一个问题，却意外发现这背后隐藏着更大的隐患。几件原本互不相干的小事，也会因为这个新发现，突然有了联系",
+          "color": "#5991FF"
+        },
+        {
+          "text": "。眼前的东西并没有改变，但我们理解它们的方式改变了。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我们想把这种体验做成游戏，在经历了很多探索之后，我们最终选择用节点来作为主要的探索方式和玩法。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "因此，我们很在意那些细小的时刻：一个名字被再次提起，一段编号终于有了用途，一份早已读过的记录，让你忍不住重新打开。我们希望，推动你继续探索的，不只是下一个任务目标，还有你自己心里冒出来的问题。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "“原来如此。”"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "“等等，我是不是漏掉了什么？”"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "这两种感受，对我们同样重要。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我们没有把所有联系都当作答案。有时，新的信息会让一个解释更加清楚；有时，它会让你发现，自己之前想得太快了。我们希望你既能享受找到联系的满足，也能在信息不足时，保留一点迟疑。那些暂时不能确定的事情，也值得被认真对待。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "人物也是如此。我们希望「群星号」上的人，不只是提供线索或推动任务的角色。他们有自己的工作、兴趣、习惯，以及并不总能被别人理解的想法。也许最初你只是为了处理一个故障而认识某个人，后来却开始在意他为什么这样说、经历过什么。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "在视觉上，我们选择了像素、细线和深紫与金米色的终端界面。我们想做出一台有些旧、但仍然值得被使用的终端：资料可以展开，节点可以移动，一张工作台随着你的操作，慢慢留下探索的痕迹。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "从最初的故事和流程图，到能够实际操作的节点、程序和档案，我们在制作过程中反复调整，也从试玩反馈里发现了许多自己没有注意到的问题。看到玩家在我们以为清楚的地方停下来，才知道一个提示、一处换行或一次操作反馈，也可能影响整段体验。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "对两个人的团队来说，能把这份设想变成可以交到大家手里的作品，是一件很开心的事。我们也知道，它仍有值得打磨的地方。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "欢迎把你的发现、困惑和感受留在评论里。让你停下来想一想的故事细节，和让你不知道如何继续的操作问题，我们都想听见。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "谢谢你愿意打开《星群》，在这台小小的终端前停留一会儿。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "没有一块碎片知道完整的故事。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "但我们可以从其中一块开始。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "#聚光灯游戏创作挑战",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E8%81%9A%E5%85%89%E7%81%AF%E6%B8%B8%E6%88%8F%E5%88%9B%E4%BD%9C%E6%8C%91%E6%88%98",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=268150"
+          }
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "#聚光灯gamejam开发者日志",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E8%81%9A%E5%85%89%E7%81%AFGameJam%E5%BC%80%E5%8F%91%E8%80%85%E6%97%A5%E5%BF%97",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=272749"
+          }
+        },
+        {
+          "text": " "
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png",
+      "original_format": "png",
+      "width": 1920,
+      "height": 1080,
+      "color": "0x998461",
+      "original_size": 68218,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc.jpg"
+    }
+  ],
+  "footer_images": [
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010025.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010025.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010025.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010025.png",
+      "original_format": "png",
+      "width": 1920,
+      "height": 1080,
+      "color": "0x998461",
+      "original_size": 68218,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010025.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FodEoJijADgVlybj5Fh9pSwRcwF6_20261021010034.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FodEoJijADgVlybj5Fh9pSwRcwF6_20261021010034.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FodEoJijADgVlybj5Fh9pSwRcwF6_20261021010034.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FodEoJijADgVlybj5Fh9pSwRcwF6_20261021010034.png",
+      "original_format": "png",
+      "width": 720,
+      "height": 1080,
+      "color": "0x7f6d55",
+      "original_size": 58224,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FodEoJijADgVlybj5Fh9pSwRcwF6_20261021010034.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FuMZA3tYpzgWH6jDemj4x1aN1y9n_20261021010043.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FuMZA3tYpzgWH6jDemj4x1aN1y9n_20261021010043.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FuMZA3tYpzgWH6jDemj4x1aN1y9n_20261021010043.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FuMZA3tYpzgWH6jDemj4x1aN1y9n_20261021010043.png",
+      "original_format": "png",
+      "width": 4600,
+      "height": 1955,
+      "color": "0x998461",
+      "original_size": 104923,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FuMZA3tYpzgWH6jDemj4x1aN1y9n_20261021010043.png/_tap_ugc.jpg"
+    }
+  ],
+  "topic": {
+    "id_str": "54628092",
+    "type": 2,
+    "title": "GAME DEV LOG 06 | 节点之间，星群涌现",
+    "summary": "大家好，我们是 THISHI 和 SZU，《星群 ASTRA NEXUS》的两位开发者。\n这是聚光灯比赛期间内的最后一次DEVLOG了，无论如何我们完成了这个项目，不管结局会如何，我们都很开心，这是我们作为开发者自己觉得没有辜负初心的作品，20天忙碌的画图、写故事、打磨和完善优化，终于在最后一天可以安心的睡一个好觉了。\n这几天认真修复了所有的BUG，以及完善了最终的一些宣传图，做了好几个版本都不太",
+    "images": [
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png",
+        "original_format": "png",
+        "width": 1920,
+        "height": 1080,
+        "color": "0x998461",
+        "original_size": 68218,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010914.png/_tap_ugc.jpg"
+      }
+    ],
+    "videos": [
+      {
+        "video_id": 5997159,
+        "info": {
+          "aspect_ratio": "1.77778",
+          "best_format_name": "",
+          "duration": 36
+        },
+        "thumbnail": {
+          "url": "https://img-tc.tapimg.com/video-recthumb/tid-6ad79cf4478e2de67bb49a35/FrndtRrYZfo7jZ4ZqKoA3uCRILmq.png/_tap_banner.jpg",
+          "medium_url": "https://img-tc.tapimg.com/video-recthumb/tid-6ad79cf4478e2de67bb49a35/FrndtRrYZfo7jZ4ZqKoA3uCRILmq.png/_tap_banner_m.jpg",
+          "small_url": "https://img-tc.tapimg.com/video-recthumb/tid-6ad79cf4478e2de67bb49a35/FrndtRrYZfo7jZ4ZqKoA3uCRILmq.png/_tap_banner_s.jpg",
+          "original_url": "https://img-tc.tapimg.com/video-recthumb/tid-6ad79cf4478e2de67bb49a35/FrndtRrYZfo7jZ4ZqKoA3uCRILmq.png",
+          "original_format": "png",
+          "width": 1920,
+          "height": 1080,
+          "color": "0x73686e",
+          "original_size": 1090567,
+          "large_url": "https://img-tc.tapimg.com/video-recthumb/tid-6ad79cf4478e2de67bb49a35/FrndtRrYZfo7jZ4ZqKoA3uCRILmq.png/_tap_banner_l.jpg"
+        },
+        "trace_log": {
+          "video_id": 5997159,
+          "subjectId": 54628092,
+          "subjectType": "topicDetail"
+        },
+        "play_log": {
+          "video_id": 5997159,
+          "paramId": 5997159,
+          "paramType": "videoDetail",
+          "subjectId": 54628092,
+          "subjectType": "topicDetail"
+        }
+      }
+    ],
+    "footer_images": [
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010025.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010025.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010025.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010025.png",
+        "original_format": "png",
+        "width": 1920,
+        "height": 1080,
+        "color": "0x998461",
+        "original_size": 68218,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FsNBZyOSL1uRPvFHcSUmATxmhCsk_20261021010025.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FodEoJijADgVlybj5Fh9pSwRcwF6_20261021010034.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FodEoJijADgVlybj5Fh9pSwRcwF6_20261021010034.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FodEoJijADgVlybj5Fh9pSwRcwF6_20261021010034.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FodEoJijADgVlybj5Fh9pSwRcwF6_20261021010034.png",
+        "original_format": "png",
+        "width": 720,
+        "height": 1080,
+        "color": "0x7f6d55",
+        "original_size": 58224,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FodEoJijADgVlybj5Fh9pSwRcwF6_20261021010034.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FuMZA3tYpzgWH6jDemj4x1aN1y9n_20261021010043.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FuMZA3tYpzgWH6jDemj4x1aN1y9n_20261021010043.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FuMZA3tYpzgWH6jDemj4x1aN1y9n_20261021010043.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FuMZA3tYpzgWH6jDemj4x1aN1y9n_20261021010043.png",
+        "original_format": "png",
+        "width": 4600,
+        "height": 1955,
+        "color": "0x998461",
+        "original_size": 104923,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FuMZA3tYpzgWH6jDemj4x1aN1y9n_20261021010043.png/_tap_ugc.jpg"
+      }
+    ]
+  },
+  "videoRecords": [],
+  "textStatus": "complete: embedded source body verified with browser scroll",
+  "mediaStatus": "images retrieved; full local video pending",
+  "missingItems": [
+    "Video available on TapTap as signed HLS; no portable self-hosted video imported."
+  ],
+  "dateConflict": "Updated timestamp precedes publication; do not infer scheduling or reorder history."
+}

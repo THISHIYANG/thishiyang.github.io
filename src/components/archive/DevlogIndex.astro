@@ -1,0 +1,16 @@
+---
+import { getDevlogs } from '../../content/devlogs';
+const entries = await getDevlogs();
+---
+{entries.length > 0 && <section class="devlog-index" aria-label="Development logs"><h2>DEVLOG</h2><ol>{entries.map(entry => <li><a href={'/archive/' + entry.data.slug + '/'}><span>DEVLOG {String(entry.data.sequence).padStart(2,'0')}{entry.data.draft && ' / DRAFT'}</span><strong>{entry.data.title}</strong></a></li>)}</ol></section>}
+<style>
+.devlog-index { display:none; }
+:global([data-experience][data-scene="ideas"]) .devlog-index { display:block; width:min(900px,calc(100% - 80px)); margin:0 auto; padding:0 0 90px; color:var(--ink); }
+.devlog-index h2,.devlog-index span { font:12px/1.5 var(--mono); }
+.devlog-index ol { list-style:none; padding:0; }
+.devlog-index a { display:grid; gap:16px; padding:24px 0; border-block:1px solid var(--ink); text-decoration:none; }
+.devlog-index strong { font:24px/1.6 'Noto Sans SC',sans-serif; }
+.devlog-index a:focus-visible { outline:1px solid var(--ink); outline-offset:5px; }
+:global(html:has([data-experience][data-scene="ideas"]) .crt-screen) { position:relative; inset:auto; margin:10px; min-height:calc(100svh - 20px); overflow:clip; }
+:global(html:has([data-experience][data-scene="ideas"]) .crt-content) { position:relative; inset:auto; width:100%; height:auto; min-height:calc(100svh - 20px); transform:none; }
+</style>

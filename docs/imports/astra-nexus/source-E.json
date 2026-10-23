@@ -1,0 +1,355 @@
+{
+  "sourceId": "E",
+  "postId": "860943497941747954",
+  "url": "https://www.taptap.cn/moment/860943497941747954",
+  "originalTitle": "GAME DEV LOG 05 | 《星群 ASTRA NEXUS》 实机演示",
+  "verifiedPublicationDate": "2026-10-18T10:02:05.000Z",
+  "verifiedUpdatedDate": "2026-10-20T17:16:22.000Z",
+  "seoUpdatedDate": "2026-10-18T10:02:05+00:00",
+  "blocks": [
+    {
+      "type": "app",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "app_id": 979989
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "节点之间涌现的科幻解谜游戏。",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "style": "block-quote"
+      }
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "终于，把它交到大家面前",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "终于，把它交到大家面前",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "大家好，我是阿石，我们的游戏名称由《"
+        },
+        {
+          "text": "群星",
+          "color": "#5991FF"
+        },
+        {
+          "text": "》改成了《"
+        },
+        {
+          "text": "星群",
+          "color": "#5991FF"
+        },
+        {
+          "text": "》，英文暂定 "
+        },
+        {
+          "text": "ASTRA NEXUS。",
+          "color": "#5991FF"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "这次的实机演示，就是《星群》目前的样子，玩法和剧情文本已经完成，除此之外我们还设计了一些跟通关无关的彩蛋和细节，整体流程我们预计在1-1.5h左右。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "目前游戏已经上线提供试玩，我们会在这几天进行最终优化，尽善尽美打磨最终版本，期待大家的反馈，这会帮我们更好的改良游戏，感谢一路看着开发日志、提出意见，也愿意停下来看看这个小小终端的朋友们，如果你是第一次刷到我们的游戏，请允许我为你介绍。"
+        }
+      ]
+    },
+    {
+      "type": "horizontal-rule",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "id": 3
+      }
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "这是一款什么样的游戏？",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "这是一款什么样的游戏？",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我们按照设想完成了这样一款以"
+        },
+        {
+          "text": "节点交互、信息检索",
+          "bold": true,
+          "color": "#5991FF"
+        },
+        {
+          "text": "与",
+          "bold": true
+        },
+        {
+          "text": "调查解谜",
+          "bold": true,
+          "color": "#5991FF"
+        },
+        {
+          "text": "为核心的"
+        },
+        {
+          "text": "科幻背景游戏",
+          "color": "#5991FF"
+        },
+        {
+          "text": "。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "在游戏中，你将扮演一名在「群星号」上醒来的维修工程师。接到工作、检查设备、查找资料、处理故障，是你最初的日常。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "你的工作台由一个个"
+        },
+        {
+          "text": "节点",
+          "color": "#5991FF"
+        },
+        {
+          "text": "组成。人物、设备、档案和信息，都可以成为探索的起点。你需要查看它们的属性，追踪相关记录，并通过连接，让手头的线索发挥作用。修复一台设备，可能得到一条新的信息；而新找到的记录，也可能改变你对之前某段对话的理解。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "人物、设备、文件和功能，都以节点的形式出现在终端里。你可以拖动它们、展开资料、建立连接，并运行不同的程序。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "调查往往从很小的地方开始：文件里出现的一个名字，设备上残留的一段编号，或者对话中顺口提到的一处地点。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "你需要把这些信息带到下一次检索和操作中。找到相关的人，读懂一份技术资料，完成一次维修，再带着新的发现重新看待之前的记录。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我们希望你逐渐熟悉的不只是终端的操作，还有那些出现在档案和对话里的人。他们有自己的专业、习惯和说话方式，也有与工作无关的小兴趣。"
+        }
+      ]
+    },
+    {
+      "type": "horizontal-rule",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "id": 3
+      }
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "和涌现之间的联系？",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "和涌现之间的联系？",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我们希望比赛的主题"
+        },
+        {
+          "text": "「涌现」",
+          "color": "#5991FF"
+        },
+        {
+          "text": "能发生在这些操作之中：随着维修和调查推进，零散的线索逐渐产生联系，一段过去也慢慢变得清晰。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "每一个节点都像一颗可以被单独看见的星。它们并不各自拥有完整的故事，却能在彼此的关系中，让一幅更大的图景慢慢显现。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "从一个节点到一组关系，从一项任务到认识过去。",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "style": "block-quote"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "这就是我们希望《星群》带给大家的涌现。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "谢谢你愿意花时间看看《星群》。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": ""
+        },
+        {
+          "text": "#聚光灯gamejam开发者日志",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E8%81%9A%E5%85%89%E7%81%AFGameJam%E5%BC%80%E5%8F%91%E8%80%85%E6%97%A5%E5%BF%97",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=272749"
+          }
+        },
+        {
+          "text": " "
+        }
+      ]
+    }
+  ],
+  "footer_images": [],
+  "topic": {
+    "id_str": "54581755",
+    "type": 1,
+    "title": "GAME DEV LOG 05 | 《星群 ASTRA NEXUS》 实机演示",
+    "summary": "节点之间涌现的科幻解谜游戏。\n终于，把它交到大家面前\n大家好，我是阿石，我们的游戏名称由《群星》改成了《星群》，英文暂定 ASTRA NEXUS。\n这次的实机演示，就是《星群》目前的样子，玩法和剧情文本已经完成，除此之外我们还设计了一些跟通关无关的彩蛋和细节，整体流程我们预计在1-1.5h左右。\n目前游戏已经上线提供试玩，我们会在这几天进行最终优化，尽善尽美打磨最终版本，期待大家的反馈，这会帮我们",
+    "pin_video": {
+      "video_id": 5983719,
+      "play_log": {
+        "video_id": "5983719",
+        "paramId": "5983719",
+        "paramType": "videoDetail",
+        "subjectId": "54581755",
+        "subjectType": "topicDetail"
+      },
+      "thumbnail": {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FpzYVPmvUCcYmCE-L0eVYizONpM5_20261018165924.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FpzYVPmvUCcYmCE-L0eVYizONpM5_20261018165924.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FpzYVPmvUCcYmCE-L0eVYizONpM5_20261018165924.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FpzYVPmvUCcYmCE-L0eVYizONpM5_20261018165924.png",
+        "original_format": "png",
+        "width": 2559,
+        "height": 1440,
+        "color": "0x282873",
+        "original_size": 385906,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FpzYVPmvUCcYmCE-L0eVYizONpM5_20261018165924.png/_tap_ugc.jpg"
+      },
+      "duration": 119
+    }
+  },
+  "videoRecords": [],
+  "textStatus": "complete: embedded source body verified with browser scroll",
+  "mediaStatus": "images retrieved; full local video pending",
+  "missingItems": [
+    "Video available on TapTap as signed HLS; no portable self-hosted video imported."
+  ],
+  "dateConflict": "SEO update timestamp differs from structured post timestamp."
+}

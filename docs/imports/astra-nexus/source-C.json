@@ -1,0 +1,2298 @@
+{
+  "sourceId": "C",
+  "postId": "858060575781949039",
+  "url": "https://www.taptap.cn/moment/858060575781949039",
+  "originalTitle": "GAME DEV LOG 03 | 群星",
+  "verifiedPublicationDate": "2026-10-10T11:06:23.000Z",
+  "verifiedUpdatedDate": "2026-10-20T17:17:45.000Z",
+  "seoUpdatedDate": "2026-10-10T11:06:23+00:00",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "这次，想先告诉大家一件小事：我们的游戏确认了正式的名字："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "群星 | CONSTELLATIONS ",
+          "bold": true,
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "style": "block-quote"
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png",
+          "original_format": "png",
+          "width": 64,
+          "height": 64,
+          "color": "0x99804d",
+          "original_size": 588,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png",
+          "original_format": "png",
+          "width": 768,
+          "height": 64,
+          "color": "0x99804d",
+          "original_size": 3566,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif",
+          "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc.gif",
+          "original_format": "gif",
+          "width": 64,
+          "height": 64,
+          "color": "0x99804d",
+          "original_size": 4001,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "00.游戏LOGO和一个小动画尝试",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "K-3089 会继续留在故事里，但随着开发的进行，一台设备的编号，已经不足以装下我们想要讲的东西了。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "这十天中，我们俩人一边继续验证玩法，一边重新寻找游戏的样子。我们讨论节点、人物、终端、文字，也讨论一个很实际的问题：如果玩家真的要在这座空间站里工作，他面对的屏幕应该是什么样的？"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png",
+          "original_format": "png",
+          "width": 960,
+          "height": 540,
+          "color": "0x732873",
+          "original_size": 13721,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "游戏画面整体目前确定使用1bit像素美术，采用暖感的蓝黄对比色来体现复古+科幻的质感，试了很多不同的颜色之后我们喜欢这个色调和像素渐变产生的抖动效果。这里有一些没用上的概念图，放出来给大家做一个感觉上的区别。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png",
+          "original_format": "png",
+          "width": 320,
+          "height": 540,
+          "color": "0x737373",
+          "original_size": 31851,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png",
+          "original_format": "png",
+          "width": 320,
+          "height": 540,
+          "color": "0x99995c",
+          "original_size": 8050,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png",
+          "original_format": "png",
+          "width": 320,
+          "height": 540,
+          "color": "0x737373",
+          "original_size": 24068,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png",
+          "original_format": "png",
+          "width": 320,
+          "height": 540,
+          "color": "0x737373",
+          "original_size": 33086,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "01-a.《群星》界面初版设计探索",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "把资源画完拼起来的时候看起来很对味，我们将画面分成了1：2的两个窗口，两边都设计了一套单独的UI交互系统，简述大概是："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "左边是真实场景发生的互动窗口，右边是终端机的虚拟交互界面",
+          "color": "#5991FF"
+        },
+        {
+          "text": "。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png",
+          "original_format": "png",
+          "width": 2430,
+          "height": 1363,
+          "color": "0x732873",
+          "original_size": 35646,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "01-b.《群星》当前游戏画面截图",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我们之前提到的节点玩法会主要在终端里面进行完成和操作，当然了，我们还打算设计一些其他功能，这些如果能做出来并且实现的话，后续再分享吧。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "再体验这个游戏画面的时候，还是会有一种无以言表的开心，这是我第二次自己体验到自己画的游戏，不过是第一次自己做程序，边请教GPT老师边自己想办法，玩起来的时候还是个空壳，但是我怀念这种纯粹的快乐，然后直到名字确定下来的时候，回想起来最开始这些互不相关的东西，我能感觉到它们正在慢慢靠近同一个方向。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "01 | 为什么是群星",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "01 | 为什么是群星",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我们想过一些更长的名字。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "“群星静默”“群星之间”，我都很喜欢。前者有一种安静的伤感，后者则很自然地让人想到联系：不是某一个独立的对象，而是对象与对象之间发生了什么。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "最后，Szu说直接叫“群星”好了。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "为什么不呢？这太好了。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "故事发生的地方叫"
+        },
+        {
+          "text": "群星号",
+          "color": "#5991FF"
+        },
+        {
+          "text": "。它是一座"
+        },
+        {
+          "text": "球形空间站",
+          "color": "#5991FF"
+        },
+        {
+          "text": "，像一颗人造的星球。里面的人各自工作、生活、休眠，也留下各自的记录和记忆。他们已经熟悉彼此，参与过某次工作，对一件事情形成过自己的解释。有些关系仍然持续，有些只剩下一份公告、一条备注、一件物品。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我开始觉得，"
+        },
+        {
+          "text": "人物也像群星",
+          "color": "#5991FF"
+        },
+        {
+          "text": "。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "每个人都是一个独立的存在，却并不孤立。我们认识一个人，常常不是因为他完整地介绍了自己，而是因为在另一个人的话里、在一件物品的来历里，再次遇到了他的名字。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "这也很像我们正在做的"
+        },
+        {
+          "text": "节点式调查玩法",
+          "color": "#5991FF"
+        },
+        {
+          "text": "：从一个名字出发，走到一份记录，再从记录里看见另一个人。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "群星不只在空间站之外，也在这些人与人之间。",
+          "bold": true,
+          "color": "#5991FF"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "不过，这个名字对我来说并不只有浪漫。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "一条联系被重新发现，并不意味着它能重新发生。我们可以恢复文件，读出铭文，却未必还能等到那个人亲自回答。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "02｜节点不应该只负责承载内容",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "02｜节点不应该只负责承载内容",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "名字确定的同时，节点系统也在继续收束。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我们用很粗糙的网页 Demo 跑了一些例子。没有美术资源的时候，反而更容易看清自己是在思考游戏设计，还是只是在按照我们安排的顺序点按钮。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "最开始我们想让人物、设备、档案、对话、维修和解谜推理都变成节点，维修员的工作也会包含恢复数据，那么我们想让操作终端成为一个有代入感的方式，推理过程就在节点的连接之间涌现。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png",
+          "original_format": "png",
+          "width": 2905,
+          "height": 1715,
+          "color": "0x737373",
+          "original_size": 501919,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "02.初次节点交互实验 | 10.6",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "Szu先利用很粗糙的DEMO试验了一下，主要是为了验证核心的三个节点大类："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "【实体节点】【信息节点】【功能节点】运作起来是否流畅。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "如图所示，例如人物、设备等统一归纳为【实体节点】，【功能节点】包含细分类别，例如【属性】【追踪】【筛选】等，将其连接在【实体节点】就可以得到一些新东西，这是目前玩法的一部分，作为一款推理游戏来说感觉还是蛮新鲜的，不过问题也很多，例如交互起来会有很多琐碎和重复操作，以及信息量过大带来的节点膨胀。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "所以后面我们主要保留三类核心结构："
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "children": [
+        {
+          "text": "",
+          "type": "table-row",
+          "children": [
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "实体节点",
+                  "bold": true,
+                  "color": "#5991FF"
+                },
+                {
+                  "text": "\n"
+                },
+                {
+                  "text": "\n"
+                },
+                {
+                  "text": "是人物、部门、设备、场景，以及世界内能够被定位和操作的对象。"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "信息节点",
+                  "bold": true,
+                  "color": "#5991FF"
+                },
+                {
+                  "text": "\n"
+                },
+                {
+                  "text": "\n"
+                },
+                {
+                  "text": "是从这些对象那里获得的记录、档案、测试结果与陈述。"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "功能节点",
+                  "bold": true,
+                  "color": "#5991FF"
+                },
+                {
+                  "text": "\n"
+                },
+                {
+                  "text": "\n"
+                },
+                {
+                  "text": "则是玩家使用的方法：属性、追踪、筛选、连接。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "table-row",
+          "children": [
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "人物"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "报告"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "属性"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "table-row",
+          "children": [
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "部门"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "公告"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "追踪"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "table-row",
+          "children": [
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "物品"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "记录"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "筛选"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "table-row",
+          "children": [
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "程序"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "活动"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "table-cell",
+              "children": [
+                {
+                  "text": "连接"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "节点不应该只负责承载内容。它也应该代表玩家拥有的能力、方法和资源。",
+          "bold": true,
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "style": "block-quote"
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png",
+          "original_format": "png",
+          "width": 20,
+          "height": 20,
+          "color": "0x732873",
+          "original_size": 246,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png",
+          "original_format": "png",
+          "width": 20,
+          "height": 20,
+          "color": "0x99804d",
+          "original_size": 231,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png",
+          "original_format": "png",
+          "width": 20,
+          "height": 20,
+          "color": "0x99804d",
+          "original_size": 258,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png",
+          "original_format": "png",
+          "width": 20,
+          "height": 20,
+          "color": "0x99804d",
+          "original_size": 257,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png",
+          "original_format": "png",
+          "width": 20,
+          "height": 20,
+          "color": "0x99804d",
+          "original_size": 245,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png",
+          "original_format": "png",
+          "width": 20,
+          "height": 20,
+          "color": "0x99804d",
+          "original_size": 245,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "03.一些UI探索",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "节点本身就应该代表玩家拥有的能力、方法和资源。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "例如，知道一个名字，只意味着知道了一个名字。使用"
+        },
+        {
+          "text": "“属性”",
+          "color": "#5991FF"
+        },
+        {
+          "text": "，才能补全它对应的登记信息；"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "使用"
+        },
+        {
+          "text": "“追踪”",
+          "color": "#5991FF"
+        },
+        {
+          "text": "，可以继续查找相关材料；"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "当材料太多时，再用"
+        },
+        {
+          "text": "“筛选”",
+          "color": "#5991FF"
+        },
+        {
+          "text": "缩小范围。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "“连接”",
+          "color": "#5991FF"
+        },
+        {
+          "text": "也不只是把两张东西放在旁边。它可以帮助玩家比较候选人与经办记录，寻找共同出现的材料，或者把两份原文放在一起阅读。nexus9_node_investigation_demo_…"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "举一个和游戏内容无关的例子："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "一台设备已经能够通电，却仍然读不出旧工作环境。此时，只知道某个人“会维修”还不够。玩家需要继续查他的专业与工作记录，判断他是否真正处理过这个问题。",
+          "color": "#CC66FF"
+        }
+      ],
+      "info": {
+        "style": "block-quote"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我们希望推进不只是因为找到了那个被预先标亮的人，而是因为玩游戏的人可以开始思考"
+        },
+        {
+          "text": "自己现在需要的帮助究竟是什么。",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "当然，这套方法也暴露了不少问题。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "信息一多，节点就还是容易膨胀；提取、展开、再作为输入，有时候会让一个已经想清楚的判断，需要经历好几次重复操作。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "操作有步骤，不代表步骤都有意思。",
+          "bold": true,
+          "color": "#5991FF"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "接下来要继续删掉的，就是那些只负责搬运信息、却没有带来新判断的手续。功能节点究竟需要怎样的限制，也还要测试。我们不想为了让它“像一种资源”，反而让玩家在已经知道怎么做的时候，被迫多跑一趟。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "03 | 美术探索 —— 节点块 NODE BLOCK",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "03 | 美术探索 —— 节点块 NODE BLOCK",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我以前是一个Notion重度使用患者，使我依赖这个产品的功能特点有两个："
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "children": [
+        {
+          "text": "",
+          "type": "list-item",
+          "children": [
+            {
+              "text": "All in one的概念"
+            }
+          ],
+          "info": {
+            "li-level": 1
+          }
+        },
+        {
+          "text": "",
+          "type": "list-item",
+          "children": [
+            {
+              "text": "Block的概念"
+            }
+          ],
+          "info": {
+            "li-level": 1
+          }
+        }
+      ],
+      "info": {
+        "style": "numbered"
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "All in one的概念"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Block的概念"
+          },
+          {
+            "text": "\n"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "卡片的概念固然很好，但是缺少了一些维修员的体感，然后我就想到了模块，之前看过一个很有意思的产品："
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg",
+          "original_format": "jpeg",
+          "width": 620,
+          "height": 465,
+          "color": "0x7b9494",
+          "original_size": 34288,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "04.SAM PHYSICAL NODES",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "这是一个名叫SAM的模块化编程物理组件，模块的节点之间互相运作的感觉，更像维修员，而且这样可视化的效果给了我很多视觉探索上的灵感。画了一些草图，想要尝试找到一个感觉，想要在平面和立体感中找到一个平衡。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg",
+          "original_format": "jpeg",
+          "width": 3264,
+          "height": 2512,
+          "color": "0x999999",
+          "original_size": 747781,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg",
+          "original_format": "jpeg",
+          "width": 2176,
+          "height": 3264,
+          "color": "0x999999",
+          "original_size": 422411,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "05.最初的节点设想概念设计",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png",
+          "original_format": "png",
+          "width": 542,
+          "height": 776,
+          "color": "0x7b617a",
+          "original_size": 10639,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif",
+          "gif_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc.gif",
+          "original_format": "gif",
+          "width": 128,
+          "height": 128,
+          "color": "0x999999",
+          "original_size": 3641,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif",
+          "gif_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc.gif",
+          "original_format": "gif",
+          "width": 128,
+          "height": 128,
+          "color": "0x999999",
+          "original_size": 3492,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "06.第二步尝试的升级版节点像素动画",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "然后我就想要让这个节点看起来不那么程序化，像模块可能会比较有意思，左右两边各有一个比较小的连接点，当【功能节点】进行连接作用时就大概是像视频这样子。"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "video_id": 5954725,
+        "image": {
+          "url": "https://img-tc.tapimg.com/video-picture/tid-6aca1692478e2de67bb25eff/first.jpg/_tap_ugc.jpg",
+          "medium_url": "https://img-tc.tapimg.com/video-picture/tid-6aca1692478e2de67bb25eff/first.jpg/_tap_ugc_m.jpg",
+          "small_url": "https://img-tc.tapimg.com/video-picture/tid-6aca1692478e2de67bb25eff/first.jpg/_tap_ugc_s.jpg",
+          "original_url": "https://img-tc.tapimg.com/video-picture/tid-6aca1692478e2de67bb25eff/first.jpg",
+          "original_format": "jpeg",
+          "width": 970,
+          "height": 624,
+          "color": "0x929599",
+          "original_size": 60834,
+          "large_url": "https://img-tc.tapimg.com/video-picture/tid-6aca1692478e2de67bb25eff/first.jpg/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "07.一个简单的实现效果 | Godot",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "这个时候颜色还是一个比较暗沉的版本，看起来不是很有趣，不过作为初次的美术尝试我觉得还可以，也摸到了更多绘制像素画的技巧，万幸的是没有浪费时间做无用功。接下来会顺着这个感觉以确定的色调继续优化，希望一切顺利，画出很有意思的【节点块】给大家来玩。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "04｜让它们慢慢连接起来涌现",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 2
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "04｜让它们慢慢连接起来涌现",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我觉得”涌现“其实在潜移默化地影响我们对游戏的理解，以至于我们已经不会去多想主题了，因为它已经成为了我们游戏的一部分，我们现在只需要连接起所有的碎片，拼图的外圈拼好了，事情在慢慢变得简单。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png",
+          "original_format": "png",
+          "width": 2432,
+          "height": 1365,
+          "color": "0x732873",
+          "original_size": 43921,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png",
+          "original_format": "png",
+          "width": 1486,
+          "height": 1352,
+          "color": "0x737373",
+          "original_size": 132074,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "08.基本功能测试画面 | Godot",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "节点操作仍然需要压缩，资料过多时怎样组织、长时间阅读是否舒服、剧情与终端如何更自然地配合，都还需要继续试验。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "但这次再看画面，我终于有一种比较确定的感觉：我知道自己想让它往哪里长了。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "不是因为每件事情都有了答案，而是因为名字、人物、玩法与画面，不再各自朝着不同的方向前进。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "那台工程终端仍然叫 K-3089。它等待着被检查、被修复，也等待有人继续追问它留下来的东西。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "而故事里的人，不应该只是通往下一个任务的入口。他们各自拥有一段生活，也在别人的记录里留下了某个位置。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "我们现在想做的，就是"
+        },
+        {
+          "text": "让群星可以相连",
+          "color": "#5991FF"
+        },
+        {
+          "text": "。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif",
+          "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc.gif",
+          "original_format": "gif",
+          "width": 64,
+          "height": 64,
+          "color": "0x99804d",
+          "original_size": 4001,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "#聚光灯gamejam开发者日志",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E8%81%9A%E5%85%89%E7%81%AFGameJam%E5%BC%80%E5%8F%91%E8%80%85%E6%97%A5%E5%BF%97",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=272749"
+          }
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "#聚光灯",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E8%81%9A%E5%85%89%E7%81%AF",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=83168"
+          }
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "#科幻游戏",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E7%A7%91%E5%B9%BB%E6%B8%B8%E6%88%8F",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=2949"
+          }
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "#推理解谜",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E6%8E%A8%E7%90%86%E8%A7%A3%E8%B0%9C",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=79257"
+          }
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "#独立游戏开发",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=66324"
+          }
+        },
+        {
+          "text": " "
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png",
+      "original_format": "png",
+      "width": 64,
+      "height": 64,
+      "color": "0x99804d",
+      "original_size": 588,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png",
+      "original_format": "png",
+      "width": 768,
+      "height": 64,
+      "color": "0x99804d",
+      "original_size": 3566,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif",
+      "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc.gif",
+      "original_format": "gif",
+      "width": 64,
+      "height": 64,
+      "color": "0x99804d",
+      "original_size": 4001,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png",
+      "original_format": "png",
+      "width": 960,
+      "height": 540,
+      "color": "0x732873",
+      "original_size": 13721,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png",
+      "original_format": "png",
+      "width": 320,
+      "height": 540,
+      "color": "0x737373",
+      "original_size": 31851,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png",
+      "original_format": "png",
+      "width": 320,
+      "height": 540,
+      "color": "0x99995c",
+      "original_size": 8050,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png",
+      "original_format": "png",
+      "width": 320,
+      "height": 540,
+      "color": "0x737373",
+      "original_size": 24068,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png",
+      "original_format": "png",
+      "width": 320,
+      "height": 540,
+      "color": "0x737373",
+      "original_size": 33086,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png",
+      "original_format": "png",
+      "width": 2430,
+      "height": 1363,
+      "color": "0x732873",
+      "original_size": 35646,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png",
+      "original_format": "png",
+      "width": 2905,
+      "height": 1715,
+      "color": "0x737373",
+      "original_size": 501919,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png",
+      "original_format": "png",
+      "width": 20,
+      "height": 20,
+      "color": "0x732873",
+      "original_size": 246,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png",
+      "original_format": "png",
+      "width": 20,
+      "height": 20,
+      "color": "0x99804d",
+      "original_size": 231,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png",
+      "original_format": "png",
+      "width": 20,
+      "height": 20,
+      "color": "0x99804d",
+      "original_size": 258,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png",
+      "original_format": "png",
+      "width": 20,
+      "height": 20,
+      "color": "0x99804d",
+      "original_size": 257,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png",
+      "original_format": "png",
+      "width": 20,
+      "height": 20,
+      "color": "0x99804d",
+      "original_size": 245,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png",
+      "original_format": "png",
+      "width": 20,
+      "height": 20,
+      "color": "0x99804d",
+      "original_size": 245,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg",
+      "original_format": "jpeg",
+      "width": 620,
+      "height": 465,
+      "color": "0x7b9494",
+      "original_size": 34288,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg",
+      "original_format": "jpeg",
+      "width": 3264,
+      "height": 2512,
+      "color": "0x999999",
+      "original_size": 747781,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg",
+      "original_format": "jpeg",
+      "width": 2176,
+      "height": 3264,
+      "color": "0x999999",
+      "original_size": 422411,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png",
+      "original_format": "png",
+      "width": 542,
+      "height": 776,
+      "color": "0x7b617a",
+      "original_size": 10639,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif",
+      "gif_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc.gif",
+      "original_format": "gif",
+      "width": 128,
+      "height": 128,
+      "color": "0x999999",
+      "original_size": 3641,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif",
+      "gif_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc.gif",
+      "original_format": "gif",
+      "width": 128,
+      "height": 128,
+      "color": "0x999999",
+      "original_size": 3492,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png",
+      "original_format": "png",
+      "width": 2432,
+      "height": 1365,
+      "color": "0x732873",
+      "original_size": 43921,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png",
+      "original_format": "png",
+      "width": 1486,
+      "height": 1352,
+      "color": "0x737373",
+      "original_size": 132074,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif",
+      "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc.gif",
+      "original_format": "gif",
+      "width": 64,
+      "height": 64,
+      "color": "0x99804d",
+      "original_size": 4001,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc.jpg"
+    }
+  ],
+  "footer_images": [
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010174918.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010174918.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010174918.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010174918.png",
+      "original_format": "png",
+      "width": 2430,
+      "height": 1363,
+      "color": "0x73605b",
+      "original_size": 35646,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010174918.png/_tap_ugc.jpg"
+    }
+  ],
+  "topic": {
+    "id_str": "54431748",
+    "type": 2,
+    "title": "GAME DEV LOG 03 | 群星",
+    "summary": "这次，想先告诉大家一件小事：我们的游戏确认了正式的名字：\n群星 | CONSTELLATIONS \n00.游戏LOGO和一个小动画尝试\nK-3089 会继续留在故事里，但随着开发的进行，一台设备的编号，已经不足以装下我们想要讲的东西了。\n这十天中，我们俩人一边继续验证玩法，一边重新寻找游戏的样子。我们讨论节点、人物、终端、文字，也讨论一个很实际的问题：如果玩家真的要在这座空间站里工作，他面对的屏幕",
+    "images": [
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png",
+        "original_format": "png",
+        "width": 64,
+        "height": 64,
+        "color": "0x99804d",
+        "original_size": 588,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fs4k4c7rrpiqtuifZ3keKI2m-FfJ_20261010182935.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png",
+        "original_format": "png",
+        "width": 768,
+        "height": 64,
+        "color": "0x99804d",
+        "original_size": 3566,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fhw9UziVsP3wGOVz6DpDAetCIT2d_20261010182743.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif",
+        "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc.gif",
+        "original_format": "gif",
+        "width": 64,
+        "height": 64,
+        "color": "0x99804d",
+        "original_size": 4001,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010182756.gif/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png",
+        "original_format": "png",
+        "width": 960,
+        "height": 540,
+        "color": "0x732873",
+        "original_size": 13721,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fvf8gZ4gkC9pREUn3zHVgje68l-l_20261010175557.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png",
+        "original_format": "png",
+        "width": 320,
+        "height": 540,
+        "color": "0x737373",
+        "original_size": 31851,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FoCK7dpUMuOEP4nh_u34Vm7QvdoW_20261010183637.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png",
+        "original_format": "png",
+        "width": 320,
+        "height": 540,
+        "color": "0x99995c",
+        "original_size": 8050,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FozM5iAWkeFKGWNupo6lcDysOon-_20261010183641.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png",
+        "original_format": "png",
+        "width": 320,
+        "height": 540,
+        "color": "0x737373",
+        "original_size": 24068,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fv0_Xn7Jkl3FvfHhBwB3BN1wVpMF_20261010183653.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png",
+        "original_format": "png",
+        "width": 320,
+        "height": 540,
+        "color": "0x737373",
+        "original_size": 33086,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fgy0W7y9lcelTJtP4pYPRCVQ8TNm_20261010183707.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png",
+        "original_format": "png",
+        "width": 2430,
+        "height": 1363,
+        "color": "0x732873",
+        "original_size": 35646,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010180053.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png",
+        "original_format": "png",
+        "width": 2905,
+        "height": 1715,
+        "color": "0x737373",
+        "original_size": 501919,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FkUAAr0toIn7izEo_QKN7S4Eg54N_20261010181014.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png",
+        "original_format": "png",
+        "width": 20,
+        "height": 20,
+        "color": "0x732873",
+        "original_size": 246,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fkgd2R2uHHwRgZSsrvlFV4SpSfJg_20261010190153.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png",
+        "original_format": "png",
+        "width": 20,
+        "height": 20,
+        "color": "0x99804d",
+        "original_size": 231,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FoIUFKnYHPuql6epgS3pdQb9_q3l_20261010190153.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png",
+        "original_format": "png",
+        "width": 20,
+        "height": 20,
+        "color": "0x99804d",
+        "original_size": 258,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FnULXesEy4ZjTe6z_QgRwEvQtob__20261010190153.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png",
+        "original_format": "png",
+        "width": 20,
+        "height": 20,
+        "color": "0x99804d",
+        "original_size": 257,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FlhZ2UNo50TWaq-ncB1-vOzFubBc_20261010190153.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png",
+        "original_format": "png",
+        "width": 20,
+        "height": 20,
+        "color": "0x99804d",
+        "original_size": 245,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fs8qXfox8PR5F9sSiRHfgikSSS6X_20261010190153.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png",
+        "original_format": "png",
+        "width": 20,
+        "height": 20,
+        "color": "0x99804d",
+        "original_size": 245,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fp1ghWiOkb659MbHFRomhhIdR9nC_20261010190153.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg",
+        "original_format": "jpeg",
+        "width": 620,
+        "height": 465,
+        "color": "0x7b9494",
+        "original_size": 34288,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FrthmY_n1JtRT4cmw8Z88Bn9QeWV_20261007151929.jpg/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg",
+        "original_format": "jpeg",
+        "width": 3264,
+        "height": 2512,
+        "color": "0x999999",
+        "original_size": 747781,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FrFcLy53HPxm3-QhSdwFl7DVH3aP_20261010185208.jpg/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg",
+        "original_format": "jpeg",
+        "width": 2176,
+        "height": 3264,
+        "color": "0x999999",
+        "original_size": 422411,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FigLLAVdE6_Iw9W3LO-uo2jVeZDj_20261010185215.jpg/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png",
+        "original_format": "png",
+        "width": 542,
+        "height": 776,
+        "color": "0x7b617a",
+        "original_size": 10639,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FgzPm1UhWqdS6GmulmBz8VZ11MDN_20261010190423.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif",
+        "gif_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc.gif",
+        "original_format": "gif",
+        "width": 128,
+        "height": 128,
+        "color": "0x999999",
+        "original_size": 3641,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fi2sTs9qDH2z6QUYHwn5xl9FPqrH_20261010184042.gif/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif",
+        "gif_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc.gif",
+        "original_format": "gif",
+        "width": 128,
+        "height": 128,
+        "color": "0x999999",
+        "original_size": 3492,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FpxxLtpzZX9NZmG2lw9Gs3jqo-Ik_20261010184054.gif/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png",
+        "original_format": "png",
+        "width": 2432,
+        "height": 1365,
+        "color": "0x732873",
+        "original_size": 43921,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FqlMJhGAz8B_qsQN3jmQ-RjWblEr_20261010185627.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png",
+        "original_format": "png",
+        "width": 1486,
+        "height": 1352,
+        "color": "0x737373",
+        "original_size": 132074,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fgf_1n7QIghb9YuV6uOlBWemSzFV_20261010185740.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif",
+        "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc.gif",
+        "original_format": "gif",
+        "width": 64,
+        "height": 64,
+        "color": "0x99804d",
+        "original_size": 4001,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261010185432.gif/_tap_ugc.jpg"
+      }
+    ],
+    "videos": [
+      {
+        "video_id": 5954725,
+        "info": {
+          "aspect_ratio": "1.55449",
+          "best_format_name": "",
+          "duration": 12
+        },
+        "thumbnail": {
+          "url": "https://img-tc.tapimg.com/video-picture/tid-6aca1692478e2de67bb25eff/first.jpg/_tap_banner.jpg",
+          "medium_url": "https://img-tc.tapimg.com/video-picture/tid-6aca1692478e2de67bb25eff/first.jpg/_tap_banner_m.jpg",
+          "small_url": "https://img-tc.tapimg.com/video-picture/tid-6aca1692478e2de67bb25eff/first.jpg/_tap_banner_s.jpg",
+          "original_url": "https://img-tc.tapimg.com/video-picture/tid-6aca1692478e2de67bb25eff/first.jpg",
+          "original_format": "jpeg",
+          "width": 970,
+          "height": 624,
+          "color": "0x929599",
+          "original_size": 60834,
+          "large_url": "https://img-tc.tapimg.com/video-picture/tid-6aca1692478e2de67bb25eff/first.jpg/_tap_banner_l.jpg"
+        },
+        "trace_log": {
+          "video_id": 5954725,
+          "subjectId": 54431748,
+          "subjectType": "topicDetail"
+        },
+        "play_log": {
+          "video_id": 5954725,
+          "paramId": 5954725,
+          "paramType": "videoDetail",
+          "subjectId": 54431748,
+          "subjectType": "topicDetail"
+        }
+      }
+    ],
+    "footer_images": [
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010174918.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010174918.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010174918.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010174918.png",
+        "original_format": "png",
+        "width": 2430,
+        "height": 1363,
+        "color": "0x73605b",
+        "original_size": 35646,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FgUsGI4tcAMmIVeBCUwOiUAPnTzr_20261010174918.png/_tap_ugc.jpg"
+      }
+    ]
+  },
+  "videoRecords": [],
+  "textStatus": "complete: embedded source body verified with browser scroll",
+  "mediaStatus": "images retrieved; full local video pending",
+  "missingItems": [
+    "Video available on TapTap as signed HLS; no portable self-hosted video imported."
+  ],
+  "dateConflict": "SEO update timestamp differs from structured post timestamp."
+}

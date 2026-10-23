@@ -1,0 +1,1730 @@
+{
+  "sourceId": "D",
+  "postId": "859871874656502801",
+  "url": "https://www.taptap.cn/moment/859871874656502801",
+  "originalTitle": "GAME DEV LOG 04｜欢迎来到群星号",
+  "verifiedPublicationDate": "2026-10-15T11:03:50.000Z",
+  "verifiedUpdatedDate": "2026-10-20T17:17:05.000Z",
+  "seoUpdatedDate": "2026-10-15T11:03:51+00:00",
+  "blocks": [
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif",
+          "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc.gif",
+          "original_format": "gif",
+          "width": 64,
+          "height": 64,
+          "color": "0x99804d",
+          "original_size": 4001,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "忙碌的正式开发日又过去了五天，"
+        },
+        {
+          "text": "群星1.0",
+          "color": "#5991FF"
+        },
+        {
+          "text": "终于有点模样了，画像素画的眼睛都有点花了，也遇到好多问题解决了超出预计的时间，枯燥的过程不多赘述，总之！令人喜悦的事情是 —— 我们终于可以就现有的游戏版本进行介绍了！会包括功能和部分玩法介绍，希望大家会喜欢！"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "01 你在群星号上的第一天",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "01 你在群星号上的第一天",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "某一天你从休眠中醒来，重新感受到身体的重量。舱外似乎有人在等你。「起身」后，你在群星号上的工作也就开始了。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "你叫"
+        },
+        {
+          "text": "安德鲁斯基·塔伦（Andruski TAren）",
+          "color": "#5991FF"
+        },
+        {
+          "text": "，属于工程部的结构维护与舱外作业组。你的组长"
+        },
+        {
+          "text": "大卫·赵（David Cho）",
+          "color": "#5991FF"
+        },
+        {
+          "text": "会先带你熟悉随身终端，看看自己的登记信息，再把工作中的地点和线索记下来。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png",
+          "original_format": "png",
+          "width": 798,
+          "height": 1353,
+          "color": "0x85726b",
+          "original_size": 687372,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "01 苏醒后的第一个动作：起身，见见舱外等你的人。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "对话里出现的门牌号可以点击，记录到地图中。记下一个地点后，你仍然可以先看看手边的资料，再决定是否前往。空间站上的姓名、部门和房间，会这样一点点变得熟悉。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png",
+          "original_format": "png",
+          "width": 1013,
+          "height": 1357,
+          "color": "0x282873",
+          "original_size": 309595,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "02 记下对话中出现的门牌号，作为之后查找地点的线索。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "打开地图，便能看到从外围楼层到核心区的分布。地图只列出已经知道的地点；随着你走动、交谈，可去的地方也会逐渐增加。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png",
+          "original_format": "png",
+          "width": 801,
+          "height": 654,
+          "color": "0x282873",
+          "original_size": 189370,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "03 先选楼层，再查看已经记录下来的地点。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "02 你的终端，也是你的工作台",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "02 你的终端，也是你的工作台",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "打开私人终端，左边仍然保留着设备信息和对话，右边则是可以摆放节点的工作区域。深色屏幕、浅色文字和像素边框，把这张工作台围了起来。人物、设备和查到的资料，都将在这里留下自己的位置。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "先从自己开始。一个写着"
+        },
+        {
+          "text": "「安德鲁斯基·塔伦」",
+          "color": "#5991FF"
+        },
+        {
+          "text": "的人物节点出现在画布中央。确认之后，你就可以继续操作它。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png",
+          "original_format": "png",
+          "width": 1939,
+          "height": 1625,
+          "color": "0x282873",
+          "original_size": 388911,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "04 第一个出现在终端中的人物，是你自己。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "大卫会让你把"
+        },
+        {
+          "text": "「属性」",
+          "color": "#5991FF"
+        },
+        {
+          "text": "拖到自己的节点上。接着，点击节点的展开按钮，就能读到姓名、所属部门和岗位。原本只有名字的小卡片，下方多出了可以阅读的登记信息。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png",
+          "original_format": "png",
+          "width": 2048,
+          "height": 1155,
+          "color": "0x282873",
+          "original_size": 548875,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "05 跟着大卫的提示，把「属性」拖到人物节点上。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png",
+          "original_format": "png",
+          "width": 1430,
+          "height": 1127,
+          "color": "0x282873",
+          "original_size": 138067,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "06 展开信息，看看终端怎样记录你的身份与工作。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "你也可以从工具栏拖出一个"
+        },
+        {
+          "text": "「文本」",
+          "color": "#5991FF"
+        },
+        {
+          "text": "节点，放在画布空白处，输入想要使用的关键词。教学里，大卫给出的词是"
+        },
+        {
+          "text": "「结构维护」",
+          "color": "#5991FF"
+        },
+        {
+          "text": "。文字由你输入，再按回车提交，成为工作台上的一块材料。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png",
+          "original_format": "png",
+          "width": 2048,
+          "height": 1151,
+          "color": "0x282873",
+          "original_size": 524234,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "07 在空白位置放下文本节点，准备记录关键词。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png",
+          "original_format": "png",
+          "width": 1213,
+          "height": 1037,
+          "color": "0x282873",
+          "original_size": 81368,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "08 输入文字并提交。接下来的查找，从手边的词开始。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png",
+          "original_format": "png",
+          "width": 266,
+          "height": 157,
+          "color": "0x282873",
+          "original_size": 12734,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "09 文本节点与「属性」操作的局部画面。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "人物、文字和设备都可以放到同一张工作台上。接下来，你会用到"
+        },
+        {
+          "text": "「追踪」",
+          "color": "#5991FF"
+        },
+        {
+          "text": "和节点之间的连接：从眼前的对象出发，找出与它相关的资料，再把需要的工具接进来。先拿一台照明设备试试。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "03 先来维修第一台设备吧！",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "03 先来维修第一台设备吧！",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "第一份维修练习，从一台不亮的照明设备开始。把设备节点拖到顺手的位置，展开它的信息。刚开始，终端里只有设备编号，属性还没有查询，维修进度也是 0%。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png",
+          "original_format": "png",
+          "width": 618,
+          "height": 715,
+          "color": "0x282873",
+          "original_size": 52241,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "10 从节点头部拖动，把设备放到工作台上合适的位置。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png",
+          "original_format": "png",
+          "width": 483,
+          "height": 554,
+          "color": "0x282873",
+          "original_size": 36310,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "11 查询前的设备卡片，还没有展开具体的故障信息。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "查询之后，登记信息就出现了：这是一台照明单元，故障是照明不亮，供电指示闪烁，检修尚未完成。先看看它出了什么问题，再找下一步需要的资料。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png",
+          "original_format": "png",
+          "width": 471,
+          "height": 553,
+          "color": "0x282873",
+          "original_size": 45818,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "12 设备的类别、故障和检修状态，都记录在卡片下方。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "把设备连接到"
+        },
+        {
+          "text": "「追踪」",
+          "color": "#5991FF"
+        },
+        {
+          "text": "节点，终端会找到对应的维修规范。连接时，从节点右侧的连接点拖向功能节点左侧的连接点，就能让它接收这台设备的信息。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png",
+          "original_format": "png",
+          "width": 1011,
+          "height": 1002,
+          "color": "0x282873",
+          "original_size": 106699,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "13 沿着设备查到维修规范，准备开始检修。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "现在，设备、维修规范和「线路检修」程序（程序节点由若干个解谜游戏组成）都摆在了工作台上。你可以打开档案阅读，也可以进入检修程序动手。刚才学过的查看、拖动和连接，在这里串成了一次完整的工作。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png",
+          "original_format": "png",
+          "width": 1615,
+          "height": 1364,
+          "color": "0x282873",
+          "original_size": 406803,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "14 一边查看设备与档案，一边准备运行检修程序。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "完成检修后，设备的状态会更新，进度条也会填满。屏幕上留下了这次工作的结果：这台照明设备已经修好了。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "例如这个就是首个维修任务的完成状态。",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png",
+          "original_format": "png",
+          "width": 789,
+          "height": 534,
+          "color": "0x282873",
+          "original_size": 72889,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "15 检修完成，设备维修进度更新为 100%。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "之后，还有更旧、也更复杂的设备等着你。材料分析、硬件诊断和旧系统恢复，会把你带到不同的同事面前。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "04 可靠的同事们",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "04 可靠的同事们",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "维修途中，你会认识几位各有所长的同事。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "大卫·赵 David Cho",
+          "bold": true,
+          "color": "#5991FF"
+        },
+        {
+          "text": " 是你的直属组长。刚醒来的时候，他会陪你完成终端上的第一轮操作。查看登记、记录地点、输入关键词，都是从他的几句工作提示开始的。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "安妮·利斯特 Annie Lister",
+          "bold": true,
+          "color": "#5991FF"
+        },
+        {
+          "text": " 在科学部做材料与化学分析。腐蚀、老化和表面残留是她熟悉的东西。她安静、细心，也喜欢摆弄虚拟晶体模拟程序 Pretty Rocks。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "佩内洛普·罗 Penelope Rowe",
+          "bold": true,
+          "color": "#5991FF"
+        },
+        {
+          "text": " 负责工程部的硬件系统。接口板和工程终端出了问题，可以找她讨论。她专注、务实，对机械之外的生长之物也保持着兴趣。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "理查德·厄普顿 Richard Upton",
+          "bold": true,
+          "color": "#5991FF"
+        },
+        {
+          "text": " 负责软件与旧系统，擅长面对损坏的数据和年代久远的代码。他耐心、谨慎，习惯先看手里的记录，再给出判断。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "你会带着设备去找他们，也会从交谈中逐渐认识他们各自的生活。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "见面时，你可以选择想问的话题：打听一个人、询问同事的位置，或聊聊眼前的材料实验。有了新的疑问，再回来和他们谈谈。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png",
+          "original_format": "png",
+          "width": 788,
+          "height": 1239,
+          "color": "0x806e68",
+          "original_size": 649186,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "16 走近同事，从对话中选择你想继续了解的事。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "05 一台无人领取的设备",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "05 一台无人领取的设备",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "那台设备的编号是 K-3089。它在群星号上一直没有被领取。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "第一次把它放到终端上时，你还没有查询它的属性，维修进度停在 0%。眼前只有一张设备卡片，接下来要一点点查清它的情况。"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png",
+          "original_format": "png",
+          "width": 486,
+          "height": 557,
+          "color": "0x282873",
+          "original_size": 37259,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "17 K-3089，等待你开始检查的旧设备。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "起初，你接手的是一份维修工作。随着设备逐渐恢复，留下来的信息把你带向了更早以前的人和事。有些名字出现在档案里，有些仍然能够当面询问；而一份已经写好的记录，也可能留下新的问题。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "到了游戏的中段进程，你或许会保留很多查到的人物、组织、档案和程序。你可以按照自己的想法顺着新出现的名字找人、读资料。刚上手时那张空空的终端，逐渐被这份工作填满了，这也是我们在设计中希望追求的事情："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "让节点成为所有人/事/物/谜的载体，通过节点，群星建立连接，全貌逐渐涌现。",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "style": "block-quote"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "下图含部分人物资料与维修进度。",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png",
+          "original_format": "png",
+          "width": 2048,
+          "height": 1151,
+          "color": "0x282873",
+          "original_size": 982246,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "18 维修和调查同时留在工作台上，接下来想查什么，由你继续寻找。",
+          "italic": true,
+          "color": "#868C92"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "修好之后，它可以成为一件完成的工作。你也可以继续追问：原本应该来领取它的人，后来去了哪里？"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "text": "最后，欢迎登上群星号！",
+          "color": "#5991FF"
+        }
+      ],
+      "info": {
+        "level": 1
+      },
+      "fallback": {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "最后，欢迎登上群星号！",
+            "color": "#5991FF"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "从休眠舱里醒来，到亲手完成一次维修，你会慢慢熟悉这座空间站，也认识那些在这里工作和生活的人。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "《群星》的 1.0 版本这几天我们正在测试中，以上所有图片均来自目前开发阶段游戏截图，所有视觉美术资源均由我制作，SZU负责撰写所有文本和剧情，AI在代码方面提供了强大的帮助，帮我们二人团队节省了不少时间。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "如果你对这样一款"
+        },
+        {
+          "text": "在太空工作站体验一天维修员",
+          "color": "#5991FF"
+        },
+        {
+          "text": "的"
+        },
+        {
+          "text": "解谜像素游戏",
+          "color": "#5991FF"
+        },
+        {
+          "text": "感兴趣的话，欢迎留下你的想法，我们很乐意倾听和交流，这对我们改良游戏会很有帮助。比赛时间余额不多，我们会加油改良，争取完成一款我们心中理接近理想值的游戏呈现给大家，感谢你的阅读！"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "children": [
+        {
+          "text": ""
+        }
+      ],
+      "info": {
+        "img_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif",
+        "image": {
+          "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc.jpg",
+          "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc_m.jpg",
+          "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc_s.jpg",
+          "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif",
+          "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc.gif",
+          "original_format": "gif",
+          "width": 64,
+          "height": 64,
+          "color": "0x99804d",
+          "original_size": 4001,
+          "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc.jpg"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "#聚光灯gamejam开发者日志",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E8%81%9A%E5%85%89%E7%81%AFGameJam%E5%BC%80%E5%8F%91%E8%80%85%E6%97%A5%E5%BF%97",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=272749"
+          }
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "#聚光灯",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E8%81%9A%E5%85%89%E7%81%AF",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=83168"
+          }
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "#科幻游戏",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E7%A7%91%E5%B9%BB%E6%B8%B8%E6%88%8F",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=2949"
+          }
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "#推理解谜",
+          "type": "hashtag",
+          "info": {
+            "web_url": "https://www.taptap.cn/hashtag/%E6%8E%A8%E7%90%86%E8%A7%A3%E8%B0%9C",
+            "uri": "taptap://taptap.com/hashtag_detail?hashtag_id=79257"
+          }
+        },
+        {
+          "text": " "
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif",
+      "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc.gif",
+      "original_format": "gif",
+      "width": 64,
+      "height": 64,
+      "color": "0x99804d",
+      "original_size": 4001,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png",
+      "original_format": "png",
+      "width": 798,
+      "height": 1353,
+      "color": "0x85726b",
+      "original_size": 687372,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png",
+      "original_format": "png",
+      "width": 1013,
+      "height": 1357,
+      "color": "0x282873",
+      "original_size": 309595,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png",
+      "original_format": "png",
+      "width": 801,
+      "height": 654,
+      "color": "0x282873",
+      "original_size": 189370,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png",
+      "original_format": "png",
+      "width": 1939,
+      "height": 1625,
+      "color": "0x282873",
+      "original_size": 388911,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png",
+      "original_format": "png",
+      "width": 2048,
+      "height": 1155,
+      "color": "0x282873",
+      "original_size": 548875,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png",
+      "original_format": "png",
+      "width": 1430,
+      "height": 1127,
+      "color": "0x282873",
+      "original_size": 138067,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png",
+      "original_format": "png",
+      "width": 2048,
+      "height": 1151,
+      "color": "0x282873",
+      "original_size": 524234,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png",
+      "original_format": "png",
+      "width": 1213,
+      "height": 1037,
+      "color": "0x282873",
+      "original_size": 81368,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png",
+      "original_format": "png",
+      "width": 266,
+      "height": 157,
+      "color": "0x282873",
+      "original_size": 12734,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png",
+      "original_format": "png",
+      "width": 618,
+      "height": 715,
+      "color": "0x282873",
+      "original_size": 52241,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png",
+      "original_format": "png",
+      "width": 483,
+      "height": 554,
+      "color": "0x282873",
+      "original_size": 36310,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png",
+      "original_format": "png",
+      "width": 471,
+      "height": 553,
+      "color": "0x282873",
+      "original_size": 45818,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png",
+      "original_format": "png",
+      "width": 1011,
+      "height": 1002,
+      "color": "0x282873",
+      "original_size": 106699,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png",
+      "original_format": "png",
+      "width": 1615,
+      "height": 1364,
+      "color": "0x282873",
+      "original_size": 406803,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png",
+      "original_format": "png",
+      "width": 789,
+      "height": 534,
+      "color": "0x282873",
+      "original_size": 72889,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png",
+      "original_format": "png",
+      "width": 788,
+      "height": 1239,
+      "color": "0x806e68",
+      "original_size": 649186,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png",
+      "original_format": "png",
+      "width": 486,
+      "height": 557,
+      "color": "0x282873",
+      "original_size": 37259,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png",
+      "original_format": "png",
+      "width": 2048,
+      "height": 1151,
+      "color": "0x282873",
+      "original_size": 982246,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc.jpg"
+    },
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif",
+      "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc.gif",
+      "original_format": "gif",
+      "width": 64,
+      "height": 64,
+      "color": "0x99804d",
+      "original_size": 4001,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc.jpg"
+    }
+  ],
+  "footer_images": [
+    {
+      "url": "https://img2-tc.tapimg.com/moment/etag/FqCzXdH8KYbzIT_KR9fFTLoNCnMf_20261015183224.png/_tap_ugc.jpg",
+      "medium_url": "https://img2-tc.tapimg.com/moment/etag/FqCzXdH8KYbzIT_KR9fFTLoNCnMf_20261015183224.png/_tap_ugc_m.jpg",
+      "small_url": "https://img2-tc.tapimg.com/moment/etag/FqCzXdH8KYbzIT_KR9fFTLoNCnMf_20261015183224.png/_tap_ugc_s.jpg",
+      "original_url": "https://img2-tc.tapimg.com/moment/etag/FqCzXdH8KYbzIT_KR9fFTLoNCnMf_20261015183224.png",
+      "original_format": "png",
+      "width": 2133,
+      "height": 549,
+      "color": "0x736873",
+      "original_size": 168745,
+      "large_url": "https://img2-tc.tapimg.com/moment/etag/FqCzXdH8KYbzIT_KR9fFTLoNCnMf_20261015183224.png/_tap_ugc.jpg"
+    }
+  ],
+  "topic": {
+    "id_str": "54518024",
+    "type": 2,
+    "title": "GAME DEV LOG 04｜欢迎来到群星号",
+    "summary": "忙碌的正式开发日又过去了五天，群星1.0终于有点模样了，画像素画的眼睛都有点花了，也遇到好多问题解决了超出预计的时间，枯燥的过程不多赘述，总之！令人喜悦的事情是 —— 我们终于可以就现有的游戏版本进行介绍了！会包括功能和部分玩法介绍，希望大家会喜欢！\n01 你在群星号上的第一天\n某一天你从休眠中醒来，重新感受到身体的重量。舱外似乎有人在等你。「起身」后，你在群星号上的工作也就开始了。\n你叫安德鲁斯",
+    "images": [
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif",
+        "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc.gif",
+        "original_format": "gif",
+        "width": 64,
+        "height": 64,
+        "color": "0x99804d",
+        "original_size": 4001,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183802.gif/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png",
+        "original_format": "png",
+        "width": 798,
+        "height": 1353,
+        "color": "0x85726b",
+        "original_size": 687372,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fg6c-06oMcsFQkzLcdSPARhphoyg_20261015181832.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png",
+        "original_format": "png",
+        "width": 1013,
+        "height": 1357,
+        "color": "0x282873",
+        "original_size": 309595,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fnf7abtRIur1e-n0ggCPRMJwM3qQ_20261015183539.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png",
+        "original_format": "png",
+        "width": 801,
+        "height": 654,
+        "color": "0x282873",
+        "original_size": 189370,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FvMzRYLSZDDdwo7he09eMmnG8_6V_20261015183544.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png",
+        "original_format": "png",
+        "width": 1939,
+        "height": 1625,
+        "color": "0x282873",
+        "original_size": 388911,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FqBs8n6Wmp6pITIpqhHuWJjRlNB9_20261015183551.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png",
+        "original_format": "png",
+        "width": 2048,
+        "height": 1155,
+        "color": "0x282873",
+        "original_size": 548875,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FvPuwHLOfeFppbUeQTe5OvVb0IA8_20261015183557.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png",
+        "original_format": "png",
+        "width": 1430,
+        "height": 1127,
+        "color": "0x282873",
+        "original_size": 138067,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FtIJvg2h4HbY7_-jbzXw1fFzg18O_20261015183603.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png",
+        "original_format": "png",
+        "width": 2048,
+        "height": 1151,
+        "color": "0x282873",
+        "original_size": 524234,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FszXVmmTQTLfnQ_98sr4GL7r9SO9_20261015183610.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png",
+        "original_format": "png",
+        "width": 1213,
+        "height": 1037,
+        "color": "0x282873",
+        "original_size": 81368,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Frr8Zyt_vQuTcWmUmsfaEaj29GEE_20261015183616.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png",
+        "original_format": "png",
+        "width": 266,
+        "height": 157,
+        "color": "0x282873",
+        "original_size": 12734,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fiy7Egghvjp9oAJ0QqutBJtffrEz_20261015183621.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png",
+        "original_format": "png",
+        "width": 618,
+        "height": 715,
+        "color": "0x282873",
+        "original_size": 52241,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FiPSqcTdNSlufM9vcDz5kubyuukq_20261015183627.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png",
+        "original_format": "png",
+        "width": 483,
+        "height": 554,
+        "color": "0x282873",
+        "original_size": 36310,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FpGNOky27PFlHWdxg9MFOVShK5pY_20261015183632.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png",
+        "original_format": "png",
+        "width": 471,
+        "height": 553,
+        "color": "0x282873",
+        "original_size": 45818,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FkmSyiadKxNN6y2_6DlcHb3q2YDt_20261015183638.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png",
+        "original_format": "png",
+        "width": 1011,
+        "height": 1002,
+        "color": "0x282873",
+        "original_size": 106699,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FmMpKAbNLeIR7hVys1wVgnQJSC8h_20261015183644.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png",
+        "original_format": "png",
+        "width": 1615,
+        "height": 1364,
+        "color": "0x282873",
+        "original_size": 406803,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fou7hcq7SVO7B1TdpOtJ256gOO_P_20261015183658.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png",
+        "original_format": "png",
+        "width": 789,
+        "height": 534,
+        "color": "0x282873",
+        "original_size": 72889,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fhc1wVYkJ4h_OXiS2fZulTW0zoW0_20261015183704.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png",
+        "original_format": "png",
+        "width": 788,
+        "height": 1239,
+        "color": "0x806e68",
+        "original_size": 649186,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FoXemvermcjoOruDQCcDVyJwTSzm_20261015183711.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png",
+        "original_format": "png",
+        "width": 486,
+        "height": 557,
+        "color": "0x282873",
+        "original_size": 37259,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/Fi2YsQYJV9fXPZHVK4MUqzPy8lU1_20261015183718.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png",
+        "original_format": "png",
+        "width": 2048,
+        "height": 1151,
+        "color": "0x282873",
+        "original_size": 982246,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FoesH7CxusNb2wULcv2BLT-gMqQ7_20261015183723.png/_tap_ugc.jpg"
+      },
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif",
+        "gif_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc.gif",
+        "original_format": "gif",
+        "width": 64,
+        "height": 64,
+        "color": "0x99804d",
+        "original_size": 4001,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FrV2T9q5I-qJypfnoWqY6CgSzTmU_20261015183813.gif/_tap_ugc.jpg"
+      }
+    ],
+    "footer_images": [
+      {
+        "url": "https://img2-tc.tapimg.com/moment/etag/FqCzXdH8KYbzIT_KR9fFTLoNCnMf_20261015183224.png/_tap_ugc.jpg",
+        "medium_url": "https://img2-tc.tapimg.com/moment/etag/FqCzXdH8KYbzIT_KR9fFTLoNCnMf_20261015183224.png/_tap_ugc_m.jpg",
+        "small_url": "https://img2-tc.tapimg.com/moment/etag/FqCzXdH8KYbzIT_KR9fFTLoNCnMf_20261015183224.png/_tap_ugc_s.jpg",
+        "original_url": "https://img2-tc.tapimg.com/moment/etag/FqCzXdH8KYbzIT_KR9fFTLoNCnMf_20261015183224.png",
+        "original_format": "png",
+        "width": 2133,
+        "height": 549,
+        "color": "0x736873",
+        "original_size": 168745,
+        "large_url": "https://img2-tc.tapimg.com/moment/etag/FqCzXdH8KYbzIT_KR9fFTLoNCnMf_20261015183224.png/_tap_ugc.jpg"
+      }
+    ]
+  },
+  "videoRecords": [],
+  "textStatus": "complete: embedded source body verified with browser scroll",
+  "mediaStatus": "images retrieved",
+  "missingItems": [],
+  "dateConflict": "SEO update timestamp differs from structured post timestamp."
+}

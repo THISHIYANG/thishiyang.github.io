@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+import { getDevlogs } from '../../content/devlogs';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../SiteHeader.astro';
+import DotCursor from '../cursor/DotCursor.astro';
+import { scenes } from '../../content/scenes';
+import '../../styles/project.css';
+import '../../styles/devlog.css';
+interface Props { entry:CollectionEntry<'devlogs'>; review?:boolean }
+const { entry, review=false }=Astro.props;const data=entry.data;
+const { Content }=await render(entry);
+const entries=await getDevlogs();const current=entries.findIndex(e=>e.id===entry.id);
+const previous=current>0?entries[current-1]:undefined;const next=current>=0?entries[current+1]:undefined;
+const date=(value:string)=>new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',dateStyle:'long',timeStyle:'short'}).format(new Date(value));
+---
+<BaseLayout lang="zh" noindex={data.draft||review} canonical={'https://thishiyang.github.io/archive/'+data.slug+'/'}>
+<div class="landing work-document" data-work-document data-devlog-document>
+<SiteHeader /><nav class="scene-nav metadata" aria-label="Letter worlds">{scenes.map(scene=><a href={scene.path} aria-label={scene.title} aria-current={scene.id==='ideas'?'page':undefined}>{scene.letter}</a>)}</nav>
+<main id="main" tabindex="-1"><article class="devlog-document" lang="zh">
+<a class="project-index-link" href="/archive">← ARCHIVE</a>
+<header class="devlog-header"><p class="metadata">{data.series} / {String(data.sequence).padStart(2,'0')} / {data.edition==='original'?'原文':'编辑版'}</p><h1>{data.title}</h1>
+<p>{data.edition==='edited'?'根据 TapTap 开发日志整理，章节与配图顺序经过编辑。':'以下保留 TapTap 原文，仅作站内格式适配。'}</p>
+<p><a href={data.authorUrl}>{data.author}</a> · 站内{data.edition==='original'?'导入':'编辑'}：{data.editedAt}</p>
+<ul class="devlog-sources">{data.sources.map(source=><li><a href={source.url}>{source.originalTitle} ↗</a>{source.publishedAt&&<span> · 原帖发布 <time datetime={source.publishedAt}>{date(source.publishedAt)}</time></span>}</li>)}</ul>
+</header>
+{review&&<aside class="devlog-draft">本地编辑审阅 · {data.draft?'DRAFT':'已通过素材检查，尚未部署'}。{data.missingMedia>0&&<>媒体待补 {data.missingMedia} 项；缺失项已在正文标记。</>}<a href="/preview/devlogs/">查看四篇审阅目录 →</a></aside>}
+{data.toc.length>0&&<nav class="devlog-toc" aria-label="章节目录"><h2>目录</h2><ol>{data.toc.map(section=><li><a href={'#'+section.id}>{section.title}</a></li>)}</ol></nav>}
+<div class="devlog-body"><Content /></div>
+<footer class="devlog-footer"><a href="/archive">← ARCHIVE</a>{data.sources.map(source=><a href={source.url}>在 TapTap 阅读原文 / 查看讨论 · {source.id} ↗</a>)}</footer>
+{!data.draft&&<nav class="devlog-series-nav" aria-label="系列文章">{previous&&<a href={'/archive/'+previous.data.slug+'/'}>← 上一篇 · {previous.data.title}</a>}{next&&<a href={'/archive/'+next.data.slug+'/'}>下一篇 · {next.data.title} →</a>}</nav>}
+</article></main></div><DotCursor /><script>import { setupPointer } from '../../scripts/dot-cursor'; setupPointer();</script>
+</BaseLayout>
