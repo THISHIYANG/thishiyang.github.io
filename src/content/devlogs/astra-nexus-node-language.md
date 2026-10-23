@@ -1,5 +1,5 @@
 ---
-title: "GAME DEV LOG 02 | 节点之间——从调查草图到〈群星〉的终端语言"
+title: "GAME DEV LOG 02 | 【星群 ASTRA NEXUS】节点之间——从调查草图到〈群星〉的终端语言"
 slug: "astra-nexus-node-language"
 series: "GAME DEV LOG"
 sequence: 2
@@ -10,9 +10,9 @@ author: "THISHI"
 authorUrl: "https://www.taptap.cn/user/21100518"
 sources: [{"id":"B","originalTitle":"GAME DEV LOG 02｜调查与涌现 —— 节点之间","url":"https://www.taptap.cn/moment/856377676682756810","publishedAt":"2026-10-06T00:30:00.000Z"},{"id":"C","originalTitle":"GAME DEV LOG 03 | 群星","url":"https://www.taptap.cn/moment/858060575781949039","publishedAt":"2026-10-10T11:06:23.000Z"}]
 editedAt: "2026-10-23"
-draft: true
-mediaComplete: false
-missingMedia: 1
+draft: false
+mediaComplete: true
+missingMedia: 0
 toc: [{"id":"sketch","title":"从房间草图到调查画布"},{"id":"understanding","title":"读到信息与理解关系之间的距离"},{"id":"grammar","title":"实体、信息、功能：节点系统的收束"},{"id":"blocks","title":"从卡片到模块：NODE BLOCK 的形状"},{"id":"name","title":"名字、人物与终端画面的汇合"},{"id":"questions","title":"当时仍未解决的问题"},{"id":"references","title":"References"},{"id":"process","title":"过程图档"}]
 ---
 
@@ -49,7 +49,7 @@ toc: [{"id":"sketch","title":"从房间草图到调查画布"},{"id":"understand
 <div data-editor-source="C:63"><p>接下来要继续删掉的，就是那些只负责搬运信息、却没有带来新判断的手续。功能节点究竟需要怎样的限制，也还要测试。我们不想为了让它“像一种资源”，反而让玩家在已经知道怎么做的时候，被迫多跑一趟。</p></div></section>
 <section><h2 id="blocks">从卡片到模块：NODE BLOCK 的形状</h2><div data-editor-source="C:65"><p>我以前是一个Notion重度使用患者，使我依赖这个产品的功能特点有两个：</p></div>
 <div data-editor-source="C:66"><ol><li>All in one的概念</li><li>Block的概念</li></ol></div>
-<div data-editor-source="C:67"><p>卡片的概念固然很好，但是缺少了一些维修员的体感，然后我就想到了模块，之前看过一个很有意思的产品：</p></div><figure data-asset-id="C-17"><a href="/media/devlogs/astra-nexus/C-17.jpg" target="_blank" rel="noopener" aria-label="查看原尺寸图片"><img src="/media/devlogs/astra-nexus/C-17.jpg" width="620" height="465" loading="lazy" alt="04.SAM PHYSICAL NODES" /></a><figcaption>04.SAM PHYSICAL NODES</figcaption></figure><div data-editor-source="C:70"><p>这是一个名叫SAM的模块化编程物理组件，模块的节点之间互相运作的感觉，更像维修员，而且这样可视化的效果给了我很多视觉探索上的灵感。画了一些草图，想要尝试找到一个感觉，想要在平面和立体感中找到一个平衡。</p></div><figure data-asset-id="C-18"><a href="/media/devlogs/astra-nexus/C-18.jpg" target="_blank" rel="noopener" aria-label="查看原尺寸图片"><img src="/media/devlogs/astra-nexus/C-18.jpg" width="3264" height="2512" loading="lazy" alt="05.最初的节点设想概念设计" /></a><figcaption>05.最初的节点设想概念设计</figcaption></figure><figure data-asset-id="C-20"><a href="/media/devlogs/astra-nexus/C-20.png" target="_blank" rel="noopener" aria-label="查看原尺寸图片"><img src="/media/devlogs/astra-nexus/C-20.png" width="542" height="776" loading="lazy" alt="06.第二步尝试的升级版节点像素动画" /></a><figcaption>06.第二步尝试的升级版节点像素动画</figcaption></figure><div data-editor-source="C:78"><p>然后我就想要让这个节点看起来不那么程序化，像模块可能会比较有意思，左右两边各有一个比较小的连接点，当【功能节点】进行连接作用时就大概是像视频这样子。</p></div><aside class="devlog-missing"><p>视频待补：已确认原帖视频 5954725 的存在，尚未迁入可本地播放的完整视频文件。</p><a href="https://www.taptap.cn/moment/858060575781949039">到原帖观看视频 ↗</a></aside><div data-editor-source="C:81"><p>这个时候颜色还是一个比较暗沉的版本，看起来不是很有趣，不过作为初次的美术尝试我觉得还可以，也摸到了更多绘制像素画的技巧，万幸的是没有浪费时间做无用功。接下来会顺着这个感觉以确定的色调继续优化，希望一切顺利，画出很有意思的【节点块】给大家来玩。</p></div></section>
+<div data-editor-source="C:67"><p>卡片的概念固然很好，但是缺少了一些维修员的体感，然后我就想到了模块，之前看过一个很有意思的产品：</p></div><figure data-asset-id="C-17"><a href="/media/devlogs/astra-nexus/C-17.jpg" target="_blank" rel="noopener" aria-label="查看原尺寸图片"><img src="/media/devlogs/astra-nexus/C-17.jpg" width="620" height="465" loading="lazy" alt="04.SAM PHYSICAL NODES" /></a><figcaption>04.SAM PHYSICAL NODES</figcaption></figure><div data-editor-source="C:70"><p>这是一个名叫SAM的模块化编程物理组件，模块的节点之间互相运作的感觉，更像维修员，而且这样可视化的效果给了我很多视觉探索上的灵感。画了一些草图，想要尝试找到一个感觉，想要在平面和立体感中找到一个平衡。</p></div><figure data-asset-id="C-18"><a href="/media/devlogs/astra-nexus/C-18.jpg" target="_blank" rel="noopener" aria-label="查看原尺寸图片"><img src="/media/devlogs/astra-nexus/C-18.jpg" width="3264" height="2512" loading="lazy" alt="05.最初的节点设想概念设计" /></a><figcaption>05.最初的节点设想概念设计</figcaption></figure><figure data-asset-id="C-20"><a href="/media/devlogs/astra-nexus/C-20.png" target="_blank" rel="noopener" aria-label="查看原尺寸图片"><img src="/media/devlogs/astra-nexus/C-20.png" width="542" height="776" loading="lazy" alt="06.第二步尝试的升级版节点像素动画" /></a><figcaption>06.第二步尝试的升级版节点像素动画</figcaption></figure><div data-editor-source="C:78"><p>然后我就想要让这个节点看起来不那么程序化，像模块可能会比较有意思，左右两边各有一个比较小的连接点，当【功能节点】进行连接作用时就大概是像视频这样子。</p></div><aside class="devlog-video-link"><a href="https://www.taptap.cn/moment/858060575781949039">在 TapTap 观看原帖视频 ↗</a></aside><div data-editor-source="C:81"><p>这个时候颜色还是一个比较暗沉的版本，看起来不是很有趣，不过作为初次的美术尝试我觉得还可以，也摸到了更多绘制像素画的技巧，万幸的是没有浪费时间做无用功。接下来会顺着这个感觉以确定的色调继续优化，希望一切顺利，画出很有意思的【节点块】给大家来玩。</p></div></section>
 <section><h2 id="name">名字、人物与终端画面的汇合</h2><div data-editor-source="C:0"><p>这次，想先告诉大家一件小事：我们的游戏确认了正式的名字：</p></div>
 <div data-editor-source="C:1"><blockquote><p><strong>群星 | CONSTELLATIONS </strong></p></blockquote></div>
 <div data-editor-source="C:6"><p>K-3089 会继续留在故事里，但随着开发的进行，一台设备的编号，已经不足以装下我们想要讲的东西了。</p></div>

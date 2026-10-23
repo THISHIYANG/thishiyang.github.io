@@ -1,18 +1,18 @@
 ---
-title: "GAME DEV LOG 01 | 涌现与回忆 —— 未领取的过去"
+title: "GAME DEV LOG 01 | 【星群 ASTRA NEXUS】涌现与回忆 —— 未领取的过去"
 slug: "k-3089-devlog-01"
 series: "GAME DEV LOG"
 sequence: 1
 language: "zh"
 edition: "original"
-summary: "保留 TapTap DEV LOG 01 原文；一处源图片地址缺失，暂存草稿。"
+summary: "保留 TapTap DEV LOG 01 原文：从无人领取的设备出发，记录调查、回忆与涌现的最初探索。"
 author: "THISHI"
 authorUrl: "https://www.taptap.cn/user/21100518"
 sources: [{"id":"A","originalTitle":"GAME DEV LOG 01 | 涌现与回忆 —— 未领取的过去","url":"https://www.taptap.cn/moment/855555778927395880","publishedAt":"2026-10-03T13:13:13.000Z"}]
 editedAt: "2026-10-23"
-draft: true
-mediaComplete: false
-missingMedia: 1
+draft: false
+mediaComplete: true
+missingMedia: 0
 toc: [{"id":"source-heading-0","title":"引言 | 维修员不会出现在第一现场"},{"id":"source-heading-1","title":"1. 故事的开始"},{"id":"source-heading-2","title":"2. 两颗坏掉的铆钉"},{"id":"source-heading-3","title":"3. 调查怎样从维修中涌现"},{"id":"source-heading-4","title":"4. 当解谜者成为谜题"},{"id":"source-heading-5","title":"5. 没有撒谎的叙述"},{"id":"source-heading-6","title":"6. 把涌现落实到玩家的动作里"},{"id":"source-heading-7","title":"7. 尾言｜当故事终于可以被触碰"},{"id":"source-heading-8","title":"References"}]
 ---
 
@@ -182,7 +182,7 @@ Senior Airman Jessica Reitano 使用 go/no-go gauge 检查液压管路接头，L
 
 <div class="devlog-source-block" data-source-block="80"><p>他因此成为了那个<strong>能够解开谜题的人</strong>。</p></div>
 
-<div class="devlog-source-block" data-source-block="81"><aside class="devlog-missing" role="note">导入注：原文此处的图片地址为空，待作者补充。原图注保留在下方。</aside></div>
+<div class="devlog-source-block" data-source-block="81"></div>
 
 <div class="devlog-source-block" data-source-block="82"><p class="devlog-caption"><code>Oedipus and the Sphinx</code><br /><code>Attic red-figure kylix, c. 470–460 BCE.</code></p></div>
 

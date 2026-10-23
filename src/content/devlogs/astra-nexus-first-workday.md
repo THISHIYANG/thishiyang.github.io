@@ -1,5 +1,5 @@
 ---
-title: "GAME DEV LOG 03 | 欢迎登上群星号——一名维修员怎样开始调查"
+title: "GAME DEV LOG 03 | 【星群 ASTRA NEXUS】欢迎登上群星号——一名维修员怎样开始调查"
 slug: "astra-nexus-first-workday"
 series: "GAME DEV LOG"
 sequence: 3

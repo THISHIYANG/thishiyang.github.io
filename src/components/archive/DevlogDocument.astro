@@ -25,7 +25,7 @@ const date=(value:string)=>new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shang
 <p><a href={data.authorUrl}>{data.author}</a> · 站内{data.edition==='original'?'导入':'编辑'}：{data.editedAt}</p>
 <ul class="devlog-sources">{data.sources.map(source=><li><a href={source.url}>{source.originalTitle} ↗</a>{source.publishedAt&&<span> · 原帖发布 <time datetime={source.publishedAt}>{date(source.publishedAt)}</time></span>}</li>)}</ul>
 </header>
-{review&&<aside class="devlog-draft">本地编辑审阅 · {data.draft?'DRAFT':'已通过素材检查，尚未部署'}。{data.missingMedia>0&&<>媒体待补 {data.missingMedia} 项；缺失项已在正文标记。</>}<a href="/preview/devlogs/">查看四篇审阅目录 →</a></aside>}
+{review&&<aside class="devlog-draft">本地编辑审阅 · {data.draft?'DRAFT':'公开版本'}。{data.missingMedia>0&&<>媒体待补 {data.missingMedia} 项；缺失项已在正文标记。</>}<a href="/preview/devlogs/">查看四篇审阅目录 →</a></aside>}
 {data.toc.length>0&&<nav class="devlog-toc" aria-label="章节目录"><h2>目录</h2><ol>{data.toc.map(section=><li><a href={'#'+section.id}>{section.title}</a></li>)}</ol></nav>}
 <div class="devlog-body"><Content /></div>
 <footer class="devlog-footer"><a href="/archive">← ARCHIVE</a>{data.sources.map(source=><a href={source.url}>在 TapTap 阅读原文 / 查看讨论 · {source.id} ↗</a>)}</footer>

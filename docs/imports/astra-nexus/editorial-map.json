@@ -2,15 +2,15 @@
   "articles": [
     {
       "slug": "k-3089-devlog-01",
-      "title": "GAME DEV LOG 01 | 涌现与回忆 —— 未领取的过去",
+      "title": "GAME DEV LOG 01 | 【星群 ASTRA NEXUS】涌现与回忆 —— 未领取的过去",
       "sequence": 1,
       "edition": "original",
       "summary": "保留 TapTap DEV LOG 01 原文；一处源图片地址缺失，暂存草稿。",
       "letters": [
         "A"
       ],
-      "draft": true,
-      "missingMedia": 1,
+      "draft": false,
+      "missingMedia": 0,
       "toc": [
         {
           "id": "source-heading-0",
@@ -52,7 +52,7 @@
     },
     {
       "slug": "astra-nexus-node-language",
-      "title": "GAME DEV LOG 02 | 节点之间——从调查草图到〈群星〉的终端语言",
+      "title": "GAME DEV LOG 02 | 【星群 ASTRA NEXUS】节点之间——从调查草图到〈群星〉的终端语言",
       "sequence": 2,
       "edition": "edited",
       "summary": "从维修流程的纸上草图，走到实体、信息、功能节点与 NODE BLOCK 的早期探索。",
@@ -60,8 +60,8 @@
         "B",
         "C"
       ],
-      "draft": true,
-      "missingMedia": 1,
+      "draft": false,
+      "missingMedia": 0,
       "toc": [
         {
           "id": "sketch",
@@ -99,7 +99,7 @@
     },
     {
       "slug": "astra-nexus-first-workday",
-      "title": "GAME DEV LOG 03 | 欢迎登上群星号——一名维修员怎样开始调查",
+      "title": "GAME DEV LOG 03 | 【星群 ASTRA NEXUS】欢迎登上群星号——一名维修员怎样开始调查",
       "sequence": 3,
       "edition": "edited",
       "summary": "从苏醒、记录地点和终端教学，走进第一台照明设备的维修，以及维修之后仍可继续的调查。",
@@ -137,7 +137,7 @@
     },
     {
       "slug": "astra-nexus-public-build",
-      "title": "GAME DEV LOG 04 | 从〈群星〉到〈星群〉——把节点之间的故事交给玩家",
+      "title": "GAME DEV LOG 04 | 【星群 ASTRA NEXUS】从〈群星〉到〈星群〉——把节点之间的故事交给玩家",
       "sequence": 4,
       "edition": "edited",
       "summary": "名称更改、实机演示与比赛期间最后一篇日志：记录作品交到玩家面前时的状态与仍需打磨的地方。",
@@ -145,8 +145,8 @@
         "E",
         "F"
       ],
-      "draft": true,
-      "missingMedia": 2,
+      "draft": false,
+      "missingMedia": 0,
       "toc": [
         {
           "id": "renaming",
@@ -920,5 +920,11 @@
   "editorialRemovals": [
     "Removed C block 56 trailing exported filename fragment nexus9_node_investigation_demo_… from edited prose; full source remains in source-C.json.",
     "Omitted repeated greetings, hashtag footers and repeated broad node introductions from edited editions; no original A text was omitted."
-  ]
+  ],
+  "publicationDecision": {
+    "date": "2026-10-23",
+    "authorization": "Author confirmed no media additions are required and requested all four articles be published.",
+    "videoPolicy": "Use original TapTap video links; no claim of locally hosted video files.",
+    "emptySourceImage": "Empty original image node omitted from visible article; adjacent original caption preserved."
+  }
 }

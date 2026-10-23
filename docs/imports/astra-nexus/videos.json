@@ -10,8 +10,8 @@
     "credit": "THISHI / SZU 原帖",
     "targetArticle": 2,
     "targetSection": "从卡片到模块：NODE BLOCK 的形状",
-    "placement": "待补",
-    "status": "Observed source video-resource endpoint provides signed HLS. No portable local video file has been imported. Cover is recorded separately.",
+    "placement": "原帖视频链接",
+    "status": "Author-approved external original-video link; local video hosting is not required for publication.",
     "sourceDuration": 12,
     "resourceDuration": 13
   },
@@ -26,8 +26,8 @@
     "credit": "THISHI / SZU 原帖",
     "targetArticle": 4,
     "targetSection": "从〈群星〉到〈星群〉",
-    "placement": "待补",
-    "status": "Signed HLS observed; local video migration pending. Cover is not counted as video.",
+    "placement": "原帖视频链接",
+    "status": "Author-approved external original-video link; local video hosting is not required for publication.",
     "sourceDuration": 119,
     "resourceDuration": 120
   },
@@ -42,8 +42,8 @@
     "credit": "THISHI / SZU 原帖",
     "targetArticle": 4,
     "targetSection": "比赛期间最后一篇日志",
-    "placement": "待补",
-    "status": "Signed HLS observed; local video migration pending. Cover is not counted as video.",
+    "placement": "原帖视频链接",
+    "status": "Author-approved external original-video link; local video hosting is not required for publication.",
     "sourceDuration": 36,
     "resourceDuration": 36
   }

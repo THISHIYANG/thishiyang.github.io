@@ -33,3 +33,5 @@ html:has([data-devlog-document]) .crt-content { filter:none; }
 .devlog-body td { padding:14px; border-bottom:1px solid var(--ink); min-width:160px; vertical-align:top; }
 .devlog-body h2 { scroll-margin-top:28px; }
 .devlog-series-nav { display:flex; flex-wrap:wrap; gap:24px; margin-top:32px; }
+
+.devlog-video-link { margin:28px auto; padding:16px 0; border-block:1px solid var(--ink); font-size:14px; }
