@@ -119,16 +119,8 @@
 
 .crt-content {
   position: absolute;
-  inset: -1.4% -1%;
-  width: 102%;
-  height: 102.6%;
-
-  transform:
-    perspective(1200px)
-    scaleX(1.018)
-    scaleY(0.984);
-
-  transform-origin: center;
+  /* Fit the frame so overscan cannot clip controls on wide displays. */
+  inset: 0;
   filter: url(#crt-ink);
 }
 /* Keep the CRT frame while letting mobile world content scroll in document flow. */
