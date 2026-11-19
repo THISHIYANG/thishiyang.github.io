@@ -1,13 +1,13 @@
 ---
 import type { ArchiveWork } from '../../content/portfolio-archive';
 import ArtworkPlaceholder from './ArtworkPlaceholder.astro';
-interface Props { work: ArchiveWork; discipline: string; href?: string }
-const {work,discipline,href}=Astro.props;
+interface Props { work: ArchiveWork; workNumber: string; discipline: string; href?: string }
+const {work,workNumber,discipline,href}=Astro.props;
 const metrics=[['30+','PLAYTEST SESSIONS'],['¥100,000+','CROWDFUNDING'],['1026%+','FUNDING GOAL'],['1,000+','BACKERS'],['3,000+','TOTAL SALES']];
 ---
 <article class:list={['pa-project','pa-project--'+work.id]} id={'work-'+work.id} data-portfolio-project data-work-id={work.id} aria-labelledby={'work-title-'+work.id}>
-  <div class="pa-project-eyebrow"><span>WORK {work.id}</span><span>{discipline}</span></div>
-  <div class="pa-slot-grid">{work.slots.map((slot,index)=><ArtworkPlaceholder ratio={slot.ratio} workId={work.id} name={work.name} slotNumber={index+1} label={slot.label} size={work.id==='04'&&index===0?'lead':'standard'} />)}</div>
+  <div class="pa-project-eyebrow"><span>WORK {workNumber}</span><span>{discipline}</span></div>
+  <div class="pa-slot-grid">{work.slots.map((slot,index)=><ArtworkPlaceholder ratio={slot.ratio} workNumber={workNumber} name={work.name} slotNumber={index+1} label={slot.label} size={work.id==='04'&&index===0?'lead':'standard'} />)}</div>
   <header class="pa-project-caption"><div><h3 id={'work-title-'+work.id}>{href?<a href={href}>{work.name}<span aria-hidden="true"> ↗</span></a>:work.name}</h3>{work.chinese&&<p class="pa-chinese" lang="zh-CN">{work.chinese}</p>}<p class="pa-project-subtitle">{work.title}</p>{work.tagline&&<p class="pa-tagline">{work.tagline}</p>}</div><p class="pa-date">{work.date}</p></header>
   {work.description&&<p class="pa-description" lang="zh-CN">{work.description}</p>}
   {work.role&&<dl class="pa-responsibility"><dt>ROLE</dt><dd>{work.role}</dd></dl>}

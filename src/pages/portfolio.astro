@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import DotCursor from '../components/cursor/DotCursor.astro';
 import ArchiveIndex from '../components/portfolio/ArchiveIndex.astro';
 import PortfolioProject from '../components/portfolio/PortfolioProject.astro';
-import {portfolioChapters,getPortfolioDetails} from '../content/portfolio-archive';
+import {portfolioChapters,getPortfolioDetails,portfolioWorkNumber} from '../content/portfolio-archive';
 import '../styles/portfolio.css';
 const details=await getPortfolioDetails();
 ---
@@ -12,7 +12,7 @@ const details=await getPortfolioDetails();
   <header class="pa-topbar"><a href="/portfolio/" class="pa-brand">TH!SHI <span>/</span> PORTFOLIO</a><nav aria-label="Portfolio navigation"><a href="#portfolio-archive">ARCHIVE</a><a href="#archive-index">INDEX</a><a href="/">BACK TO TH!SHI <span aria-hidden="true">↗</span></a></nav></header>
   <main id="main" tabindex="-1">
     <header class="pa-masthead"><p class="pa-kicker">SELECTED WORKS</p><h1>PORTFOLIO</h1><div class="pa-masthead-bottom"><div><p class="pa-profession">GAME ILLUSTRATOR / CHARACTER CONCEPT ARTIST</p><p class="pa-person">THISHI / YISHI YANG<br />PERSONAL CREATIVE ARCHIVE<br />2019 — 2026</p></div><p class="pa-totals"><span>10 PROJECTS</span><span>06 DISCIPLINES</span></p></div></header>
-    <div class="pa-archive" id="portfolio-archive"><ArchiveIndex /><div class="pa-chapters">{portfolioChapters.map(chapter=><section class={'pa-chapter pa-chapter--'+chapter.id} id={'chapter-'+chapter.id} data-portfolio-chapter={chapter.id} aria-labelledby={'chapter-title-'+chapter.id}><header class="pa-chapter-header"><span>{chapter.number} /</span><h2 id={'chapter-title-'+chapter.id}>{chapter.title}</h2><span>{String(chapter.works.length).padStart(2,'0')} {chapter.works.length===1?'PROJECT':'PROJECTS'}</span></header><div class="pa-projects">{chapter.works.map(work=><PortfolioProject work={work} discipline={chapter.title} href={details.get(work.id)} />)}</div></section>)}<footer class="pa-ending"><p>END OF SELECTED WORKS.</p><a href="#main">BACK TO TOP ↑</a><a href="/">BACK TO TH!SHI ↗</a></footer></div></div>
+    <div class="pa-archive" id="portfolio-archive"><ArchiveIndex /><div class="pa-chapters">{portfolioChapters.map(chapter=><section class={'pa-chapter pa-chapter--'+chapter.id} id={'chapter-'+chapter.id} data-portfolio-chapter={chapter.id} aria-labelledby={'chapter-title-'+chapter.id}><header class="pa-chapter-header"><span>{chapter.number} /</span><h2 id={'chapter-title-'+chapter.id}>{chapter.title}</h2><span>{String(chapter.works.length).padStart(2,'0')} {chapter.works.length===1?'PROJECT':'PROJECTS'}</span></header><div class="pa-projects">{chapter.works.map((work,index)=><PortfolioProject work={work} workNumber={portfolioWorkNumber(index)} discipline={chapter.title} href={details.get(work.id)} />)}</div></section>)}<footer class="pa-ending"><p>END OF SELECTED WORKS.</p><a href="#main">BACK TO TOP ↑</a><a href="/">BACK TO TH!SHI ↗</a></footer></div></div>
   </main>
 </div><DotCursor /><script>import '../scripts/portfolio-archive';import {setupPointer} from '../scripts/dot-cursor';setupPointer();</script>
 </BaseLayout>
