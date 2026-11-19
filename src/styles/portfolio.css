@@ -52,3 +52,25 @@
 @media(max-width:1100px) { .pa-document { padding-inline:32px; }.pa-archive { grid-template-columns:175px minmax(0,1fr); gap:30px; }.pa-project-caption { flex-direction:column; gap:14px; }.pa-profession { font-size:11px; } }
 @media(max-width:760px) { .pa-document { padding:0 20px 50px; }.pa-topbar { min-height:70px; flex-wrap:wrap; gap:12px; padding-block:18px; font-size:9px; }.pa-topbar nav { gap:18px; }.pa-masthead { padding:38px 0 30px; }.pa-masthead h1 { font-size:clamp(45px,12vw,90px); }.pa-masthead-bottom { align-items:start; }.pa-profession { font-size:10px; }.pa-person { font-size:9px; }.pa-totals { font-size:9px; flex:none; }.pa-archive { display:block; padding-top:20px; }.pa-index { position:relative; top:auto; max-height:none; margin-bottom:28px; padding:12px 0; border-bottom:1px solid var(--ink); }.pa-index summary { padding:0; cursor:pointer; }.pa-index summary span { display:inline; float:right; }.pa-index details[open] > ol { margin-top:22px; grid-template-columns:repeat(2,minmax(0,1fr)); }.pa-chapter + .pa-chapter { margin-top:64px; }.pa-chapter-header { gap:5px; grid-template-columns:32px minmax(0,1fr); }.pa-chapter-header > span:last-child { grid-column:2; }.pa-chapter-header h2 { font-size:17px; }.pa-projects { grid-template-columns:minmax(0,1fr); gap:40px; }.pa-artwork-label,.pa-artwork-caption { font-size:7px; }.pa-artwork-label { top:10px; left:10px; }.pa-artwork-caption { left:10px; right:10px; bottom:10px; }.pa-statistics { grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }.pa-statistics dd { font-size:23px; }.pa-project-eyebrow { font-size:8px; }.pa-slot-grid { gap:10px; }.pa-project--03 .pa-slot-grid { grid-template-columns:minmax(0,1fr); }.pa-project--03 .pa-slot-grid > :first-child { grid-row:auto; }.pa-project--01 .pa-slot-grid { grid-template-columns:minmax(0,1fr); }.pa-slot-grid > :first-child { grid-column:1/-1; }.pa-project--10 .pa-slot-grid > :nth-child(even) { margin-top:24px; } }
 @media(prefers-reduced-motion:reduce) { .pa-document *, .pa-document *::before,.pa-document *::after { transition:none!important; scroll-behavior:auto!important; } }
+
+/* Supplied artwork stays full width and uncropped, in a consistent reading sequence. */
+.pa-slot-grid.pa-slot-grid--artwork { grid-template-columns:minmax(0,1fr); gap:28px; }
+.pa-project-caption.pa-project-caption--before { margin-top:0; margin-bottom:24px; }
+.pa-artwork-image { min-width:0; }
+.pa-artwork-open { display:block; width:100%; padding:0; background:transparent; text-align:inherit; border:1px solid color-mix(in srgb,var(--ink) 15%,var(--paper)); }
+.pa-artwork-image img { display:block; width:100%; height:auto; }
+.pa-artwork-image figcaption { display:flex; justify-content:space-between; gap:16px; padding-top:10px; color:var(--muted); font:9px/1.6 var(--mono); }
+@media(max-width:760px) { .pa-slot-grid.pa-slot-grid--artwork { gap:22px; }.pa-artwork-image figcaption { font-size:8px; } }
+
+html:has([data-portfolio-viewer][open]) { overflow:hidden; scrollbar-gutter:stable; }
+.pa-artwork-viewer { position:fixed; inset:0; width:calc(100vw - 48px); max-width:1600px; height:calc(100dvh - 48px); max-height:none; margin:auto; padding:20px; border:1px solid var(--ink); background:var(--paper); color:var(--ink); }
+.pa-artwork-viewer[open] { display:flex; flex-direction:column; gap:16px; }
+.pa-artwork-viewer::backdrop { background:rgba(10,10,10,.82); }
+.pa-artwork-viewer-header { display:flex; justify-content:space-between; align-items:start; gap:20px; }
+.pa-artwork-viewer-header h2 { margin:0; font:12px/1.6 var(--mono); }
+.pa-artwork-viewer-close { flex:none; padding:0 0 4px; border:0; border-bottom:1px solid var(--ink); background:transparent; color:inherit; font:12px/1.6 var(--mono); }
+.pa-artwork-viewer-media { min-height:0; min-width:0; flex:1; display:flex; align-items:center; justify-content:center; }
+.pa-artwork-viewer-media img { display:block; max-width:100%; max-height:calc(100dvh - 160px); width:auto; height:auto; object-fit:contain; }
+.pa-artwork-viewer-hint { margin:0; font:10px/1.5 var(--mono); color:var(--muted); }
+.pa-artwork-viewer button:focus-visible { outline:1px solid var(--ink); outline-offset:5px; }
+@media(max-width:760px) { .pa-artwork-viewer { width:calc(100vw - 20px); height:calc(100dvh - 20px); padding:14px; }.pa-artwork-viewer-header h2,.pa-artwork-viewer-close { font-size:10px; } }

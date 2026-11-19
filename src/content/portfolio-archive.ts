@@ -3,16 +3,16 @@ import { getProjects } from './projects';
 export interface ArchiveWork {
   id: string; name: string; chinese?: string; title: string; date: string;
   tagline?: string; role?: string; description?: string;
-  slots: { ratio: string; label: string }[];
+  slots: { ratio: string; label: string; image?: { src: string; width: number; height: number; alt: string } }[];
   projectSlug?: string;
 }
 export interface ArchiveChapter { id: string; number: string; title: string; works: ArchiveWork[] }
 const slot = (ratio: string, label: string) => ({ ratio, label });
 export const portfolioChapters: ArchiveChapter[] = [
   { id:'character',number:'I',title:'CHARACTER CONCEPT DESIGN',works:[
-    {id:'04',name:'HAINUO',chinese:'《王者荣耀》英雄海诺概念设计',title:'HAINUO / HERO CONCEPT DESIGN',date:'2022.07 — 2022.12',slots:[slot('16 / 9','CHARACTER ARTWORK'),slot('4 / 5','CONCEPT EXPLORATION'),slot('4 / 5','DESIGN SHEET')]},
-    {id:'05',name:'CLAUDIUS',chinese:'太空歌剧牛仔',title:'SPACE OPERA COWBOY / CLAUDIUS',date:'2023.11 — 2024.02',slots:[slot('4 / 5','CHARACTER ARTWORK'),slot('3 / 2','DESIGN SHEET')]},
-    {id:'06',name:'PANSY',chinese:'三色堇',title:'PANSY / THE CROUPIER OF MEMORY',date:'2020.11 — 2021.02',slots:[slot('4 / 5','CHARACTER ARTWORK'),slot('3 / 2','DESIGN SHEET')]},
+    {id:'04',name:'HAINUO',chinese:'《王者荣耀》英雄海诺概念设计',title:'HAINUO / HERO CONCEPT DESIGN',date:'2022.07 — 2022.12',slots:[{"ratio":"2073 / 1166","label":"CONCEPT SHEET AA","image":{"src":"/media/portfolio/hainuo/AA.png","width":2073,"height":1166,"alt":"海诺概念设计 AA：角色设定、武器与动作草图"}},{"ratio":"2073 / 1166","label":"CONCEPT SHEET BB","image":{"src":"/media/portfolio/hainuo/BB.png","width":2073,"height":1166,"alt":"海诺概念设计 BB：角色设定、武器与动作草图"}},{"ratio":"2073 / 1166","label":"CONCEPT SHEET CC","image":{"src":"/media/portfolio/hainuo/CC.png","width":2073,"height":1166,"alt":"海诺概念设计 CC：角色设定、武器与动作草图"}},{"ratio":"2073 / 1166","label":"CONCEPT SHEET DD","image":{"src":"/media/portfolio/hainuo/DD.png","width":2073,"height":1166,"alt":"海诺概念设计 DD：角色设定、武器与动作草图"}},{"ratio":"2073 / 1166","label":"CONCEPT SHEET EE","image":{"src":"/media/portfolio/hainuo/EE.png","width":2073,"height":1166,"alt":"海诺概念设计 EE：角色设定、武器与动作草图"}},{"ratio":"2073 / 1166","label":"CONCEPT SHEET FF","image":{"src":"/media/portfolio/hainuo/FF.png","width":2073,"height":1166,"alt":"海诺概念设计 FF：角色设定、武器与动作草图"}}]},
+    {id:'05',name:'CLAUDIUS',chinese:'太空歌剧牛仔',title:'SPACE OPERA COWBOY / CLAUDIUS',date:'2023.11 — 2024.02',slots:[{"ratio":"3028 / 1704","label":"CHARACTER & WEAPON DESIGN","image":{"src":"/media/portfolio/claudius/claudius.png","width":3028,"height":1704,"alt":"CLAUDIUS 太空歌剧牛仔：角色全身设定、武器结构与设计说明"}}]},
+    {id:'06',name:'PANSY',chinese:'三色堇',title:'PANSY / THE CROUPIER OF MEMORY',date:'2020.11 — 2021.02',slots:[{"ratio":"2486 / 2856","label":"CHARACTER DESIGN & COLOR STUDIES","image":{"src":"/media/portfolio/pansy/pansy.png","width":2486,"height":2856,"alt":"PANSY 三色堇：角色配色探索、服装细节、三视图与人物插画"}}]},
   ]},
   {id:'indie',number:'II',title:'ORIGINAL INDIE GAME',works:[
     {id:'02',name:'ASTRA NEXUS',chinese:'群星',title:'ASTRA NEXUS',date:'2026.09 — 2026.10',tagline:'A routine repair. An unresolved history.',slots:[slot('16 / 9','GAME VISUAL IDENTITY'),slot('16 / 9','GAME INTERFACE / TERMINAL'),slot('16 / 9','GAMEPLAY SHOWCASE')]},
