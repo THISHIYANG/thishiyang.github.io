@@ -50,7 +50,7 @@ export function setupScenes() {
     document.dispatchEvent(new CustomEvent('thishi:scene-ready',{detail:{scene:scene?.id??'home'}}));
     if(focus)(scene?heading:document.querySelector<HTMLElement>('#main'))?.focus({preventScroll:true});
   }
-  function commit(scene:Scene|undefined){current=scene;history.pushState(null,'',scene?.path??'/');window.scrollTo({top:0,behavior:'instant'});}
+  function commit(scene:Scene|undefined){if(scene?.id==='games'&&origin?.closest('[data-portfolio]')){window.location.assign('/portfolio/');return;}current=scene;history.pushState(null,'',scene?.path??'/');window.scrollTo({top:0,behavior:'instant'});}
   function sourceFor(scene:Scene,trigger?:HTMLElement){
     if(home.hidden)return shell.querySelector<HTMLElement>('[data-scene-glyph]')!;
     const owner=home.querySelector<HTMLElement>(`[data-letter-world="${scene.id}"]`)!;
@@ -182,6 +182,8 @@ export function setupScenes() {
     if(link){event.preventDefault();event.stopImmediatePropagation();const targetScene=scenes.find(s=>s.id===link.dataset.scene);void navigate(targetScene?letterDestination(targetScene,current):undefined,link);return;}
     if(home.hidden)return;
     if(!desktop.matches || matchMedia('(hover:none), (pointer:coarse)').matches){
+      const folder=target.closest<HTMLElement>('[data-portfolio]');
+      if(folder){event.preventDefault();event.stopImmediatePropagation();void navigate(scenes.find(scene=>scene.id==='games'),folder);return;}
       const letter=target.closest<HTMLElement>('[data-world]');
       if(letter?.getAttribute('aria-pressed')==='true'){
         event.preventDefault();event.stopImmediatePropagation();

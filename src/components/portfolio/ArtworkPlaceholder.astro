@@ -1,0 +1,8 @@
+---
+interface Props { ratio: string; workId: string; name: string; slotNumber: number; label?: string; size?: 'lead' | 'standard' }
+const {ratio,workId,name,slotNumber,label,size='standard'}=Astro.props;
+---
+<div class:list={['pa-artwork', 'pa-artwork--'+size]} style={'aspect-ratio:'+ratio} data-artwork-placeholder role="img" aria-label={'Empty artwork slot '+slotNumber+' for WORK '+workId+' '+name}>
+  <span class="pa-artwork-label">ARTWORK PLACEHOLDER</span><span class="pa-crosshair" aria-hidden="true"></span>
+  <div class="pa-artwork-caption"><span>WORK {workId} / {name}</span><span>IMAGE SLOT {String(slotNumber).padStart(2,'0')}{label&&' / '+label}</span></div>
+</div>
