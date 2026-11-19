@@ -4,7 +4,7 @@ const {src,width,height,alt,label,name,number,total}=Astro.props;
 ---
 <figure class="pa-artwork-image">
   <button class="pa-artwork-open" type="button" data-artwork-open data-artwork-src={src} data-artwork-title={name+' / '+label} aria-label={alt+'，放大查看'} aria-haspopup="dialog" aria-controls="portfolio-artwork-viewer">
-    <img src={src} width={width} height={height} alt={alt} loading={number===1?'eager':'lazy'} decoding="async" />
+    <img src={src} width={width} height={height} alt={alt} loading="lazy" decoding="async" />
   </button>
   <figcaption><span>{name} / {label}</span><span>{String(number).padStart(2,'0')} / {String(total).padStart(2,'0')}</span></figcaption>
 </figure>

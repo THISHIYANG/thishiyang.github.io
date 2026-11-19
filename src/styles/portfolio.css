@@ -74,3 +74,11 @@ html:has([data-portfolio-viewer][open]) { overflow:hidden; scrollbar-gutter:stab
 .pa-artwork-viewer-hint { margin:0; font:10px/1.5 var(--mono); color:var(--muted); }
 .pa-artwork-viewer button:focus-visible { outline:1px solid var(--ink); outline-offset:5px; }
 @media(max-width:760px) { .pa-artwork-viewer { width:calc(100vw - 20px); height:calc(100dvh - 20px); padding:14px; }.pa-artwork-viewer-header h2,.pa-artwork-viewer-close { font-size:10px; } }
+
+/* Finished galleries keep each supplied image's original proportions. */
+.pa-game-link { display:inline-flex; align-items:center; gap:10px; min-height:36px; margin-top:16px; border-bottom:1px solid var(--ink); font:11px/1.6 var(--mono); }
+.pa-slot-grid--artwork > :first-child { grid-row:auto; }
+.pa-chapter--illustration .pa-project { grid-column:1/-1; }
+.pa-slot-grid.pa-slot-grid--contact-sheet { grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; }
+.pa-project .pa-slot-grid.pa-slot-grid--contact-sheet > * { grid-column:auto; grid-row:auto; margin-top:0; }
+@media(max-width:760px) { .pa-slot-grid.pa-slot-grid--contact-sheet { grid-template-columns:minmax(0,1fr); }.pa-game-link { min-height:44px; } }

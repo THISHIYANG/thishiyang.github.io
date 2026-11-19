@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FieldCanvas from './field/FieldCanvas.astro';
-import WorkIndex from './work/WorkIndex.astro';
 import DevlogIndex from './archive/DevlogIndex.astro';
 import SiteHeader from './SiteHeader.astro';
 import LetterHero from './LetterHero.astro';
@@ -18,7 +17,6 @@ const { scene } = Astro.props;
 <main id="main" tabindex="-1">
 <div data-home hidden={!!scene}><LetterHero /><FieldCanvas /></div>
 <SceneShell scene={scene} />
-<WorkIndex />
 <DevlogIndex />
 </main>
 </div>

@@ -50,7 +50,7 @@ export function setupScenes() {
     document.dispatchEvent(new CustomEvent('thishi:scene-ready',{detail:{scene:scene?.id??'home'}}));
     if(focus)(scene?heading:document.querySelector<HTMLElement>('#main'))?.focus({preventScroll:true});
   }
-  function commit(scene:Scene|undefined){if(scene?.id==='games'&&origin?.closest('[data-portfolio]')){window.location.assign('/portfolio/');return;}current=scene;history.pushState(null,'',scene?.path??'/');window.scrollTo({top:0,behavior:'instant'});}
+  function commit(scene:Scene|undefined){current=scene;history.pushState(null,'',scene?.path??'/');window.scrollTo({top:0,behavior:'instant'});}
   function sourceFor(scene:Scene,trigger?:HTMLElement){
     if(home.hidden)return shell.querySelector<HTMLElement>('[data-scene-glyph]')!;
     const owner=home.querySelector<HTMLElement>(`[data-letter-world="${scene.id}"]`)!;
@@ -84,6 +84,7 @@ export function setupScenes() {
   }
   async function navigate(scene:Scene|undefined,trigger?:HTMLElement){
     if(busy||scene?.id===current?.id)return;
+    if(scene?.id==='games'){window.location.assign('/portfolio/');return;}
     const ticket=++generation;origin=trigger;busy=true;
     document.dispatchEvent(new CustomEvent('thishi:freeze',{detail:{id:scene?.id}}));
     const source=scene?sourceFor(scene,trigger):undefined;

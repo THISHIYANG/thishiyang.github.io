@@ -11,7 +11,7 @@ const metrics=[['30+','PLAYTEST SESSIONS'],['¥100,000+','CROWDFUNDING'],['1026%
 <article class:list={['pa-project','pa-project--'+work.id]} id={'work-'+work.id} data-portfolio-project data-work-id={work.id} aria-labelledby={'work-title-'+work.id}>
   <div class="pa-project-eyebrow"><span>WORK {workNumber}</span><span>{discipline}</span></div>
   {hasArtwork&&<PortfolioProjectCaption work={work} href={href} beforeArtwork />}
-  <div class:list={['pa-slot-grid',{'pa-slot-grid--artwork':hasArtwork}]}>{work.slots.map((slot,index)=>slot.image ? <ArtworkImage {...slot.image} label={slot.label} name={work.name} number={index+1} total={work.slots.length} /> : <ArtworkPlaceholder ratio={slot.ratio} workNumber={workNumber} name={work.name} slotNumber={index+1} label={slot.label} size={work.id==='04'&&index===0?'lead':'standard'} />)}</div>
+  <div class:list={['pa-slot-grid',{'pa-slot-grid--artwork':hasArtwork,'pa-slot-grid--contact-sheet':hasArtwork&&['07','08','09','10'].includes(work.id)}]}>{work.slots.map((slot,index)=>slot.image ? <ArtworkImage {...slot.image} label={slot.label} name={work.name} number={index+1} total={work.slots.length} /> : <ArtworkPlaceholder ratio={slot.ratio} workNumber={workNumber} name={work.name} slotNumber={index+1} label={slot.label} size={work.id==='04'&&index===0?'lead':'standard'} />)}</div>
   {!hasArtwork&&<PortfolioProjectCaption work={work} href={href} />}
   {work.description&&<p class="pa-description" lang="zh-CN">{work.description}</p>}
   {work.role&&<dl class="pa-responsibility"><dt>ROLE</dt><dd>{work.role}</dd></dl>}

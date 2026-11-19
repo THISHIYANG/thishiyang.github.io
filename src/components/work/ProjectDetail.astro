@@ -20,7 +20,7 @@ const data = project.data;
     </nav>
     <main id="main" tabindex="-1">
       <article class="project-article">
-        <a class="project-index-link" href="/work">← WORK INDEX</a>
+        <a class="project-index-link" href="/portfolio/">← PORTFOLIO</a>
         <ProjectHeader project={project} />
         {data.heroImage && <ProjectMedia images={[{ src: data.heroImage, alt: data.heroImageAlt ?? data.title, caption: data.heroCaption }]} eager />}
         <div class="project-prose"><slot /></div>

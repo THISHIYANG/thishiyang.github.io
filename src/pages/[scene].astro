@@ -2,7 +2,7 @@
 import Experience from '../components/Experience.astro';
 import { scenes } from '../content/scenes';
 export function getStaticPaths() {
-return scenes.map(scene => ({ params: { scene: scene.path.slice(1) }, props: { scene } }));
+return scenes.filter(scene => scene.id !== 'games').map(scene => ({ params: { scene: scene.path.slice(1) }, props: { scene } }));
 }
 const { scene } = Astro.props;
 ---
